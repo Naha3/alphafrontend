@@ -1,0 +1,62 @@
+.concern-item {
+    padding: 1rem;
+
+    .title {
+        display: flex;
+
+        .concern-tital {
+            color: red;
+        }
+    }
+
+    .title-name{
+        display: flex;
+        .level{
+            margin-top: 21.5px;
+            margin-left: 25px;
+            .level-1{
+                outline: 1px solid #1677FF;
+                border-radius: 4px;
+                padding: 5px;
+                color: #1677FF;
+                background-color: #cdd8ea;
+            }
+            .level-concern{
+                margin-left: 10px;
+                outline: 1px solid #FF3E3E;
+                border-radius: 4px;
+                padding: 5px;
+                color: #FF3E3E;
+                background-color: #FFA39E;
+            }
+        }
+    }
+    .image img {
+        width: 324.04px;
+        height: 240px;
+    }
+    
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.actions .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+}

@@ -1,0 +1,15 @@
+.concerns-container {
+    width: 1296px;
+    .header {
+        background-color: #ff3e3e;
+        width: 1296px;
+        height: 56px;
+        span {
+            color: white;
+            margin-left: 5px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 22px;
+        }
+    }
+}

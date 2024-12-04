@@ -1,0 +1,123 @@
+.attention-dialog {
+    width: 868px;
+    // height: 388px;
+    top: 110px;
+    border-radius: 8px;
+    padding: 32px 32px 22px 32px;
+    gap: 16px;
+    margin-left: 286px;
+    margin-top: 110px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    .dialog-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: black; 
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        font-weight: 700;
+        size: 20px;
+        line-height: 22px;
+
+        .icon {
+            font-size: 24px;
+            margin-right: 8px;
+            color: #FAAD14;
+
+        }
+    }
+
+    .dialog-content {
+        font-size: 14px;
+        color: #333;
+        width: 764px;
+        height: 214px;
+        margin-left: 30px;
+
+
+        p {
+
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+
+        }
+
+        .strong {
+            margin-top: 20px;
+            color: #000000;
+            opacity: 0.8;
+            strong {
+
+                font-size: 16px;
+                
+                line-height: 24px;
+                font-weight: 400;
+                margin-bottom: 3px;
+
+            }
+
+            .sub-servies {
+                color: #333;
+                font-weight: 400;
+                line-height: 24px;
+                font-size: 16px;
+                padding-left: 5px;
+            }
+        }
+
+    }
+
+    .dialog-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            // font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-left: 8px;
+            transition: background-color 0.2s ease-in-out;
+
+            &.cancel {
+                background-color: white;
+                color: black;
+                outline: 1px solid rgb(228, 224, 224);
+                line-height: 22px;
+                font-size: 14px;
+                font-weight: 400;
+
+            }
+
+            &.link-concerns {
+                background-color: #FAAD14;
+                color: black;
+
+                &:hover {
+                    background-color: #FAAD14;
+                    line-height: 22px;
+                font-size: 14px;
+                font-weight: 400;
+                }
+            }
+
+            &.continue {
+                background-color: #00b578;
+                color: #ffffff;
+                line-height: 22px;
+                font-size: 14px;
+                font-weight: 400;
+
+                &:hover {
+                    background-color: #00b578;
+                }
+            }
+        }
+    }
+}

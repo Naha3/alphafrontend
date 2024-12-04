@@ -1,0 +1,35 @@
+<div class="concern-item">
+    <div class="title">
+        <span class="concern-tital">{{ concern.title }}
+
+        </span>
+        <span>
+            {{concern.title_description}}
+        </span>
+    </div>
+    <div class="title-name">
+        <span>
+            <h2>{{ concern.title_name}}</h2>
+        </span>
+        <div class="level">
+            <span class="level-1">{{concern.level}} </span>
+            <span class="level-concern">{{concern.concern}}</span>
+        </div>
+    </div>
+    <p>{{ concern.description }}</p>
+    <div class="image">
+        <img [src]="concern.image" alt="Concern Image" />
+    </div>
+   
+    <div>
+        <h4>Service: {{ concern.service }}</h4>
+        <p>Labor Cost: ${{ concern.laborCost }}</p>
+        <p>Discount: -${{ concern.discount }}</p>
+        <p>Part Cost: ${{ concern.partCost }} x {{ concern.partQuantity }} units</p>
+        <p>Total: ${{ concern.total }}</p>
+    </div>
+    <div class="actions">
+        <button class="btn btn-secondary">Maybe Later</button>
+        <button class="btn btn-primary">Approve</button>
+    </div>
+</div>

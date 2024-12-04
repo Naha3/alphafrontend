@@ -1,0 +1,10 @@
+<div class="concerns-container">
+    <div class="header">
+        <span>{{ concerns.length }} Concerns Reported by You</span>
+    </div>
+      <app-concern-item
+      *ngFor="let concern of concerns"
+      [concern]="concern">
+    </app-concern-item>
+  </div>
+  
