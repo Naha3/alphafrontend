@@ -13,5 +13,14 @@ export interface Concern {
     partQuantity: number;
     total: number;
     image?: string | null;
+    service_note?:string;
+    service_part?:string;
+    hours:string;
+    hour_cost:string;
+    services_cost:string;
+    services_message:string;
+    discount_amount:string;
+    total_cost:string;
+
   }
   

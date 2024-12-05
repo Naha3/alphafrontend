@@ -1,18 +1,12 @@
-<div class="concerns-container">
-    <div  *ngFor="let concern of concerns"
-      class="header"
-      [ngClass]="{
-        'red-header': concern.concern === 'Needs Immediate Attention',
-        'yellow-header': concern.concern !== 'Needs Immediate Attention'
-      }"
-    >
-      <span>{{ concerns.length }} Concerns Reported by You</span>
+<div class="container">
+  <div class="concerns-container">
+    <div *ngFor="let concern of concerns">
+      <span class="header" [ngClass]="{
+      'red-header': concern.concern === 'Needs Immediate Attention',
+      'yellow-header': concern.concern !== 'Needs Immediate Attention'
+    }">{{ concerns.length }} Concerns Reported by You</span>
+      <app-concern-item [concern]="concern">
+      </app-concern-item>
     </div>
-  
-    <!-- Loop through the concerns array -->
-    <app-concern-item
-      *ngFor="let concern of concerns"
-      [concern]="concern">
-    </app-concern-item>
   </div>
-  
+</div>

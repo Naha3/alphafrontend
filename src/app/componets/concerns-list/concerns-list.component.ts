@@ -23,6 +23,14 @@ export class ConcernsListComponent {
       partCost: 10,
       partQuantity: 5.5,
       total: 36.5,
+      service_note:'This is a service note.',
+      service_part:'OIL filter R&R',
+      hours:'0.5',
+      hour_cost:'150.00',
+      services_cost:'60.00',
+      discount_amount:'15.00',
+      services_message:'Includes: The removal of component and all necessary components for access. Does not include: System diagnosis, testing, wheel alignment, or a vehicle road test. The disassembly of shock/strut and spring assembly.',
+      total_cost:'159.00',
     },
     {
       id: 2,
@@ -35,6 +43,12 @@ export class ConcernsListComponent {
       partCost: 10,
       partQuantity: 5.5,
       total: 36.5,
+      hours:'0.5',
+      hour_cost:'150.00',
+      services_cost:'60.00',
+      discount_amount:'15.00',
+      services_message:'Includes: The removal of component and all necessary components for access.Does not include: System diagnosis, testing, wheel alignment, or a vehicle road test. The disassembly of shock/strut and spring assembly.',
+total_cost:'159.00',
     },
   ];
 }

@@ -1,9 +1,14 @@
+.container{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
 .concerns-container {
-    width: 100%; /* Ensure it adapts to the container size */
-  }
-  
+  width: 1296px; 
+}
+
   .header {
-    width: 100%;
+    width: 1296px;
     height: 56px;
     display: flex;
     align-items: center;
@@ -11,10 +16,10 @@
     color: white;
     font-weight: bold;
     font-size: 16px;
-    justify-content: center;
+    // margin-top: 5px;
+    
   }
-  
-  /* Apply a red background when concern is 'Needs Immediate Attention' */
+}
   .red-header {
     background-color: #ff3e3e;
   }
