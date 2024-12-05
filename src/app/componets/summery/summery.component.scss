@@ -1,0 +1,47 @@
+.container {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+
+    .sub-container {
+        height: 833px;
+        width: 1296px;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .summery {
+            .service-name{
+                
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px;
+                }
+
+                .services-detail {
+                    padding: 0px 12px 0px 12px;
+                    display: flex;
+                    justify-content: space-between;
+                  
+                }
+               
+            }
+            .summery-line {
+                border: 0;
+                border-top: 1px solid #d8d6d6; /* Adjust color and thickness */
+                // margin: 20px 0; 
+                padding: 0px 12px 0px 12px;
+        }
+    }
+}
