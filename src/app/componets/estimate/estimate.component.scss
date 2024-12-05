@@ -1,0 +1,294 @@
+.estimate-container {
+  width: 868px;
+  // height: 1014px;
+  margin-top: 65px;
+  margin-left: 286px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+
+  #cust {
+    padding-right: 25px;
+  }
+  #sub {
+    padding-right: 40px;
+  }
+  #mes {
+    padding-right: 35px;
+   
+  }
+  #form{
+    padding-right: 58px ;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      width: 295px;
+      height: 33px;
+      color: #2a2a2a;
+      margin-top: 32px;
+      margin-left: 32px;
+      line-height: 32.68px;
+    }
+
+    .header-buttons {
+      button {
+        padding: 8px 15px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 5px;
+        border: solid 1px;
+        cursor: pointer;
+        margin-left: 10px;
+
+        &.cancel {
+          background-color: #ffffff;
+          color: #353535;
+          border-color: #ccc;
+
+          
+        }
+
+        &.send {
+          background-color: #00B578;
+          color: white;
+
+          
+        }
+      }
+    }
+  }
+
+  .section {
+    margin-bottom: 15px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row; /* Keeps items in a row */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    opacity: 0.8;
+  
+    /* Exclude textarea from opacity */
+    textarea {
+      opacity: 1; /* Override opacity for textarea */
+    }
+  
+    .send-options {
+      display: flex;
+      gap: 20px; /* Adds spacing between Email and SMS */
+      margin-left: auto; /* Aligns checkboxes to the right */
+      align-items: center;
+  
+      span {
+        display: flex;
+        align-items: center;
+  
+        label {
+          font-size: 14px;
+          display: flex;
+          gap: 8px;
+  
+          input[type="checkbox"] {
+            /* Hide default checkbox */
+            appearance: none;
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            border: 2px solid #00B578;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+            background-color: white;
+  
+            &:checked {
+              background-color: #00B578;
+              border-color: #00B578;
+            }
+  
+            &:checked::before {
+              content: '';
+              position: absolute;
+              top: 2px;
+              left: 4px;
+              width: 6px;
+              height: 10px;
+              border: solid white;
+              border-width: 0 2px 2px 0;
+              transform: rotate(45deg);
+            }
+  
+            &:focus {
+              outline: 2px solid #00B578;
+            }
+          }
+        }
+      }
+    }
+  
+    label {
+      font-size: 14px;
+      color: #333;
+      display: flex;
+      align-items: start;
+  
+      strong {
+        color: #333;
+      }
+    }
+  
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: auto;
+      padding: 10px;
+      font-size: 14px;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+  
+      &:focus {
+        outline: none;
+        border-color: #00B578;
+        background-color: #fff;
+      }
+    }
+  
+    textarea {
+      height: 120px;
+    }
+  }
+  
+
+
+
+  .options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FAFAFA; // Secondary background color (light gray)
+    border-radius: 8px;
+    padding: 8px;
+  
+    .authorization,
+    .send-to-same {
+      display: flex;
+      align-items: center;
+      margin-left: 35px;
+      padding: 10px;
+    }
+  
+    .authorization {
+      label {
+        font-size: 14px;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: row-reverse;
+      }
+  
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 22px;   // Increased width for larger checkbox
+        height: 22px;  // Increased height for larger checkbox
+        border: 2px solid #00B578; // Primary color (green)
+        border-radius: 4px;
+        background-color: white;
+        cursor: pointer;
+        position: relative;
+        margin-right: 10px;
+        
+  
+        &:checked {
+          background-color: #00B578;
+          border-color: #00B578;
+        }
+  
+        &:checked::before {
+          content: '';
+          position: absolute;
+          top: 3px;    // Adjusted position of the checkmark
+          left: 5px;   // Adjusted position of the checkmark
+          width: 8px;  // Increased width of the checkmark
+          height: 12px; // Increased height of the checkmark
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+  
+        &:focus {
+          outline: 2px solid #00B578;
+        }
+      }
+    }
+  
+    .send-to-same {
+      label {
+        font-size: 14px;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+  
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 22px;   // Adjusted to match size of authorization reminder checkbox
+        height: 22px;  // Adjusted to match size of authorization reminder checkbox
+        border: 2px solid #00B578; // Primary color (green)
+        border-radius: 4px;
+        background-color: white;
+        cursor: pointer;
+        position: relative;
+        margin-right: 10px;
+  
+        &:checked {
+          background-color: #00B578;
+          border-color: #00B578;
+        }
+  
+        &:checked::before {
+          content: '';
+          position: absolute;
+          top: 3px;    // Adjusted position of the checkmark
+          left: 5px;   // Adjusted position of the checkmark
+          width: 8px;  // Adjusted checkmark width
+          height: 12px; // Adjusted checkmark height
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+  
+        &:focus {
+          outline: 2px solid #00B578;
+        }
+      }
+    }
+  }
+  
+  
+  
+  
+  
+
+
+}
+
+#textarea{
+  height: 20px;
+}
+
