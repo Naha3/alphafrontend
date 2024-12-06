@@ -2,10 +2,14 @@
   width: 100%;
   align-items: center;
   justify-content: center;
+  display: flex;
+  justify-content: center;
 
+  .sub-container{
+    width: 1296px; 
 .concerns-container {
-  width: 1296px; 
-}
+ 
+
 
   .header {
     width: 1296px;
@@ -19,7 +23,7 @@
     // margin-top: 5px;
     
   }
-}
+
   .red-header {
     background-color: #ff3e3e;
   }
@@ -28,4 +32,8 @@
   .yellow-header {
     background-color: #ffcc00;
   }
+}
+}
+}
+
   

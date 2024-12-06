@@ -18,6 +18,7 @@
         }
 
         .title-name {
+            padding-left: 12px;
             display: flex;
             align-items: baseline;
 
@@ -26,25 +27,39 @@
                 margin-left: 25px;
 
                 .level-1 {
-                    outline: 1px solid #1677FF;
+                    border: 1px solid #1677FF;
                     border-radius: 4px;
                     padding: 5px;
                     color: #1677FF;
-                    background-color: #cdd8ea;
+                    background-color: #eaf1fb;
+                    width: 55px;
+                    height: 24px;
                 }
 
                 .level-concern {
+                    width: 222px;
+                    height:24px;
                     margin-left: 10px;
-                    outline: 1px solid #FF3E3E;
+                    border: 1px solid #FF3E3E;
                     border-radius: 4px;
                     padding: 5px;
                     color: #FF3E3E;
-                    background-color: #FFA39E;
+                    background-color: #ffefef;
                 }
             }
         }
 
+        p {
+            padding-left: 12px;
+            font-family: Open Sans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            color: #000000;
+        }
+
         .image img {
+            padding-left: 12px;
             width: 324.04px;
             height: 240px;
         }
@@ -52,7 +67,7 @@
 
     .service-engine {
         width: 1245px;
-
+        padding-left: 12px;
         .service-part {
             display: flex;
             justify-content: space-between;
@@ -62,13 +77,32 @@
             .sevices-name {
                 display: flex;
                 flex-direction: column;
+                .service-name-part{
+                    font-family: Open sans;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 27.24px;
+                }
+                .service-name-service_note{
+                    font-family: Open sans;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    opacity: 0.7;
+                }
             }
 
             .actions {
                 display: flex;
                 justify-content: flex-end;
                 gap: 10px;
-                align-items: center;
+                align-items: baseline;
+                
+                span{
+                    width: 100px;
+                    height: 27px;
+                    color: #000000;
+                }
 
                 .btn {
                     padding: 0.5rem 1rem;
@@ -98,48 +132,75 @@
         border: none;
         border-top: 1px solid #cecdcd;
         margin: 20px 0;
-
+    
         .services-name {
+            
+
             margin-top: 8px;
             width: 1245px;
             display: flex;
-
-            .service-left {
-                flex: 1;
-            }
-
-            .service-right {
-                display: flex;
-                justify-content: space-between;
-                text-align: right;
-                margin-top: 4px;
-                gap: 40px;
+            justify-content: space-between; /* Ensure left and right are spaced out */
+        }
+    
+        .service-left {
+            
+            display: flex;
+            gap:5px;
+            align-items: baseline; /* Center items vertically if needed */
+            span{
+                font-family: open sans;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21.79px;
+                color: #000000;
+                opacity: 0.7;
             }
         }
+    
+        .service-right {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 4px;
+            gap: 40px;
 
-        .services-message {
-            width: 1245px;
-            .services-message-name {
-                display: flex;
-
-                .service-left-message {
-                    width: 900px;
-                    word-wrap: break-word;
-                    overflow-wrap: break-word;
-                    white-space: normal;
-
-                }
-
-                .service-right-message {
-                    width: 345px;
-                    display: flex;
-                    justify-content: center;
-                }
-            }
-
+            font-family: open sans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21.79px;
+            color: #000000;
+            opacity: 0.5;
         }
     }
+    
+    .services-message {
+        width: 1245px;
+    
+        .services-message-name {
+            display: flex;
+            justify-content: space-between; /* Ensure left and right are spaced out */
+    
+            .service-left-message {
+                width: 900px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
 
+                font-family: open sans;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19.07px;
+                color: #000000;
+                opacity: 0.6;
+            }
+    
+            .service-right-message {
+                width: 345px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    
 
     .total-cost {
         width: 24%;
@@ -148,12 +209,19 @@
         float: right;
 
         .cost {
-        //    padding: 8px;
-        // background-color: #571010;
-        height: 30px;
+            //    padding: 8px;
+            // background-color: #571010;
+            height: 30px;
             display: flex;
             justify-content: flex-end;
             margin-bottom: 5px;
+
+            font-family: open sans;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21.79px;
+            color: #000000;
+            opacity: 0.5;
         }
 
     }
