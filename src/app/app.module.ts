@@ -12,6 +12,10 @@ import { SummeryComponent } from './componets/summery/summery.component';
 import { EstimateComponent } from './componets/estimate/estimate.component';
 import { SubmissionComponent } from './componets/submission/submission.component';
 import { OwnerimagesComponent } from './componets/ownerimages/ownerimages.component';
+import { HeaderComponent } from './componets/header/header.component';
+import { FooterComponent } from './componets/footer/footer.component';
+import { ConcernapprovedComponent } from './componets/concernapproved/concernapproved.component';
+import { ThankyouComponent } from './componets/thankyou/thankyou.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { OwnerimagesComponent } from './componets/ownerimages/ownerimages.compon
     SummeryComponent,
     EstimateComponent,
     SubmissionComponent,
-    OwnerimagesComponent
+    OwnerimagesComponent,
+    HeaderComponent,
+    FooterComponent,
+    ConcernapprovedComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,
