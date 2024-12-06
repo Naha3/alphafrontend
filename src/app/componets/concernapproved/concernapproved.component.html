@@ -1,0 +1,24 @@
+<div *ngIf="status === 'deferred'; else approvedTemplate" class="status-box">
+    <div class="status-container">
+      <i class="status-icon fa fa-clock"></i> <!-- Font Awesome clock icon -->
+      <div class="status-message">
+        <p class="status-text">Deferred for later</p>
+        <p class="status-timestamp">01:33 pm, Nov 2, 2024</p>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #approvedTemplate>
+    <div class="statuss-box">
+      <div class="statuss-container">
+        <div class="statuss-icon">
+          <i class="fas fa-check-circle"></i> <!-- Font Awesome checkmark icon -->
+        </div>
+        <div class="statuss-message">
+          <div class="statuss-text">Approved!</div>
+          <div class="statuss-timestamp">01:33 pm, Nov 2, 2024</div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  

@@ -1,0 +1,121 @@
+.kanata-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    // border-radius: 8px;
+    // width: 100%;
+    // max-width: 1439px;
+    height: 72px;
+    font-family: Arial, sans-serif;
+  
+    .kanata-header {
+      display: flex;
+      align-items: center;
+    
+  
+      img {
+        width: 50px;
+        height: auto;
+        margin-right: 12px;
+      }
+  
+      .kanata-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+    }
+  
+    .kanata-details {
+      flex: 1;
+      margin-left: 24px;
+     
+  
+      .kanata-address {
+        margin: 0;
+        font-size: 14px;
+        color: #555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+  
+        i {
+          font-size: 14px;
+          color: #555;
+        }
+  
+        .kanata-gst {
+          color: #777;
+          font-size: 13px;
+  
+          i {
+            font-size: 13px;
+            color: #777;
+          }
+        }
+      }
+    }
+  
+    .kanata-actions {
+      display: flex;
+      gap: 12px;
+      background: none;
+  
+      button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        font-size: 14px;
+        color: #777;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        // transition: background-color 0.3s;
+  
+        i {
+          font-size: 14px;
+        }
+  
+        // &.kanata-email-btn {
+        //   background-color: #777;
+  
+        
+        // }
+  
+        // &.kanata-call-btn {
+        //   background-color: #28a745;
+  
+        //   &:hover {
+        //     background-color: #1e7e34;
+        //   }
+        // }
+      }
+    }
+    @media (max-width: 768px) {
+        .kanata-info-container {
+          flex-direction: column; /* Stack content vertically for smaller screens */
+          align-items: flex-start;
+          height: auto;
+          gap: 8px; /* Add space between sections */
+        }
+      
+        .kanata-header,
+        .kanata-details,
+        .kanata-actions {
+          flex: unset; /* Remove flex-grow for stacked layout */
+          width: 100%; /* Ensure full width for each section */
+        }
+      
+        .kanata-actions {
+          justify-content: flex-start; /* Align buttons to the left */
+        }
+      }
+      
+  }
+  

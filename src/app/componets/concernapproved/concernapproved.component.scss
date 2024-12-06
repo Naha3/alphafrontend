@@ -1,0 +1,79 @@
+.status-box {
+    background-color: #f8f4e1; // Light yellow background
+    padding: 10px 20px;
+    border-radius: 8px;
+    height: 80px;
+    width: 250px; // Adjust based on your requirement
+    margin: 20px auto; // Center the box on screen
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .status-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; // Space between the icon and text
+  
+      .status-icon {
+        font-size: 24px;
+        color: #f4c542; // Yellow color for the icon
+        margin-bottom: 33px;
+      }
+  
+      .status-message {
+        .status-text {
+          font-size: 1.5rem; // Increased font-size for larger text
+          color: #f4c542; // Orange color for the status message
+          margin-bottom: 5px;
+          font-weight: 700;
+        }
+  
+        .status-timestamp {
+          font-size: 1rem;
+          color: #7f8c8d; // Grey color for the timestamp
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+  .statuss-box {
+    background-color: #d4f8d4; // Light green background
+    padding: 10px 20px;
+    border-radius: 8px;
+    height: 80px;
+    width: 250px; // Adjust based on your requirement
+    margin: 20px auto; // Center the box on screen
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .statuss-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; // Space between the icon and text
+  
+      .statuss-icon {
+        font-size: 24px;
+        color: #28a745; // Green color for the icon
+        margin-bottom: 33px;
+      }
+  
+      .statuss-message {
+        .statuss-text {
+          font-size: 1.5rem;
+          color: #28a745; // Green color for the status text
+          margin-bottom: 15px;
+          font-weight: 700;
+        }
+  
+        .statuss-timestamp {
+          font-size: 1rem;
+          color: #7f8c8d; // Grey color for the timestamp
+        }
+      }
+    }
+  }
+  
+  
