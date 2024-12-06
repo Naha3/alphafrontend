@@ -1,21 +1,21 @@
 .kanata-info-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     padding: 16px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 1439px;
+    // border-radius: 8px;
+    // width: 100%;
+    // max-width: 1439px;
     height: 72px;
     font-family: Arial, sans-serif;
-    justify-content: space-around;
-    align-items: center;
   
     .kanata-header {
       display: flex;
       align-items: center;
-      margin-bottom: 16px;
+    
   
       img {
         width: 50px;
@@ -31,62 +31,91 @@
     }
   
     .kanata-details {
-        display: flex;
-        justify-content: center;
+      flex: 1;
+      margin-left: 24px;
+     
+  
       .kanata-address {
         margin: 0;
-        // line-height: 1.5;
+        font-size: 14px;
         color: #555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+  
+        i {
+          font-size: 14px;
+          color: #555;
+        }
   
         .kanata-gst {
           color: #777;
-          font-size: 14px;
-        }
-      }
+          font-size: 13px;
   
-      .kanata-contact {
-        margin-top: 8px;
-        font-size: 16px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-  
-        .kanata-phone-icon {
-          margin-right: 4px;
+          i {
+            font-size: 13px;
+            color: #777;
+          }
         }
       }
     }
   
     .kanata-actions {
-      margin-top: 16px;
       display: flex;
-      gap: 8px;
+      gap: 12px;
+      background: none;
   
       button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         padding: 8px 16px;
         font-size: 14px;
-        color: #fff;
+        color: #777;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-        transition: background-color 0.3s;
+        // transition: background-color 0.3s;
   
-        &.kanata-email-btn {
-          background-color: #007bff;
-  
-          &:hover {
-            background-color: #0056b3;
-          }
+        i {
+          font-size: 14px;
         }
   
-        &.kanata-call-btn {
-          background-color: #28a745;
+        // &.kanata-email-btn {
+        //   background-color: #777;
   
-          &:hover {
-            background-color: #1e7e34;
-          }
-        }
+        
+        // }
+  
+        // &.kanata-call-btn {
+        //   background-color: #28a745;
+  
+        //   &:hover {
+        //     background-color: #1e7e34;
+        //   }
+        // }
       }
     }
+    @media (max-width: 768px) {
+        .kanata-info-container {
+          flex-direction: column; /* Stack content vertically for smaller screens */
+          align-items: flex-start;
+          height: auto;
+          gap: 8px; /* Add space between sections */
+        }
+      
+        .kanata-header,
+        .kanata-details,
+        .kanata-actions {
+          flex: unset; /* Remove flex-grow for stacked layout */
+          width: 100%; /* Ensure full width for each section */
+        }
+      
+        .kanata-actions {
+          justify-content: flex-start; /* Align buttons to the left */
+        }
+      }
+      
   }
   
