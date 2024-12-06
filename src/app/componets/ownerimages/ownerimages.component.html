@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="sub-container">
+
+        <div class="content">
+            <div class="images">
+                <div class="main-image">
+                    <img [src]="images[selectedImage]" alt="Vehicle" />
+                </div>
+                <div class="thumbnail-images">
+                    <button *ngFor="let image of images.slice(1); let i = index"
+                        [ngClass]="{'selected': selectedImage === i + 1}" (click)="selectImage(i + 1)"
+                        class="thumbnail">
+                        <img [src]="image" alt="Vehicle view {{ i + 1 }}" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="details">
+
+                <div class="header">
+                    <h1>Estimate #{{ estimateDetails.estimateNumber }}</h1>
+                    <button class="download-btn" (click)="handleDownload()">
+                        <span class="icon">↓</span>
+                        Download
+                    </button>
+                </div>
+
+                <div class="customer-details">
+                    <div class="customer-detail">
+                        <div class="detail">
+                            <div class="label">Customer Name</div>
+                            <div class="paragraph">{{ estimateDetails.customer.name }}</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Cell:</div>
+                            <div class="paragraph"> {{ estimateDetails.customer.cell }}</div>
+                        </div>
+                    </div>
+                    <div class="customer-detail">
+                        <div class="detail">
+                            <div class="label">Email:</div>
+                            <div class="paragraph">{{ estimateDetails.customer.email }}</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Service Advisor:</div>
+                            <div class="paragraph"> {{ estimateDetails.customer.serviceAdvisor }} </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vehicle-details">
+                    <div class="vehicle-detail">
+                        <div class="detail">
+                            <div class="label">Vehicle:</div>
+                            <div class="paragraph">{{ estimateDetails.vehicle.model }} </div>
+                        </div>
+
+                        <div class="detail">
+                            <div class="label">License Plate:</div>
+                            <div class="paragraph">{{ estimateDetails.vehicle.licensePlate }}</div>
+                        </div>
+                    </div>
+                    <div class="vehicle-detail">
+                        <div class="detail">
+                            <div class="label">VIN number:</div>
+                            <div class="paragraph">{{ estimateDetails.vehicle.vin }} </div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Odometer In: </div>
+                            <div class="paragraph"> {{ estimateDetails.vehicle.odometerIn}} </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
