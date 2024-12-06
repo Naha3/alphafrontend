@@ -11,15 +11,15 @@
         <span>
             <h2>{{ concern.title_name}}</h2>
         </span>
-        <div class="level">
-            <span class="level-1">{{concern.level}} </span>
-            <span class="level-concern">{{concern.concern}}</span>
-        </div>
+        <div *ngIf="concern.concern" class="level">
+            <span class="level-1">{{ concern.level }}</span>
+            <span class="level-concern">{{ concern.concern }}</span>
+          </div>
     </div>
     <p>{{ concern.description }}</p>
-    <div class="image">
+    <div *ngIf="concern.image" class="image">
         <img [src]="concern.image" alt="Concern Image" />
-    </div>
+      </div>
    
     <div>
         <h4>Service: {{ concern.service }}</h4>
