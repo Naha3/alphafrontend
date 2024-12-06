@@ -8,9 +8,18 @@ import { Component } from '@angular/core';
 })
 
 export class SubmissionComponent {
-
+  enteredId: number = 1; 
   
 
+  clickHere(){
+    this.enteredId = 2;
+  }
   
+
   
 }
+
+  
+
+  
+  

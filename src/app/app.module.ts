@@ -10,6 +10,10 @@ import { ConcernItemComponent } from './componets/concern-item/concern-item.comp
 import { EstimateComponent } from './componets/estimate/estimate.component';
 import { AttentionComponent } from './componets/attention/attention.component';
 import { SubmissionComponent } from './componets/submission/submission.component';
+import { FooterComponent } from './componets/footer/footer.component';
+import { ThankyouComponent } from './componets/thankyou/thankyou.component';
+import { ConcernapprovedComponent } from './componets/concernapproved/concernapproved.component';
+import { HeaderComponent } from './componets/header/header.component';
 
 
 
@@ -22,6 +26,10 @@ import { SubmissionComponent } from './componets/submission/submission.component
     AttentionComponent,
     EstimateComponent,
     SubmissionComponent,
+    FooterComponent,
+    ThankyouComponent,
+    ConcernapprovedComponent,
+    HeaderComponent,
   
     
   ],

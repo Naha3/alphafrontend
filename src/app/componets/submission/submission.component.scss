@@ -11,6 +11,7 @@
       text-align: left;
       padding: 8px;
       background-color: #ddd;
+      height: 23px;
   
       h3 {
         font-size: 28px;
@@ -62,18 +63,17 @@
     .warranty-section {
       max-width: 900px;
       margin: 20px auto;
-      padding: 20px;
+     
       background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border: 1px solid #ddd;
+      
+      opacity: 0.8;
   
       h3 {
         font-size: 20px;
         font-weight: bold;
         color: #444;
         margin-bottom: 15px;
-        border-bottom: 2px solid #ddd; /* Add a line beneath each header */
+        // border-bottom: 2px solid #ddd; /* Add a line beneath each header */
         padding-bottom: 5px;
       }
   
@@ -109,13 +109,11 @@
         margin: 0 0 10px;
       }
   
-      a {
+      span {
         color: #00B578;
         text-decoration: none;
-  
-        &:hover {
-          text-decoration: underline;
-        }
+        cursor: pointer;
+        
       }
     }
   }

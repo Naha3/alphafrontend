@@ -1,0 +1,79 @@
+.footer {
+    background-color: #fff; // White background for the footer
+    padding: 40px;
+    
+    display: flex;
+    justify-content: center; // Center horizontally
+    align-items: flex-start; // Align content to the top (default for flexbox)
+    height: auto; // Adjust height based on content, no full viewport height
+  
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 1200px;
+      max-width: 100%; // Ensure it doesn't overflow
+      height: auto; // Height based on content
+      border: 2px solid #ddd; // Light grey border around the div
+      padding: 10px; // Inner padding
+      border-radius: 8px; // Rounded corners
+      background-color: #fff; // White background for the content box
+  
+      @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px; // Adjust padding for smaller screens
+      }
+  
+      .footer-text {
+        width: 600px;
+  
+        h2 {
+          font-size: 1.8rem;
+          color: #333; // Darker text for heading
+        }
+  
+        p {
+          font-size: 16px;
+          color: #666; // Light grey text color
+          margin-top: 10px;
+        }
+      }
+  
+      .footer-button {
+        @media (max-width: 768px) {
+          align-items: center;
+          margin-top: 20px;
+        }
+  
+        .btn-sign-submit {
+          background-color: #28a745; // Green background
+          color: #fff; // White text
+          border: none;
+          border-radius: 5px;
+          padding: 12px 30px;
+          font-size: 1.1rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          width: 447.66px; // Fixed button width
+  
+          &:hover {
+            background-color: #218838; // Darker green on hover
+          }
+        }
+  
+        .footer-note {
+          margin-top: 15px;
+          font-size: 0.9rem;
+          color: #666;
+          text-align: center;
+  
+          .icon-secure {
+            margin-right: 5px;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
