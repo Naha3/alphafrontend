@@ -7,7 +7,10 @@ import { AttensionComponent } from './componets/attension/attension.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ConcernsListComponent } from './componets/concerns-list/concerns-list.component';
 import { ConcernItemComponent } from './componets/concern-item/concern-item.component';
-
+import { AttentionComponent } from './componets/attention/attention.component';
+import { SummeryComponent } from './componets/summery/summery.component';
+import { EstimateComponent } from './componets/estimate/estimate.component';
+import { SubmissionComponent } from './componets/submission/submission.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +18,14 @@ import { ConcernItemComponent } from './componets/concern-item/concern-item.comp
     AttensionComponent,
     ConcernsListComponent,
     ConcernItemComponent,
+    AttentionComponent,
+    SummeryComponent,
+    EstimateComponent,
+    SubmissionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     provideAnimationsAsync()

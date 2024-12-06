@@ -1,35 +1,103 @@
 <div class="concern-item">
-    <div class="title">
-        <span class="concern-tital">{{ concern.title }}
-
-        </span>
-        <span>
-            {{concern.title_description}}
-        </span>
-    </div>
-    <div class="title-name">
-        <span>
-            <h2>{{ concern.title_name}}</h2>
-        </span>
-        <div class="level">
-            <span class="level-1">{{concern.level}} </span>
-            <span class="level-concern">{{concern.concern}}</span>
+    <div class="concern-tital">
+        <div class="title">
+            <div class="concern-tital">{{ concern.title }}
+                <span class="tital-description">{{concern.title_description}}</span>
+            </div>
+        </div>
+        <div class="title-name">
+            <span>
+                <h2>{{ concern.title_name}}</h2>
+            </span>
+            <div *ngIf="concern.concern" class="level">
+                <span class="level-1">{{ concern.level }}</span>
+                <span class="level-concern">{{ concern.concern }}</span>
+            </div>
+        </div>
+        <p>{{ concern.description }}</p>
+        <div *ngIf="concern.image" class="image">
+            <img [src]="concern.image" alt="Concern Image" />
         </div>
     </div>
-    <p>{{ concern.description }}</p>
-    <div class="image">
-        <img [src]="concern.image" alt="Concern Image" />
-    </div>
-   
-    <div>
-        <h4>Service: {{ concern.service }}</h4>
-        <p>Labor Cost: ${{ concern.laborCost }}</p>
-        <p>Discount: -${{ concern.discount }}</p>
-        <p>Part Cost: ${{ concern.partCost }} x {{ concern.partQuantity }} units</p>
-        <p>Total: ${{ concern.total }}</p>
-    </div>
-    <div class="actions">
-        <button class="btn btn-secondary">Maybe Later</button>
-        <button class="btn btn-primary">Approve</button>
+    <div class="service-engine">
+        <div class="service-part">
+            <div class="sevices-name">
+                <span class="service-name-part">{{concern.service_part}}</span>
+
+                <span  class="service-name-service_note"> {{concern.service_note}} </span>
+            </div>
+
+
+            <div class="actions">
+                <span>
+                    Subtotal: ${{concern.partCost}}
+                </span>
+                <button class="btn btn-secondary">Maybe Later</button>
+                <button class="btn btn-primary">Approve</button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="services">
+            <div class="services-name">
+                <div class="service-left">
+                    <h4>Service:</h4> <span>{{ concern.service }}</span>
+                </div>
+                <div class="service-right">
+                    <div>{{concern.hours}} Hours</div>
+                    <div>${{concern.hour_cost}} / Hour</div>
+                    <div>${{concern.services_cost}}</div>
+                </div>
+            </div>
+
+            <div class="services-message">
+                <div class="services-message-name">
+                    <div class="service-left-message">
+                        {{concern.services_message}}
+                    </div>
+                    <div class="service-right-message">
+                    
+                    <span>Discount(-${{concern.discount_amount}})</span>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-name">
+                <div class="service-left">
+                    <h4>Service: {{ concern.service }}</h4>
+                </div>
+                <div class="service-right">
+                    <div>{{concern.hours}} Hours</div>
+                    <div>${{concern.hour_cost}} / Hour</div>
+                    <div>${{concern.services_cost}}</div>
+                </div>
+            </div>
+
+            <div class="services-name">
+                <div class="service-left">
+                    <h4>Service: {{ concern.service }}</h4>
+                </div>
+                <div class="service-right">
+                    <div>{{concern.hours}} Hours</div>
+                    <div>${{concern.hour_cost}} / Hour</div>
+                    <div>${{concern.services_cost}}</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="total-cost">
+            <div></div>
+            <div></div>
+            <div class="cost">
+                {{concern.total_cost}}
+            </div>
+        </div>
+
     </div>
 </div>

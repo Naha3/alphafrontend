@@ -1,15 +1,39 @@
+.container{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+
+  .sub-container{
+    width: 1296px; 
 .concerns-container {
+ 
+
+
+  .header {
     width: 1296px;
-    .header {
-        background-color: #ff3e3e;
-        width: 1296px;
-        height: 56px;
-        span {
-            color: white;
-            margin-left: 5px;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 22px;
-        }
-    }
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    // margin-top: 5px;
+    
+  }
+
+  .red-header {
+    background-color: #ff3e3e;
+  }
+  
+  /* Apply a yellow background when concern is not 'Needs Immediate Attention' */
+  .yellow-header {
+    background-color: #ffcc00;
+  }
 }
+}
+}
+
+  

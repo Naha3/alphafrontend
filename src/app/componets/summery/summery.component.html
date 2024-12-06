@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="sub-container">
+        <div class="header">
+            <div class="image"></div>
+            Summary
+        </div>
+        <div *ngFor="let summery of summeries" class="summery">
+
+            <div class="service-name">
+                <div>
+                    <span>{{ summery.serviceName }}</span>
+                </div>
+                <div class="">
+                    <span>{{ summery.Amount }}</span>
+                </div>
+            </div>
+            <div class="services-detail" *ngFor="let detail of summery.serviceDetails">
+                <div>
+                    <span>{{ detail.parts_1st }} </span>
+                </div>
+                <div>
+                    <span>${{ detail.cost }}</span>
+                </div>
+            </div>
+            <div class="summery-line">
+            </div>
+        </div>
+        <div class="fotter">
+            <div>
+                <h3>Notes</h3>
+            </div>
+            <div>
+                <p>
+                    Includes: The removal of component and all necessary components for access. Does not include: System
+                    diagnosis, testing, wheel alignment, or a vehicle road test. The disassembly of shock/strut and
+                    spring assembly. </p>
+            </div>
+
+        </div>
+    </div>
+</div>
