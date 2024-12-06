@@ -11,6 +11,7 @@ import { AttentionComponent } from './componets/attention/attention.component';
 import { SummeryComponent } from './componets/summery/summery.component';
 import { EstimateComponent } from './componets/estimate/estimate.component';
 import { SubmissionComponent } from './componets/submission/submission.component';
+import { OwnerimagesComponent } from './componets/ownerimages/ownerimages.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SubmissionComponent } from './componets/submission/submission.component
     AttentionComponent,
     SummeryComponent,
     EstimateComponent,
-    SubmissionComponent
+    SubmissionComponent,
+    OwnerimagesComponent
   ],
   imports: [
     BrowserModule,
