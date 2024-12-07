@@ -16,6 +16,7 @@ import { HeaderComponent } from './componets/header/header.component';
 import { FooterComponent } from './componets/footer/footer.component';
 import { ConcernapprovedComponent } from './componets/concernapproved/concernapproved.component';
 import { ThankyouComponent } from './componets/thankyou/thankyou.component';
+import { EsumateViewComponent } from './esumate-view/esumate-view.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ThankyouComponent } from './componets/thankyou/thankyou.component';
     HeaderComponent,
     FooterComponent,
     ConcernapprovedComponent,
-    ThankyouComponent
+    ThankyouComponent,
+    EsumateViewComponent
   ],
   imports: [
     BrowserModule,

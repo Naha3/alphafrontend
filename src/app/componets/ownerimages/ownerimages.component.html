@@ -10,7 +10,7 @@
                     <button *ngFor="let image of images.slice(1); let i = index"
                         [ngClass]="{'selected': selectedImage === i + 1}" (click)="selectImage(i + 1)"
                         class="thumbnail">
-                        <img [src]="image" alt="Vehicle view {{ i + 1 }}" />
+                        <img [src]="image"  />
                     </button>
                 </div>
             </div>

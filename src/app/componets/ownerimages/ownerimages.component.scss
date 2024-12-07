@@ -1,11 +1,14 @@
 .container {
     height: 100%;
     width: 100%;
+
     .sub-container {
         width: 1296px;
         height: 367px;
         margin-top: 96px;
         margin-left: 72px;
+        border: 1px solid black;
+        border-radius: 8px;
 
         .content {
             display: flex;
@@ -13,15 +16,17 @@
 
 
             .images {
+                border-radius: 8px;
 
                 .main-image {
-                    width: 395px;
+                    width: 355px;
                     height: 255px;
                     margin-bottom: 1rem;
-                    overflow: hidden;
-                    position: relative;
+                    // overflow: hidden;
+                    // position: relative;
 
                     img {
+                        padding: 10px;
                         object-fit: cover;
                         width: 100%;
                         height: 100%;
@@ -31,17 +36,18 @@
                 .thumbnail-images {
 
                     .thumbnail {
-                        width: 99px;
+                        width: 91.8px;
                         height: 84px;
-                        border: 2px solid transparent;
+                        // border: 1px solid transparent;
+                        background: none;
                         overflow: hidden;
                         cursor: pointer;
                         transition: border 0.3s ease;
 
                         img {
                             object-fit: cover;
-                            width: 100%;
-                            height: 100%;
+                            width: 80%;
+                            height: 80%;
                         }
 
                         &.selected {
@@ -65,7 +71,9 @@
                     // gap: 50px;
 
                     h1 {
-                        width:230px;
+
+                        width: 259px;
+                        margin-top: 40px;
                         height: 54px;
                         font-size: 1.5rem;
                         font-weight: bold;
@@ -74,6 +82,7 @@
                     .download-btn {
                         width: 160px;
                         height: 40px;
+                        margin-top: 37px;
                         background-color: transparent;
                         border: 1px solid #ccc;
                         // padding:8px;
@@ -94,9 +103,11 @@
 
                 .customer-details,
                 .vehicle-details {
+
                     .customer-detail,
                     .vehicle-detail {
                         display: flex;
+
                         .detail {
                             display: flex;
 
@@ -125,4 +136,3 @@
     margin: 1rem;
     width: 60px;
 }
-
