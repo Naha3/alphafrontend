@@ -1,49 +1,23 @@
 <div class="main-section shadow-box">
   <!-- Title and Content Combined -->
   <div class="title-section">
-    <h3>Submission History</h3>
+    <span>Submission History</span>
   </div>
-
   <div class="content-section">
-    <div class="history-item">
+    <div *ngFor="let item of historyDatas" class="history-item">
       <div class="history-info">
-        <p><strong>Oct 29, 2024 4:00 am</strong></p>
-        <p>Description: <b>N/A</b></p>
+        <div class="strong">{{ item.date }}</div>
+        <div class="description">Description: {{ item.description }}</div>
       </div>
       <div class="history-details">
-        <p>Approved: <b>1</b></p>
-        <p>Deferred for later: <b>2</b></p>
-        <p>Channel:<b>Online Portal </b> </p>
-        <p class="amount">$50.00</p>
-      </div>
-    </div>
-
-    <div class="history-item">
-      <div class="history-info">
-        <p><strong>Oct 29, 2024 4:00 am</strong></p>
-        <p>Description: <b>N/A</b></p>
-      </div>
-      <div class="history-details">
-        <p>Approved: <b>3</b></p>
-        <p>Deferred for later: <b>0</b></p>
-        <p>Channel: <b>Online Portal </b></p>
-        <p class="amount">$50.00</p>
-      </div>
-    </div>
-
-    <div class="history-item">
-      <div class="history-info">
-        <p><strong>Oct 29, 2024 4:00 am</strong></p>
-        <p>Description: <b>N/A</b></p>
-      </div>
-      <div class="history-details">
-        <p>Approved: <b>2</b></p>
-        <p>Deferred for later: <b>1</b></p>
-        <p>Channel: <b>Online Portal </b></p>
-        <p class="amount">$50.00</p>
+        <div>Approved: {{ item.approved }}</div>
+        <div>Deferred for later: {{ item.deferred }}</div>
+        <div>Channel: {{ item.channel }}</div>
+        <div class="amount">{{ item.amount }}</div>
       </div>
     </div>
   </div>
+  
   
 
   <!-- Disclaimer, Warranty Policy, and Thank You Section -->
