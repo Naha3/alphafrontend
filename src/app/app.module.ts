@@ -17,6 +17,9 @@ import { FooterComponent } from './componets/footer/footer.component';
 import { ConcernapprovedComponent } from './componets/concernapproved/concernapproved.component';
 import { ThankyouComponent } from './componets/thankyou/thankyou.component';
 import { EsumateViewComponent } from './esumate-view/esumate-view.component';
+import { SignatureAuthComponent } from './signature-auth/signature-auth.component';
+import { EstimateGalleryComponent } from './componets/estimate-gallery/estimate-gallery.component';
+import { InspectionResultsComponent } from './componets/inspection-results/inspection-results.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { EsumateViewComponent } from './esumate-view/esumate-view.component';
     FooterComponent,
     ConcernapprovedComponent,
     ThankyouComponent,
-    EsumateViewComponent
+    EsumateViewComponent,
+    SignatureAuthComponent,
+    EstimateGalleryComponent,
+    InspectionResultsComponent
   ],
   imports: [
     BrowserModule,
