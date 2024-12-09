@@ -1,3 +1,50 @@
+
+.inspection-container {
+    border: 1px solid #28a745; // Green border
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+  
+    .inspection-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      border-bottom: 1px solid #e0e0e0; // Divider line
+      &:last-child {
+        border-bottom: none; // Remove border for the last item
+      }
+  
+      .icon-and-title {
+        display: flex;
+        align-items: center;
+  
+        .icon {
+          font-size: 18px;
+          margin-right: 10px; // Spacing between the icon and title
+        }
+  
+        .title {
+          font-size: 16px;
+          font-weight: bold;
+          color: #333; // Dark text color
+        }
+      }
+  
+      .view-result-btn {
+        border: 1px solid #28a745; // Green border
+        background-color: #fff; // White background
+        color: #28a745; // Green text
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+  
+        &:hover {
+          background-color: #28a745; // Green background
+          color: #fff; // White text
+
 .container {
     padding: 1rem;
     max-width: 768px;
@@ -50,6 +97,7 @@
               color: #134e4a; /* Teal-700 */
             }
           }
+
         }
       }
     }
