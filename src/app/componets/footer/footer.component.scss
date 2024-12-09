@@ -77,3 +77,30 @@
     }
   }
   
+
+
+  .sign-submit-button {
+    width: 100%;
+    background-color: #00B87C;
+    color: white;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #00A06D;
+    }
+  
+    .arrow-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+  

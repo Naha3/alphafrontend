@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="header">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l-7-7 7-7m8 14l-7-7 7-7" />
+      </svg>
+      <h1>Sign and Authorize</h1>
+    </div>
+  
+    <div class="content">
+      <div class="info">
+        <p>Your signature is required for the approval process. Please sign here digitally.</p>
+        <div class="estimate">
+          <p>Estimate #: <span>22071335</span></p>
+          <p>Total: <span>$0.28</span></p>
+        </div>
+      </div>
+  
+      <div class="canvas-container">
+        <canvas
+          #canvasRef
+          width="800"
+          height="200"
+          class="canvas"
+          (mousedown)="startDrawing($event)"
+          (mousemove)="draw($event)"
+          (mouseup)="stopDrawing()"
+          (mouseleave)="stopDrawing()"
+          (touchstart)="startDrawing($event)"
+          (touchmove)="draw($event)"
+          (touchend)="stopDrawing()"
+        ></canvas>
+        <button class="clear-btn" (click)="clearCanvas()">Clear</button>
+      </div>
+  
+      <div class="signature">
+        <hr />
+        <p>Anas Siddiqui</p>
+      </div>
+  
+      <div class="checkbox-container">
+        <input type="checkbox" id="terms" />
+        <label for="terms">My signature, above, certifies that I approve payment of this invoice and that the charges appear reasonable.</label>
+      </div>
+  
+      <div class="actions">
+        <button class="btn cancel-btn">Cancel</button>
+        <button class="btn confirm-btn">Confirm Authorization</button>
+      </div>
+    </div>
+  </div>
+  
