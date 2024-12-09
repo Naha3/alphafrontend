@@ -1,8 +1,18 @@
 <div class="container">
     <div class="header">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="icon">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l-7-7 7-7m8 14l-7-7 7-7" />
-      </svg>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_116_12744)">
+        <path d="M14.8041 4.76904L17.723 1.85015L23.9965 8.12367L21.0776 11.0426L14.8041 4.76904Z" fill="white"/>
+        <path d="M13.6723 5.62219L8.40121 8.75804L5.30957 19.6644L11.3633 13.6241L11.3573 12.2065L13.7733 12.179L13.8009 14.6051L12.3659 14.6111L6.3036 20.6604L17.3239 17.4837L20.2469 12.1968L13.6723 5.62219Z" fill="white"/>
+        <path d="M5.30944 19.6648L4.81261 20.1616C4.43634 20.5379 3.93609 20.7451 3.40397 20.7451C2.87184 20.7451 2.37159 20.5379 1.99528 20.1616C1.24022 19.4066 1.21298 18.1975 1.93331 17.4092L2.88398 16.3687C4.11295 15.0236 4.06655 12.9609 2.77819 11.6725L0.994687 9.88904L0 10.8838L1.7835 12.6673C2.53856 13.4223 2.5658 14.6314 1.84547 15.4197L0.894797 16.4603C-0.334172 17.8053 -0.287766 19.8681 1.00059 21.1564C1.64255 21.7984 2.49609 22.1519 3.40402 22.1519C4.31194 22.1519 5.16544 21.7983 5.80739 21.1564L6.30356 20.6603L6.30361 20.6603L5.30944 19.6648Z" fill="white"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_116_12744">
+        <rect width="24" height="24" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>
+        
       <h1>Sign and Authorize</h1>
     </div>
   
@@ -29,23 +39,26 @@
           (touchmove)="draw($event)"
           (touchend)="stopDrawing()"
         ></canvas>
+        <div class="signature">
+          <hr />
+          <p>Anas Siddiqui</p>
+        </div>
         <button class="clear-btn" (click)="clearCanvas()">Clear</button>
       </div>
   
-      <div class="signature">
-        <hr />
-        <p>Anas Siddiqui</p>
-      </div>
-  
-      <div class="checkbox-container">
-        <input type="checkbox" id="terms" />
-        <label for="terms">My signature, above, certifies that I approve payment of this invoice and that the charges appear reasonable.</label>
-      </div>
-  
-      <div class="actions">
-        <button class="btn cancel-btn">Cancel</button>
-        <button class="btn confirm-btn">Confirm Authorization</button>
-      </div>
+      
+  <div class="footer">
+    <div class="checkbox-container">
+      <input type="checkbox" id="terms" />
+      <label for="terms">My signature, above, certifies that I approve payment of this invoice and that the charges appear reasonable.</label>
+    </div>
+
+    <div class="actions">
+      <button class="btn cancel-btn">Cancel</button>
+      <button class="btn confirm-btn">Confirm Authorization</button>
+    </div>
+  </div>
+      
     </div>
   </div>
   

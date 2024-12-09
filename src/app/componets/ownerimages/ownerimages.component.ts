@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { EstimateDetails } from './EstimateDetails/EstimateDetails.interface';
 
+
 @Component({
   selector: 'app-ownerimages',
   templateUrl: './ownerimages.component.html',
   styleUrl: './ownerimages.component.scss'
+
 })
 export class OwnerimagesComponent {
   selectedImage: number = 0;
