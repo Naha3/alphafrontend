@@ -17,6 +17,8 @@ import { FooterComponent } from './componets/footer/footer.component';
 import { ConcernapprovedComponent } from './componets/concernapproved/concernapproved.component';
 import { ThankyouComponent } from './componets/thankyou/thankyou.component';
 import { EsumateViewComponent } from './esumate-view/esumate-view.component';
+import { ButtonComponent } from './componets/button/button.component';
+import { InspectionResultsComponent } from './componets/inspection-results/inspection-results.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { EsumateViewComponent } from './esumate-view/esumate-view.component';
     FooterComponent,
     ConcernapprovedComponent,
     ThankyouComponent,
-    EsumateViewComponent
+    EsumateViewComponent,
+    ButtonComponent,
+    InspectionResultsComponent
   ],
   imports: [
     BrowserModule,
