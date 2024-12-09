@@ -12,7 +12,7 @@
     // text-align: left;
     // padding: 8px;
     background-color: #ddd;
-    width: 1296px;
+    // width: 1296px;
     height: 54px;
 
     border: 1px solid;
@@ -35,13 +35,14 @@
   /* Content Section with Border */
   .content-section {
     display: flex;
-    // flex-direction: column;
-    width: 1247px;
-    height: 74px;
+    flex-direction: column;
+    // width: 1247px;
+    // height: 74px;
 
     // justify-content: baseline;
     .history-item {
       display: flex;
+      margin-left: 20px;
       // justify-content: space-between;
       // align-items: flex-start;
       // padding: 10px 0;
@@ -50,8 +51,8 @@
 
       .history-info {
         display: flex;
-            width: 20%;
-            align-items: center;
+            // width: 20%;
+            // align-items: center;
             flex-direction: column;
             justify-content: center;
         .strong {
@@ -63,7 +64,7 @@
           // gap: 8px;
         }
         .description {
-          //
+        
         }
       }
 
@@ -95,21 +96,28 @@
 
   /* Warranty Section Styles */
   .warranty-section {
-    max-width: 900px;
+   
+    // max-width: 900px;
     // margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
+    // padding: 20px;
+    // background-color: #fff;
+    // border-radius: 5px;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    // border: 1px solid #ddd;
+    
 
     h3 {
       font-size: 20px;
-      font-weight: bold;
+      opacity: 0.8;
       color: #444;
       // margin-bottom: 15px;
-      border-bottom: 2px solid #ddd; /* Add a line beneath each header */
+      // border-bottom: 2px solid #ddd; /* Add a line beneath each header */
       padding-bottom: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 19.07px;
+      font-family: open sans;
+    
     }
 
     p {
@@ -131,12 +139,19 @@
   .info-section {
     // margin-top: 20px;
     opacity: 0.8;
+    margin-top: 55px;
+    font-family: open sans;
+    font-weight: 400;
+    font-size: 14px;
 
     h3 {
       // margin-top: 20px;
       font-size: 18px;
       color: #444;
-      font-weight: bold;
+      font-weight: 700;
+      font-family: open sans;
+      font-size: 14px;
+      line-height: 19.07px;
     }
 
     p {

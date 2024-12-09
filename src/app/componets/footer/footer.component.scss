@@ -1,11 +1,12 @@
 .footer {
     background-color: #fff; // White background for the footer
-    padding: 40px;
+    // padding: 40px;
+    width: 100%;
     
     display: flex;
     justify-content: center; // Center horizontally
-    align-items: flex-start; // Align content to the top (default for flexbox)
-    height: auto; // Adjust height based on content, no full viewport height
+    // align-items: flex-start; // Align content to the top (default for flexbox)
+    height: 114px; // Adjust height based on content, no full viewport height
   
     .footer-content {
       display: flex;
