@@ -1,0 +1,152 @@
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+
+  .card {
+    background: white;
+    width: 1296px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+
+      .header-left {
+        display: flex;
+        gap: 8px;
+        justify-content: baseline;
+        margin-left: 15px;
+
+        i {
+          margin-top: 8px;
+        }
+
+        h2 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-top: 5px;
+        }
+      }
+
+      .close-btn {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .content {
+      padding: 16px;
+
+      .description {
+       
+        margin-bottom: 16px;
+
+        .title {
+          color: #dc2626;
+          font-weight: bold;
+        }
+      }
+
+      .image-container {
+        height: 624px;
+        position: relative;
+        background: black;
+        border-radius: 8px;
+        margin-bottom: 16px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        .nav-btn {
+          
+          // display: flex;
+          // align-items: center;
+          // justify-content: space-between;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          color: black;
+          font-size: 24px;
+          cursor: pointer;
+          background-color: white;
+          border-radius: 50%;
+          
+
+          &.left {
+            left: 8px;
+          }
+
+          &.right {
+            right: 8px;
+          }
+
+          &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .thumbnails {
+        display: flex;
+        gap: 8px;
+
+        .thumbnail {
+          width: 48px;
+          height: 48px;
+          border: 2px solid transparent;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &.active {
+            border-color: #3b82f6;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .footer {
+      padding: 16px;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      .status {
+        color: #dc2626;
+        font-size: 14px;
+      }
+
+      .outline-btn {
+        background: none;
+        border: 1px solid #3b82f6;
+        color: #3b82f6;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background: #3b82f6;
+          color: white;
+        }
+      }
+    }
+  }
+}

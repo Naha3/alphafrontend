@@ -1,39 +1,39 @@
-.container{
-  width: 100%;
-  align-items: center;
-  justify-content: center;
+.container {
+  width: 75%;
+  // max-width: 1296px; // Use max-width for responsiveness
   display: flex;
-  justify-content: center;
+  // justify-content: center;
+  margin-left: 260px;
 
-  .sub-container{
-    width: 1296px; 
-.concerns-container {
- 
-
-
-  .header {
-    width: 1296px;
-    height: 56px;
+  .sub-container {
     display: flex;
     align-items: center;
-    padding: 0 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    // margin-top: 5px;
-    
-  }
+    width: 90%; // Allow for responsiveness
 
-  .red-header {
-    background-color: #ff3e3e;
-  }
-  
-  /* Apply a yellow background when concern is not 'Needs Immediate Attention' */
-  .yellow-header {
-    background-color: #ffcc00;
-  }
-}
-}
-}
+    .concerns-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
 
-  
+      .header {
+        width: 75%; // Adjust to be fully responsive
+        height: 56px;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+
+        &.red-header {
+          background-color: #ff3e3e;
+        }
+
+        &.yellow-header {
+          background-color: #ffcc00;
+        }
+      }
+    }
+  }
+}

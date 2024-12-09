@@ -1,12 +1,11 @@
 .container {
-    // height: 100%;
-    width: 100%;
+    width: 1296px;
+    height: 367px;
+display: flex;
+justify-content: center;
+    align-items: center;
 
     .sub-container {
-        width: 1296px;
-        height: 367px;
-        // margin-top: 96px;
-        // margin-left: 72px;
         border: 1px solid black;
         border-radius: 8px;
      
