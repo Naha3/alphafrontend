@@ -1,46 +1,63 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+// import { throttle } from 'lodash';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
-  
-  footerVisible: boolean = true;
-  endButtonVisible: boolean = false;
+export class FooterComponent implements OnInit, AfterViewInit, OnDestroy {
+  showFooter: boolean = true;
 
   constructor() {}
 
-  ngOnInit(): void {
-    // Initial checks to hide or show footer and button on page load
-    // this.checkScrollPosition();
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    // Listen for the scroll event after the component view has initialized
+    window.addEventListener('scroll', this.onScroll.bind(this));
   }
 
-  // @HostListener('window:scroll', ['$event'])
-  // onScroll(event: Event): void {
-  //   this.checkScrollPosition();
+  ngOnDestroy(): void {
+    // Cleanup the event listener when the component is destroyed to avoid memory leaks
+    window.removeEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  onScroll(): void {
+    // Get current scroll position, window height, and document height
+    const windowHeight = window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const documentHeight = document.body.offsetHeight;
+  
+    // Log the values to the console
+    console.log('Window Height:', windowHeight);
+    console.log('Scroll Position:', scrollPosition);
+    console.log('Document Height:', documentHeight);
+  
+    // Check if the user has scrolled to the bottom of the page
+    if ((windowHeight + scrollPosition) >= documentHeight) {
+      console.log('User has reached the bottom');
+      this.showFooter = false;
+    } else {
+      this.showFooter = true;
+    }
+  }
+  
+
+  // private onScrollThrottled = throttle(this.onScroll.bind(this), 100);
+
+  // ngAfterViewInit(): void {
+  //   window.addEventListener('scroll', this.onScrollThrottled);
   // }
 
-  // private checkScrollPosition(): void {
-  //   const footer = document.getElementById('footer');
-  //   const endButton = document.getElementById('endButton');
-  //   const documentHeight = document.documentElement.scrollHeight;
-  //   const viewportHeight = window.innerHeight;
-  //   const scrollPosition = window.scrollY + viewportHeight;
+  // ngOnDestroy(): void {
+  //   window.removeEventListener('scroll', this.onScrollThrottled);
+  // }
 
-  //   // Show footer when scrolled 100px from the top
-  //   if (window.scrollY > 100) {
-  //     this.footerVisible = true;
+  // onScroll(): void {
+  //   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+  //     this.showFooter = false;
   //   } else {
-  //     this.footerVisible = false;
-  //   }
-
-  //   // Show "Sign and Submit" button when reaching the end of the page
-  //   if (scrollPosition >= documentHeight) {
-  //     this.endButtonVisible = true;
-  //   } else {
-  //     this.endButtonVisible = false;
+  //     this.showFooter = true;
   //   }
   // }
 }
