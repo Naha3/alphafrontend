@@ -5,35 +5,26 @@
 
   .sub-container {
     display: flex;
-    // flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    // padding: 16px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    // border-radius: 8px;
     width: 100%;
     height: 100%;
-    // max-width: 1439px;
-    // height: 72px;
     font-family: Arial, sans-serif;
 
     .kanata-header {
       display: flex;
       align-items: center;
-      width: 276px;
+      // width: 276px;
       height: 33.49px;
-      // margin-left: 72px;
-      // margin-top: 19px;
 
       img {
         width: 80px;
         height: 33.49px;
-        // margin-right: 12px;
       }
 
       .kanata-title {
-        // font-size: 20px;
         font-weight: 400;
         // color: #333;
         width: 187px;
@@ -60,30 +51,7 @@
       line-height: 9.3px;
       opacity: 0.7;
 
-      // .kanata-address {
-      //   margin: 0;
-      //   font-size: 14px;
-      //   color: #555;
-      //   display: flex;
-      //   align-items: center;
-      //   justify-content: center;
-      //   gap: 8px;
 
-      //   i {
-      //     font-size: 14px;
-      //     color: #555;
-      //   }
-
-      //   .kanata-gst {
-      //     color: #777;
-      //     font-size: 13px;
-
-      //     i {
-      //       font-size: 13px;
-      //       color: #777;
-      //     }
-      //   }
-      // }
     }
 
     .kanata-actions {
@@ -125,27 +93,6 @@
       }
     }
 
-    // @media (max-width: 768px) {
-    //   .kanata-info-container {
-    //     flex-direction: column; /* Stack content vertically for smaller screens */
-    //     align-items: flex-start;
-    //     height: auto;
-    //     gap: 8px; /* Add space between sections */
-    //   }
-
-    //   .kanata-header,
-    //   .kanata-details,
-    //   .kanata-actions {
-    //     flex: unset; /* Remove flex-grow for stacked layout */
-    //     width: 100%; /* Ensure full width for each section */
-    //   }
-
-    //   .kanata-actions {
-    //     justify-content: flex-start; /* Align buttons to the left */
-    //   }
-    // }
-
-    // }
     @media (max-width: 980px) {
       .fas{
         margin-top: 0px;

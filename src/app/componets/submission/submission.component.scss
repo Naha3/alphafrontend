@@ -4,16 +4,19 @@
   background-color: #fff;
   border-radius: 5px;
   display: flex;
-  // align-items: center;
-  padding: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
   .sub-container {
     width: 94%;
-
     .title-section {
       display: flex;
       background-color: #ddd;
       height: 54px;
       border: 1px solid;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      // border-radius: 8px;
       align-items: center;
       padding-left: 14px;
 
@@ -35,7 +38,8 @@
       .history-item {
         display: flex;
         margin-left: 20px;
-        width: 1247px;
+        height: 74px;
+        // width: 1247px;
         border-bottom: 1px solid #eee;
 
         .history-info {
@@ -51,6 +55,7 @@
         }
 
         .history-details {
+          border-radius: 8px;
           display: flex;
           width: 100%;
           align-items: center;
