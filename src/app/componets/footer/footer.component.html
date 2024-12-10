@@ -1,34 +1,37 @@
-<footer class="footer">
+<!-- Footer Section -->
+<footer class="footer" id="footer" *ngIf="showFooter">
     <div class="footer-content">
-        <div class="footer-text">
-            <div>
-                <h2>Let’s Approve Your Repairs</h2>
-            </div>
-            <div>
-                <p>
-                Our expert recommendations are designed to keep your vehicle safe, reliable, and running smoothly.
-                Approve today to enjoy worry-free driving.
-            </p>
-            </div>
-            
+      <div class="footer-text">
+        <div>
+          <h2>Let’s Approve Your Repairs</h2>
         </div>
-        <div class="footer-button">
-            <button class="btn-sign-submit">
-                Sign and Submit →
-            </button>
-            <p class="footer-note">
-                <span class="icon-secure">🔒</span> Submitting is fast and secure.
-            </p>
+        <div>
+          <p>
+            Our expert recommendations are designed to keep your vehicle safe, reliable, and running smoothly.
+            Approve today to enjoy worry-free driving.
+          </p>
         </div>
+      </div>
+      <div class="footer-button">
+        <button class="btn-sign-submit">
+          Sign and Submit →
+        </button>
+        <p class="footer-note">
+          <span class="icon-secure">
+            <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.245 2.33008L6.405 0.100078L6.33 0.0700784C6.11344 0.015052 5.88656 0.015052 5.67 0.0700784L5.595 0.100078L0.754998 2.33008C0.526386 2.43534 0.334871 2.60715 0.205515 2.82304C0.076158 3.03893 0.014984 3.28885 0.0299977 3.54008L0.199998 6.38008C0.296468 8.01354 0.855342 9.58592 1.81145 10.9138C2.76755 12.2418 4.08147 13.2705 5.6 13.8801C5.72726 13.9374 5.86544 13.9664 6.005 13.9651C6.13766 13.9671 6.26913 13.9398 6.39 13.8851C7.91039 13.277 9.22641 12.2489 10.1844 10.9209C11.1423 9.59284 11.7027 8.01967 11.8 6.38508L11.97 3.54508C11.986 3.29302 11.9254 3.04202 11.7959 2.82513C11.6665 2.60824 11.4744 2.43565 11.245 2.33008ZM8.625 5.83008L5.955 8.83008C5.91156 8.87979 5.85871 8.9204 5.7995 8.94958C5.74028 8.97875 5.67588 8.99592 5.61 9.00008H5.585C5.45936 9.001 5.33797 8.95459 5.245 8.87008L3.41 7.18008C3.31253 7.0899 3.25488 6.96471 3.24972 6.83202C3.24456 6.69934 3.29232 6.57004 3.3825 6.47258C3.47267 6.37511 3.59787 6.31746 3.73055 6.3123C3.86323 6.30714 3.99253 6.3549 4.09 6.44508L5.55 7.79008L7.875 5.17008C7.96424 5.07716 8.08591 5.02228 8.21463 5.01688C8.34336 5.01148 8.4692 5.05597 8.56591 5.14108C8.66263 5.22619 8.72276 5.34536 8.73377 5.47372C8.74478 5.60208 8.70581 5.72974 8.625 5.83008Z" fill="black" fill-opacity="0.64"/>
+            </svg>
+          </span>
+          Submitting is fast and secure.
+        </p>
+      </div>
     </div>
-</footer>
-
-
-<div class="button-container">
+  </footer>
+  
+  <!-- Button Container (initially hidden) -->
+  <div class="button-container" id="buttonContainer" *ngIf="!showFooter">
     <button class="sign-submit-btn">
       Sign and Submit
       <span class="arrow">➤</span>
     </button>
   </div>
-  
-  
