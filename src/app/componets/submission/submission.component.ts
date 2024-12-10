@@ -9,6 +9,12 @@ import { HistoryItem } from './submission.interface';
 })
 
 export class SubmissionComponent {
+
+  isWarrantyVisible: boolean = false;
+
+  showWarrantySection(): void {
+    this.isWarrantyVisible = true;
+  }
 historyDatas: HistoryItem[] = [
     {
       date: "Oct 29, 2024 4:00 am",

@@ -13,7 +13,7 @@
       justify-content: space-around;
       align-items: center;
       width: 1200px;
-      max-width: 100%; // Ensure it doesn't overflow
+      max-width: 94%; // Ensure it doesn't overflow
       height: auto; // Height based on content
       border: 2px solid #ddd; // Light grey border around the div
       padding: 10px; // Inner padding
@@ -30,14 +30,19 @@
         width: 600px;
   
         h2 {
-          font-size: 1.8rem;
+          margin-top: 10px;
+          font-size: 16px;
           color: #333; // Darker text for heading
+          font-weight: 700;
+          
         }
   
         p {
-          font-size: 16px;
+          font-size: 14px;
           color: #666; // Light grey text color
-          margin-top: 10px;
+          // margin-top: 10px;
+          font-weight: 400;
+          line-height: 19.7px;
         }
       }
   
@@ -65,9 +70,12 @@
   
         .footer-note {
           margin-top: 15px;
-          font-size: 0.9rem;
+          font-size: 13px;
           color: #666;
           text-align: center;
+          line-height: 17.7px;
+          font-weight: 400;
+
   
           .icon-secure {
             margin-right: 5px;
@@ -79,29 +87,36 @@
   }
   
 
-
-  .sign-submit-button {
-    width: 100%;
-    background-color: #00B87C;
-    color: white;
-    font-weight: 500;
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
+  .button-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    align-items: center;
+    background-color: #f5f5f5; // Background color similar to your image
+    padding: 10px;
   
-    &:hover {
-      background-color: #00A06D;
-    }
+    .sign-submit-btn {
+        width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #28a745; // Green color for the button
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
   
-    .arrow-icon {
-      width: 1.25rem;
-      height: 1.25rem;
+      
+  
+      .arrow {
+        margin-left: 10px;
+        font-size: 18px;
+      }
     }
   }
+  
   
