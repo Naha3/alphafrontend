@@ -1,5 +1,6 @@
 .container {
     width: 100%;
+    height: auto;
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -21,7 +22,7 @@
 
 .images {
     border-radius: 8px;
-    width: 30%;
+    // width: 30%;
 }
 
 .main-image {
@@ -128,9 +129,17 @@
         display: flex;
         flex-direction: column;
     }
-
+.images{
+    .thumbnail-images{
+        width: auto;
+    }
+}
     .details {
         order: 1;
+    }
+    .thumbnail-images{
+        display: flex;
+        flex-direction: row;
     }
 
     .customer-details,
