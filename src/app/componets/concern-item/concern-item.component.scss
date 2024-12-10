@@ -3,8 +3,8 @@
     width: 94%; // Maintain responsiveness
     max-width: 1296px;
     display: flex;
-    margin-left: auto; // Center align
-    margin-right: auto;
+    // margin-left: auto; // Center align
+    // margin-right: auto;
     flex-direction: column;
   
     .concern-tital {
@@ -21,18 +21,21 @@
       }
   
       .title-name {
+        width: 100%;
         padding-left: 12px;
         display: flex;
         align-items: baseline;
+        gap: 20px;
   
         .level {
           margin-top: 21.5px;
-          margin-left: 25px;
+          // margin-left: 25px;
   
           .level-1 {
             border: 1px solid #1677ff;
             border-radius: 4px;
             padding: 5px;
+            margin-left: 10px;
             color: #1677ff;
             background-color: #eaf1fb;
             width: 55px;
@@ -78,7 +81,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-right: 30px;
+        // margin-right: 30px;
   
         .sevices-name {
           display: flex;
@@ -139,7 +142,7 @@
       max-width: 1245px;
       border: none;
       border-top: 1px solid #cecdcd;
-      margin: 20px 0;
+      // margin: 20px 0;
   
       .services-name {
         margin-top: 8px;
@@ -212,17 +215,18 @@
     }
   
     .total-cost {
-      width: 24%;
+      width: 28%;
       height: 1px;
       background-color: #c7c6c6;
       float: right;
+
   
       .cost {
         height: 30px;
         display: flex;
         justify-content: flex-end;
         margin-bottom: 5px;
-  
+        margin-top: 5px;
         font-family: "Open Sans", sans-serif;
         font-weight: 400;
         font-size: 16px;

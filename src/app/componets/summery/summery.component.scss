@@ -5,6 +5,7 @@
     border-radius: 8px;
     display: flex;
     justify-content: center;
+    margin-top: 10PX;
 
     .sub-container {
         // height: 833px;
@@ -22,6 +23,8 @@
             font-size: 24px;
             display: flex;
             gap: 8px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
 
         .summery {
