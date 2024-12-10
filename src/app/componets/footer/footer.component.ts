@@ -28,15 +28,15 @@ export class FooterComponent implements OnInit, AfterViewInit, OnDestroy {
     const scrollPosition = window.scrollY;
     const documentHeight = document.body.offsetHeight;
   
-    // Log the values to the console
-    console.log('Window Height:', windowHeight);
-    console.log('Scroll Position:', scrollPosition);
-    console.log('Document Height:', documentHeight);
+    // // Log the values to the console
+    // console.log('Window Height:', windowHeight);
+    // console.log('Scroll Position:', scrollPosition);
+    // console.log('Document Height:', documentHeight);
   
     // Check if the user has scrolled to the bottom of the page
     if ((windowHeight + scrollPosition) >= documentHeight) {
       console.log('User has reached the bottom');
-      this.showFooter = false;
+      this.showFooter = true;
     } else {
       this.showFooter = true;
     }
