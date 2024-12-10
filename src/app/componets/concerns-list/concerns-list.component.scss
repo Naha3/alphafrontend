@@ -1,33 +1,25 @@
 .container {
-  max-width: 1296px; 
+  // max-width: 1296px; 
   width: 100%; 
   display: flex;
     align-items: center;
     justify-content: center;
 
   .sub-container {
-    width: 92%; // 
-    max-width: 1290px; 
-    height: 1192px;
+    width: 90%; 
     display: flex;
     flex-direction: column;
-    
     border: 1px solid red;
     border-radius: 8px;
-    // align-items: center; 
 
     .concerns-container {
-      // width: 100%; 
-      // max-width: 1296px;
-      // margin-left: 0; 
       display: flex;
       flex-direction: column;
-      align-items: center; 
+      // align-items: center; 
       
     border-radius: 8px;
 
       .header {
-        width: 100%;
         height: 56px;
         display: flex;
         align-items: center; 
@@ -39,9 +31,7 @@
         font-size: 16px;
 
         &.red-header {
-          background-color: #ff3e3e;
-          width: 100%; 
-          // margin-left: 0; 
+          background-color: #ff3e3e; 
           display: flex;
           justify-content: start;
           gap: 5px;
@@ -49,7 +39,6 @@
 
         &.yellow-header {
           background-color: #ffcc00;
-          width: 100%; 
           display: flex;
           justify-content: start;
           gap: 5px;
