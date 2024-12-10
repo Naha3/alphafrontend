@@ -1,123 +1,149 @@
 .container {
-    /* max-width: 1296px; */
     width: 100%;
-    /* height: 367px; */
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .sub-container {
+}
+
+.sub-container {
     border: 1px solid black;
     border-radius: 8px;
     display: flex;
     width: 90%;
-  }
-  
-  .content {
+}
+
+.content {
     display: flex;
     gap: 2rem;
     width: 100%;
-  }
-  
-  .images {
+}
+
+.images {
     border-radius: 8px;
-    width: 40%;
-  
-    .main-image {
-      height: 255px;
-      margin-bottom: 1rem;
-  
-      img {
-        padding: 10px;
-        object-fit: cover;
-        height: 100%;
-      }
-    }
-  
-    .thumbnail-images {
-  
-      .thumbnail {
-        height: 84px;
-        background: none;
-        overflow: hidden;
-        cursor: pointer;
-        transition: border 0.3s ease;
-  
-        img {
-          object-fit: cover;
-          height: 80%;
-        }
-  
-        &.selected {
-          border-color: #007bff;
-        }
-      }
-    }
-  }
-  
-  .details {
+    width: 30%;
+}
+
+.main-image {
+    height: 255px;
+    margin-bottom: 1rem;
+}
+
+.main-image img {
+    padding: 10px;
+    object-fit: cover;
+    height: 100%;
+}
+
+.thumbnail-images {
+}
+
+.thumbnail {
+    height: 74px;
+    background: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.thumbnail img {
+    object-fit: cover;
+    height: 80%;
+}
+
+.selected {
+    border-color: #007bff;
+}
+
+.details {
     display: flex;
     flex-direction: column;
     height: 144px;
     width: 70%;
-  
-    .header {
-      display: flex;
-      gap: 50px;
-  
-      h1 {
-        margin-top: 40px;
-        height: 54px;
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-  
-      .download-btn {
-        width: 160px;
-        height: 40px;
-        margin-top: 37px;
-        background-color: transparent;
-        border: 1px solid #ccc;
-        cursor: pointer;
-        font-size: 1rem;
-  
-        .icon {
-          margin-right: 0.5rem;
-          font-size: 1.2rem;
-        }
-  
-        &:hover {
-          background-color: #f0f0f0;
-        }
-      }
+}
+
+.header {
+    display: flex;
+    gap: 50px;
+}
+
+.header h1 {
+    margin-top: 40px;
+    height: 54px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.download-btn {
+    width: 160px;
+    height: 40px;
+    margin-top: 37px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.download-btn .icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.download-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.customer-details,
+.vehicle-details {
+}
+
+.customer-detail,
+.vehicle-detail {
+    display: flex;
+}
+
+.detail {
+    display: flex;
+    align-items: flex-end;
+}
+
+.label {
+    width: 140px;
+    font-size: 0.875rem;
+    color: #777;
+}
+
+.paragraph {
+    font-size: 1rem;
+    width: 200px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+    .content {
+        flex-direction: column;
     }
-  
+
+    .sub-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details {
+        order: 1;
+    }
+
     .customer-details,
     .vehicle-details {
-  
-      .customer-detail,
-      .vehicle-detail {
-        display: flex;
-        // justify-content: space-around;
-  
-        .detail {
-          display: flex;
-          align-items: flex-end;
-          .label {
-            width: 140px;
-            font-size: 0.875rem;
-            color: #777;
-          }
-  
-          .paragraph {
-            font-size: 1rem;
-            width: 200px;
-            margin-top: 1rem;
-          }
-        }
-      }
+        flex-direction: column;
     }
-  }
-  
+
+    .customer-detail,
+    .vehicle-detail {
+        flex-direction: column;
+    }
+
+    .detail {
+        flex-direction: column;
+    }
+}
