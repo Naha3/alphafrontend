@@ -1,6 +1,6 @@
 .main-section {
   width: 100%;
-  max-width: 1296px;
+  // max-width: 1296px;
   background-color: #fff;
   border-radius: 5px;
   display: flex;
@@ -8,15 +8,16 @@
   justify-content: center;
   margin-top: 10px;
   .sub-container {
-    width: 94%;
+    width: 90%;
+
+    
     .title-section {
       display: flex;
       background-color: #ddd;
       height: 54px;
       border: 1px solid;
       border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-      // border-radius: 8px;
+    border-top-right-radius: 8px;
       align-items: center;
       padding-left: 14px;
 
@@ -39,6 +40,7 @@
         display: flex;
         margin-left: 20px;
         height: 74px;
+        height: 74PX;
         // width: 1247px;
         border-bottom: 1px solid #eee;
 
@@ -56,6 +58,9 @@
 
         .history-details {
           border-radius: 8px;
+
+
+  border-radius: 8px;
           display: flex;
           width: 100%;
           align-items: center;

@@ -1,10 +1,8 @@
 .concern-item {
     padding: 1rem;
-    width: 94%; // Maintain responsiveness
-    max-width: 1296px;
+    margin-bottom: 20px;
+    width: 96.8%; 
     display: flex;
-    // margin-left: auto; // Center align
-    // margin-right: auto;
     flex-direction: column;
   
     .concern-tital {
@@ -28,14 +26,12 @@
         gap: 20px;
   
         .level {
-          margin-top: 21.5px;
-          // margin-left: 25px;
-  
+          // margin-top: 21.5px;
           .level-1 {
             border: 1px solid #1677ff;
             border-radius: 4px;
             padding: 5px;
-            margin-left: 10px;
+            // margin-left: 10px; 
             color: #1677ff;
             background-color: #eaf1fb;
             width: 55px;
@@ -45,7 +41,7 @@
           .level-concern {
             width: 222px;
             height: 24px;
-            margin-left: 10px;
+            // margin-left: 10px;
             border: 1px solid #ff3e3e;
             border-radius: 4px;
             padding: 5px;
@@ -74,8 +70,8 @@
   
     .service-engine {
       width: 100%; // Adjust width to fit parent
-      max-width: 1245px;
-      padding-left: 12px;
+      // max-width: 1245px;
+      // padding-left: 12px;
   
       .service-part {
         display: flex;
@@ -108,7 +104,8 @@
           justify-content: flex-end;
           gap: 10px;
           align-items: baseline;
-  
+          margin-right: 10px;
+          margin-bottom: 10px;
           span {
             width: 100px;
             height: 27px;
@@ -139,9 +136,11 @@
   
     .services {
       width: 100%;
-      max-width: 1245px;
+      // max-width: 1245px;
       border: none;
       border-top: 1px solid #cecdcd;
+      padding-right: 10px;
+    
       // margin: 20px 0;
   
       .services-name {
@@ -182,7 +181,7 @@
   
     .services-message {
       width: 100%;
-      max-width: 1245px;
+      // max-width: 1245px;
   
       .services-message-name {
         display: flex;
