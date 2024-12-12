@@ -111,6 +111,12 @@
 }
 
 
+.thumbnail img {
+    object-fit: cover;
+    height: 90%;
+}
+
+
 .selected {
     border-color: #007bff;
 }
@@ -130,7 +136,149 @@
 }
 
 
+
+
 @media (max-width: 500px) {
+
+
+  .container{
+    // border: 1px solid;
+  }
+  /* Show header-1 on mobile */
+  .header-1 {
+      display: block; /* Ensure it's visible on mobile */
+  }
+  .customer-detail, .vehicle-detail{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Hide the header inside .details (for larger screens) */
+  .header {
+      display: none; /* Hide this on mobile */
+  }
+
+  /* Stack the sub-container elements vertically */
+  .sub-container {
+      width: 90%;
+      display: flex;
+      
+      
+      border: none;
+      flex-direction: column;
+    
+  }
+
+  /* For the content section, change the flex-direction to column */
+  .content {
+      flex-direction: column;
+      gap: 1rem; /* Reduce gap for mobile */
+  }
+
+  /* Show estimate and download button first (header-1 should come first) */
+  .header-1 {
+      order: -1; /* Place it first */
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+  }
+
+  /* Show images after the header */
+  .images {
+      order: 0; /* Show images second */
+      width: 90%;
+  }
+
+  /* Show other details last */
+  .details {
+      order: 1; /* Show other details last */
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    
+  }
+
+  /* Adjust main image height for mobile */
+  .main-image {
+      // height: 200px;
+      margin-bottom: 1rem;
+  }
+
+  .main-image img {
+      // padding: 5px; /* Reduce padding on mobile */
+      height: 100%;
+      width: 305px;
+  }
+  
+  /* Adjust thumbnail size for mobile */
+  .thumbnail {
+      height: 60px; /* Reduce thumbnail height */
+      margin-left: 10px;
+  }
+
+  .thumbnail img {
+      height: 83%; /* Adjust thumbnail image size */
+  }
+
+  /* Adjust download button size */
+  .download-btn {
+      width: 140px; /* Adjust width of download button */
+      height: 35px; /* Adjust height of download button */
+      // margin-bottom: 40px;
+  }
+
+  /* Adjust header font size for mobile */
+  .header-1 h1 {
+      font-size: 1.2rem; /* Adjust font size for header */
+      margin-top: 0; /* Remove margin-top for compact view */
+  }
+
+  /* Adjust font size for labels and paragraphs on mobile */
+  .label {
+      font-size: 0.75rem; /* Smaller label font */
+  }
+
+  .paragraph {
+      font-size: 0.875rem; /* Smaller paragraph font */
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+/* For larger screens, hide header-1 */
+@media (min-width: 501px) {
+  .header-1 {
+      display: none; /* Hide header-1 on large screens */
+  }
+
+  /* Ensure the header in .details is visible on larger screens */
+  .header {
+      display: flex; /* Show the header inside .details */
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
     .content {
         flex-direction: column;
     }
@@ -169,3 +317,4 @@
         flex-direction: column;
     }
 }
+
