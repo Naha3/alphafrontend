@@ -5,103 +5,88 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.sub-container {
-    border: 1px solid black;
-    border-radius: 8px;
-    display: flex;
-    width: 90%;
-}
 
-.content {
-    display: flex;
-    gap: 2rem;
-    width: 100%;
-}
+    .sub-container {
+        border: 1px solid black;
+        border-radius: 8px;
+        display: flex;
+        width: 90%;
 
-.images {
-    border-radius: 8px;
-    // width: 30%;
-}
 
-.main-image {
-    height: 255px;
-    margin-bottom: 1rem;
-}
+        .content {
+            display: flex;
+            gap: 2rem;
+            width: 100%;
 
-.main-image img {
-    padding: 10px;
-    object-fit: cover;
-    height: 100%;
-}
+            .images {
+                border-radius: 8px;
 
-.thumbnail-images {
-}
+                // width: 30%;
+                .main-image {
+                    height: 255px;
 
-.thumbnail {
-    height: 74px;
-    background: none;
-    overflow: hidden;
-    cursor: pointer;
-    transition: border 0.3s ease;
-}
+                    // margin-bottom: 1rem;
+                    img {
+                        padding: 10px;
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
 
-.thumbnail img {
-    object-fit: cover;
-    height: 90%;
-}
+                .thumbnail {
+                    height: 74px;
+                    background: none;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: border 0.3s ease;
 
-.selected {
-    border-color: #007bff;
-}
+                    img {
+                        object-fit: cover;
+                        height: 80%;
+                    }
+                }
+            }
 
-.details {
-    display: flex;
-    flex-direction: column;
-    height: 144px;
-    width: 70%;
-}
+            .details {
+                height: 144px;
 
-.header {
-    display: flex;
-    gap: 50px;
-}
+                // width: 70%;
+                .header {
+                    display: flex;
+                    gap: 50px;
+                    margin-top: 50px;
 
-.header h1 {
-    margin-top: 40px;
-    height: 54px;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+                    .header h1 {
+                        height: 54px;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
 
-.download-btn {
-    width: 160px;
-    height: 40px;
-    margin-top: 37px;
-    background-color: transparent;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    font-size: 1rem;
-}
+                    .download-btn {
+                        width: 160px;
+                        height: 40px;
+                        background-color: transparent;
+                        border: 1px solid #ccc;
+                        cursor: pointer;
+                        font-size: 1rem;
+                       align-items: center;
+                       justify-content: center;
+                       .icon {
+                        margin-top: 5px;
+                        margin-right: 0.5rem;
+                        font-size: 1.2rem;
+                    }
+                    }
+                }
 
-.download-btn .icon {
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.download-btn:hover {
-    background-color: #f0f0f0;
-}
-
-.customer-details,
+                .customer-details,
 .vehicle-details {
-}
 
 .customer-detail,
 .vehicle-detail {
     display: flex;
-}
+
 
 .detail {
     display: flex;
@@ -119,10 +104,42 @@
     width: 200px;
     margin-top: 1rem;
 }
+}}
+            }
+        }
+    }
+}
+
+
+.thumbnail img {
+    object-fit: cover;
+    height: 90%;
+}
+
+
+.selected {
+    border-color: #007bff;
+}
+
+
+
+
+
+
+
+
+
+.download-btn 
+
+.download-btn:hover {
+    background-color: #f0f0f0;
+}
+
 
 
 
 @media (max-width: 500px) {
+
 
   .container{
     // border: 1px solid;
@@ -261,3 +278,43 @@
   
   
   
+
+    .content {
+        flex-direction: column;
+    }
+
+    .sub-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .images {
+        .thumbnail-images {
+            width: auto;
+        }
+    }
+
+    .details {
+        order: 1;
+    }
+
+    .thumbnail-images {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .customer-details,
+    .vehicle-details {
+        flex-direction: column;
+    }
+
+    .customer-detail,
+    .vehicle-detail {
+        flex-direction: column;
+    }
+
+    .detail {
+        flex-direction: column;
+    }
+}
+

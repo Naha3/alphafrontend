@@ -49,3 +49,236 @@
     }
   }
 }
+.concern-item {
+  padding: 1rem;
+  width: 96.8%; 
+  display: flex;
+  flex-direction: column;
+
+  .concern-tital {
+    .title {
+      display: flex;
+
+      .concern-tital {
+        color: red;
+
+        .tital-description {
+          color: black;
+        }
+      }
+    }
+
+    .title-name {
+      width: 100%;
+      padding-left: 12px;
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+
+      .level {
+        // margin-top: 21.5px;
+        .level-1 {
+          border: 1px solid #1677ff;
+          border-radius: 4px;
+          padding: 5px;
+          // margin-left: 10px; 
+          color: #1677ff;
+          background-color: #eaf1fb;
+          width: 55px;
+          height: 24px;
+        }
+
+        .level-concern {
+          width: 222px;
+          height: 24px;
+          // margin-left: 10px;
+          border: 1px solid #ff3e3e;
+          border-radius: 4px;
+          padding: 5px;
+          color: #ff3e3e;
+          background-color: #ffefef;
+        }
+      }
+    }
+
+    p {
+      padding-left: 12px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      color: #000000;
+    }
+
+    .image img {
+      padding-left: 12px;
+      width: 100%; // Adjust width to be fully responsive
+      max-width: 324px; // Constrain maximum size
+      height: auto; // Maintain aspect ratio
+    }
+  }
+
+  .service-engine {
+    width: 100%; // Adjust width to fit parent
+    // max-width: 1245px;
+    padding-left: 12px;
+
+    .service-part {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      // margin-right: 30px;
+
+      .sevices-name {
+        display: flex;
+        flex-direction: column;
+
+        .service-name-part {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 27.24px;
+        }
+
+        .service-name-service_note {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          opacity: 0.7;
+        }
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        align-items: baseline;
+
+        span {
+          width: 100px;
+          height: 27px;
+          color: #000000;
+        }
+
+        .btn {
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          border-radius: 4px;
+        }
+
+        .btn-primary {
+          background-color: #00b578;
+          color: #fff;
+          border: none;
+        }
+
+        .btn-secondary {
+          background-color: #ffffff;
+          color: black;
+          outline: 1px solid rgb(155, 155, 155);
+          border: none;
+        }
+      }
+    }
+  }
+
+  .services {
+    width: 100%;
+    // max-width: 1245px;
+    border: none;
+    border-top: 1px solid #cecdcd;
+    // margin: 20px 0;
+
+    .services-name {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .service-left {
+      display: flex;
+      gap: 5px;
+      align-items: baseline;
+
+      span {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21.79px;
+        color: #000000;
+        opacity: 0.7;
+      }
+    }
+
+    .service-right {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 4px;
+      gap: 40px;
+
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21.79px;
+      color: #000000;
+      opacity: 0.5;
+    }
+  }
+
+  .services-message {
+    width: 100%;
+    // max-width: 1245px;
+
+    .services-message-name {
+      display: flex;
+      justify-content: space-between;
+
+      .service-left-message {
+        width: 70%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19.07px;
+        color: #000000;
+        opacity: 0.6;
+      }
+
+      .service-right-message {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+
+        span {
+          color: #ff3e3e;
+        }
+      }
+    }
+  }
+
+  .total-cost {
+    width: 28%;
+    height: 1px;
+    background-color: #c7c6c6;
+    float: right;
+
+
+    .cost {
+      height: 30px;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21.79px;
+      color: #000000;
+      opacity: 0.5;
+    }
+  }
+}
