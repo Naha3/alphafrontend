@@ -1,7 +1,12 @@
+
+
+
 .kanata-info-container {
   // max-width: 1439px;
   width: 100%;
   height: 72px;
+
+ 
 
   .sub-container {
     display: flex;
@@ -11,14 +16,14 @@
     border: 1px solid #ddd;
     width: 100%;
     height: 100%;
-    background-color: white;
+    font-family: Arial, sans-serif;
 
     .kanata-header {
       display: flex;
       // align-items: center;
       // width: 276px;
       height: 33.49px;
-
+      
       img {
         width: 80px;
         height: 33.49px;
@@ -91,12 +96,13 @@
         margin-top: 0px;
         height: 8px;
       }
-    }
-  
-
-  @media (max-width: 500px) {
-    /* Hide all images */
-    img {
+      }
+          
+    @media (max-width: 500px) {
+img{
+  display: none
+};
+      .kanata-details {
         display: none;
     }
 
