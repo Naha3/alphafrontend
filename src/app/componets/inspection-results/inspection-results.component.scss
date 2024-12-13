@@ -1,10 +1,12 @@
 .container {
   // max-width: 1296px;
-  width: 100%;
+  // width: 100%;
   display: flex;
   justify-content: center; /* Centers the sub-container horizontally */
   // align-items: center; /* Centers the sub-container vertically (if you want) */
-  margin-top: 10px;         /* Full viewport height for vertical centering */
+  margin-top: 10px; /* Full viewport height for vertical centering */
+
+
 
   .sub-container {
     border: 1px solid greenyellow;
@@ -64,3 +66,97 @@
     }
   }
 }
+
+
+
+.main-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8fafc; /* Light background */
+}
+
+.inspection-section {
+  width: 100%;
+  max-width: 500px; /* Adjust for desktop responsiveness */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between items */
+}
+
+.inspection-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 8px;
+  background-color: #fff; /* White background */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and text */
+}
+
+.card-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: #10b981; /* Green color */
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #334155; /* Dark gray color */
+}
+
+.result-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  color: #10b981; /* Green text */
+  border: 1px solid #10b981; /* Green border */
+  background-color: #fff; /* White background */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.result-button:hover {
+  background-color: #10b981;
+  color: #fff; /* White text on hover */
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+/* Default: Hide both containers */
+.container,
+.main-container {
+  display: none;
+}
+
+/* Show container for mobile screens (max-width: 500px) */
+@media (max-width: 500px) {
+  .main-container {
+    display: block;
+    
+  }
+}
+
+/* Show containerr for desktop screens (min-width: 501px) */
+@media (min-width: 501px) {
+  .container {
+    display: flex;
+  }
+}
+
