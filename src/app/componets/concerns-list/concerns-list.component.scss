@@ -75,11 +75,14 @@
       align-items: baseline;
       gap: 20px;
 
+      
+
       .level {
         // margin-top: 21.5px;
         .level-1 {
           border: 1px solid #1677ff;
           border-radius: 4px;
+          margin-right: 5px;
           padding: 5px;
           // margin-left: 10px; 
           color: #1677ff;
@@ -259,6 +262,9 @@
       }
     }
   }
+  .namee h2{
+    display: none;
+  }
 
   .total-cost {
     width: 28%;
@@ -279,6 +285,101 @@
       line-height: 21.79px;
       color: #000000;
       opacity: 0.5;
+    }
+  }
+}
+// Media Query for Mobile (max-width: 500px)
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+
+    .sub-container {
+      // width: 100%;
+    }
+
+    .concerns-container .header {
+      font-size: 14px;
+      height: auto;
+      padding: 8px;
+      // flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .concern-tital p{
+      padding-left: 0;
+      margin-top: 20px;
+      width: 90%;
+      opacity: 0.8;
+    }
+
+    .concern-item  {
+      width: 100%;
+      padding: 0.5rem;
+      .service-engine{
+        padding-left: 0;
+      }
+      .level-concern{
+        margin-left: 10px;
+      }
+
+
+      .title-name{
+        display: block;
+        padding-left: 0;
+      }
+
+      
+
+      .title-name h2{
+        display: none;
+        // flex-direction: column;
+        // gap: 0px;
+        // padding-left: 0;
+      }
+      .namee h2{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        padding-left: 0;
+      }
+      .title-name h2{
+        margin-bottom: 5px;
+      }
+
+      .image img {
+        max-width: 320px;
+      }
+
+      .services {
+        flex-direction: column;
+        .services-name {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .service-right {
+          justify-content: flex-start;
+          gap: 10px;
+        }
+      }
+
+      .total-cost {
+        width: 100%;
+
+        .cost {
+          justify-content: center;
+        }
+      }
+    }
+
+    // Hide actions on mobile view
+    .service-engine .service-part .actions {
+      display: none;
+    }
+    .concern-tital{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
     }
   }
 }
