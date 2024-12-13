@@ -235,4 +235,10 @@
       }
     }
   }
+  @media(max-width: 500px) {
+    .actions{
+      display: none;
+    }
+    
+  }
   
