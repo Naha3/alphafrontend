@@ -10,7 +10,10 @@
     border: 1px solid black;
     border-radius: 8px;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 90%;
+    // position: relative; /* Ensures position context for the overlay */
 
     .content {
       display: flex;
@@ -18,17 +21,30 @@
       width: 100%;
 
       .images {
+        position: relative; /* Required for absolute positioning of the overlay */
         border-radius: 8px;
 
-        // width: 30%;
         .main-image {
           height: 255px;
-
-          // margin-bottom: 1rem;
+          position: relative; /* Required to place the header and button over the image */
+          
           img {
             padding: 10px;
             object-fit: cover;
             height: 100%;
+            width: 100%;
+          }
+
+          /* Add the header and button on top of the image */
+          .header-1 {
+            position: absolute; /* Position the header and button over the image */
+            top: 10px; /* Adjust as necessary */
+            left: 10px; /* Adjust as necessary */
+            width: calc(100% - 20px); /* Ensure it's not overflowing */
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            z-index: 10; /* Ensure it stays on top */
           }
         }
 
@@ -38,6 +54,7 @@
           overflow: hidden;
           cursor: pointer;
           transition: border 0.3s ease;
+          margin-left: 10px;
 
           img {
             object-fit: cover;
@@ -49,7 +66,6 @@
       .details {
         height: 144px;
 
-        // width: 70%;
         .header {
           display: flex;
           gap: 50px;
@@ -77,31 +93,6 @@
             }
           }
         }
-
-        .customer-details,
-        .vehicle-details {
-          .customer-detail,
-          .vehicle-detail {
-            display: flex;
-
-            .detail {
-              display: flex;
-              align-items: flex-end;
-            }
-
-            .label {
-              width: 140px;
-              font-size: 0.875rem;
-              color: #777;
-            }
-
-            .paragraph {
-              font-size: 1rem;
-              width: 200px;
-              margin-top: 1rem;
-            }
-          }
-        }
       }
     }
   }
@@ -120,32 +111,22 @@
   background-color: #f0f0f0;
 }
 
+/* Mobile Styles */
 @media (max-width: 500px) {
   .container {
     // border: 1px solid;
   }
+
   /* Show header-1 on mobile */
   .header-1 {
     display: block; /* Ensure it's visible on mobile */
-  }
-  .customer-detail,
-  .vehicle-detail {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Hide the header inside .details (for larger screens) */
-  .header {
-    display: none; /* Hide this on mobile */
-  }
-
-  /* Stack the sub-container elements vertically */
-  .sub-container {
-    width: 90%;
-    display: flex;
-
-    border: none;
-    flex-direction: column;
+    position: absolute;
+    top: 10px; /* Adjust as necessary */
+    left: 10px; /* Adjust as necessary */
+    width: calc(100% - 20px);
+    justify-content: space-between;
+    align-items: baseline;
+    z-index: 10; /* Ensure it stays on top */
   }
 
   /* For the content section, change the flex-direction to column */
@@ -154,122 +135,46 @@
     gap: 1rem; /* Reduce gap for mobile */
   }
 
-  /* Show estimate and download button first (header-1 should come first) */
-  .header-1 {
-    order: -1; /* Place it first */
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-  }
-
-  /* Show images after the header */
   .images {
-    order: 0; /* Show images second */
+    order: 0;
     width: 90%;
+    position: relative; /* Make sure it's positioned relative */
   }
 
-  /* Show other details last */
-  .details {
-    order: 1; /* Show other details last */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Adjust main image height for mobile */
   .main-image {
-    // height: 200px;
     margin-bottom: 1rem;
   }
 
   .main-image img {
-    // padding: 5px; /* Reduce padding on mobile */
     height: 100%;
     width: 305px;
   }
 
-  /* Adjust thumbnail size for mobile */
   .thumbnail {
-    height: 60px; /* Reduce thumbnail height */
-    margin-left: 10px;
+    height: 60px;
   }
 
   .thumbnail img {
-    height: 83%; /* Adjust thumbnail image size */
+    height: 83%;
   }
 
-  /* Adjust download button size */
   .download-btn {
-    width: 140px; /* Adjust width of download button */
-    height: 35px; /* Adjust height of download button */
-    // margin-bottom: 40px;
+    width: 140px;
+    height: 35px;
   }
 
   /* Adjust header font size for mobile */
   .header-1 h1 {
     font-size: 1.2rem; /* Adjust font size for header */
-    margin-top: 0; /* Remove margin-top for compact view */
+    margin-top: 0;
   }
 
   /* Adjust font size for labels and paragraphs on mobile */
   .label {
-    font-size: 0.75rem; /* Smaller label font */
+    font-size: 0.75rem;
   }
 
   .paragraph {
-    font-size: 0.875rem; /* Smaller paragraph font */
-    display: flex;
-    flex-direction: column;
+    font-size: 0.875rem;
   }
-}
-
-/* For larger screens, hide header-1 */
-@media (min-width: 501px) {
-  .header-1 {
-    display: none; /* Hide header-1 on large screens */
-  }
-
-  /* Ensure the header in .details is visible on larger screens */
-  .header {
-    display: flex; /* Show the header inside .details */
-  }
-}
-
-.content {
-  flex-direction: column;
-}
-
-.sub-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.images {
-  .thumbnail-images {
-    width: auto;
-  }
-}
-
-.details {
-  order: 1;
-}
-
-.thumbnail-images {
-  display: flex;
-  flex-direction: row;
-}
-
-.customer-details,
-.vehicle-details {
-  flex-direction: column;
-}
-
-.customer-detail,
-.vehicle-detail {
-  flex-direction: column;
-}
-
-.detail {
-  flex-direction: column;
 }

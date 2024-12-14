@@ -13,6 +13,17 @@
     border-radius: 8px;
     margin-top: 10px;
 
+    .icon1{
+      display: none;
+    }
+
+    .icon2{
+      display: none;
+    }
+    
+
+   
+
     .concerns-container {
       display: flex;
       flex-direction: column;
@@ -28,8 +39,9 @@
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         color: white;
-        font-weight: bold;
+        // font-weight: bold;
         font-size: 16px;
+        font-size: 20px;
 
         &.red-header {
           background-color: #ff3e3e; 
@@ -293,17 +305,44 @@
   .container {
     flex-direction: column;
 
-    .sub-container {
-      // width: 100%;
-    }
-
     .concerns-container .header {
-      font-size: 14px;
+      font-size: 20px;
       height: auto;
       padding: 8px;
       // flex-direction: column;
       align-items: flex-start;
     }
+
+   
+
+    .sub-container {
+
+      // width: 100%;
+
+
+      
+
+
+      .icon1{
+        display: flex;
+        margin-left: 50px;
+      
+      }
+
+      .icon2{
+        display: block;
+      }
+      .mes{
+        display: none;
+      }
+      
+    }
+
+   
+
+    
+
+    
 
     .concern-tital p{
       padding-left: 0;

@@ -2,10 +2,14 @@
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
+  
+  align-items: center;
+  width: 100%;
 
   .card {
     background: white;
-    width: 1296px;
+    width: 90%;
+    // width: 1296px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
