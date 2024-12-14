@@ -39,5 +39,5 @@ export class EstimateGalleryComponent {
 
   closeGallery(): void {
     this.isOpen = false;
-  }
+  }
 }
