@@ -1,4 +1,3 @@
-
 .container {
   width: 80%;
   margin: 20px auto;
@@ -12,10 +11,12 @@
 .sub-container {
   padding: 20px;
 }
-.content{
+
+.content {
   display: flex;
   gap: 20px;
 }
+
 .images {
   display: flex;
   flex-direction: column;
@@ -45,13 +46,6 @@
   transition: border-color 0.3s ease;
 }
 
-
-.header {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
 h1 {
   font-size: 24px;
   margin: 0;
@@ -76,107 +70,122 @@ h1 {
 
 
 
-.details{
-  display: flex;
-  gap: 10px;
-  .customer-details, .vehicle-details {
-    width: 100%;
+
+  .details {
     display: flex;
-    .customer-detail, .vehicle-detail {
-      width: 100%;
-      .detail {
-        // width: 100%;  
+    flex-direction: column;
+    gap: 20px;
+    .dubilacte-header{
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+    
+
+    .detail-1 {
+display: flex;
+gap: 10px;
+      .customer-details,
+      .vehicle-details {
+        width: 100%;
         display: flex;
-        gap: 20px;
-        .label,.paragraph{
-          // width: 100%;
+
+        .customer-detail,
+        .vehicle-detail {
+          width: 100%;
+gap: 20px;
+          .detail {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+
+          }
         }
       }
     }
   }
-  
-}
 
+  .detail {
+    margin-bottom: 10px;
+  }
 
+  .label {
+    font-size: 0.875rem;
+    color: #777;
+  }
 
+  .paragraph {
+    font-size: 14px;
+    color: #333;
+  }
 
-.detail {
-  margin-bottom: 10px;
-}
+  .thumbnail img {
+    object-fit: cover;
+    height: 90%;
+  }
 
-.label {
-  font-size: 0.875rem;
-              color: #777;
-}
+  .download-btn .download-btn:hover {
+    background-color: #f0f0f0;
+  }
 
-.paragraph {
-  font-size: 14px;
-  color: #333;
-  // margin-top: 5px;
-}
-
-
-
-.thumbnail img {
-  object-fit: cover;
-  height: 90%;
-}
-
-.download-btn .download-btn:hover {
-  background-color: #f0f0f0;
-}
-
-
-
-
-// .toggle-view button:hover {
-//   background-color: #0056b3;
-// }
 
 @media (max-width: 720px) {
-.container{
-  width: 100%;
-}
-  .sub-container{
+  .container {
+    width: 100%;
+  }
+  .dubilacte-header{
+   display: none;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 65px 0px 10px;
+  }
+  .sub-container {
     width: 100%;
     justify-content: center;
   }
+
   .content {
     display: flex;
     flex-direction: column;
   }
-  .header{
-    padding-left: 30px;
-  }
-  .main-image{
-    width:86%;
-  }
- 
-.customer-details,
-.vehicle-details{
-  flex-direction: column;
-}
-.details{
-  display: flex;
-  flex-direction: column;
-}
-.detail{
-  display: flex;
-  align-items: baseline;
-   gap: 20px;
-}
-  .header {
-    order: 1;
-  }
 
-  .images {
-    order: 2;
-  }
+  
 
+  .main-image {
+    width: 86%;
+  }
+  
+  
   .details {
-    order: 3;
-    gap: 0px;
+    display: flex;
+    .detail-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 0px;
+    }
+    .customer-details,
+  .vehicle-details {
   }
+
+  }
+
+ 
+
+  // .header {
+  //   order: 1;
+  // }
+
+  // .images {
+  //   order: 2;
+  // }
+
+  // .details {
+  //   order: 3;
+  //   gap: 0px;
+  // }
 
   .toggle-view button {
     background-color: white;

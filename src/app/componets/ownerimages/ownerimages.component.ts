@@ -7,23 +7,19 @@ import { EstimateDetails } from './EstimateDetails/EstimateDetails.interface';
   styleUrl: './ownerimages.component.scss',
 })
 export class OwnerimagesComponent {
-  selectedImage: number = 0;
-  isSmallScreen = false; // Flag to determine if screen size is <= 720px
-  showMore = false;
+  isSmallScreen: boolean = window.innerWidth > 720;  // Flag for screen size
+  selectedImage: number = 0;  // Default selected image
+  showMore: boolean = false;  // Flag to toggle extra details
 
-  constructor() {
-    this.checkScreenSize(); // Initialize screen size check
-  }
-
-  images = [
+  images = [  // Image array
     '/assets/images/bonnet-1732777028372.webp',
     '/assets/images/bonnet-1732777028372.webp',
     '/assets/images/bonnet-1732777028372.webp',
     '/assets/images/bonnet-1732777028372.webp',
     '/assets/images/bonnet-1732777028372.webp',
   ];
-
-  estimateDetails: EstimateDetails = {
+  
+  estimateDetails: EstimateDetails = {  // Sample estimate data
     estimateNumber: '43312',
     customer: {
       name: 'John Dofender',
@@ -39,25 +35,31 @@ export class OwnerimagesComponent {
     },
   };
 
-  // Listen to window resize events
-  @HostListener('window:resize', [])
+  // Listen to window resize events and update the screen size flag
+  @HostListener('window:resize', ['$event'])
   onResize() {
     this.checkScreenSize();
   }
 
-  private checkScreenSize() {
-    this.isSmallScreen = window.innerWidth <= 720;
+  constructor() {
+    this.checkScreenSize();  // Initialize screen size check on component load
   }
 
+  private checkScreenSize() {
+    this.isSmallScreen =  window.innerWidth <= 720;;  // Update the flag based on screen size
+  }
+
+  // Toggle the visibility of extra customer/vehicle details
   toggleView() {
     this.showMore = !this.showMore;
   }
 
+  // Handle download functionality (can be customized)
   handleDownload() {
-    // Implement download functionality
     console.log('Downloading estimate...');
   }
 
+  // Select image from thumbnails
   selectImage(index: number) {
     this.selectedImage = index;
   }
