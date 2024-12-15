@@ -85,26 +85,31 @@
 }
 
 @media (max-width: 500px) {
-  
-  .container{
+  .kanata-info-container{
   .sub-container {
-    justify-content: space-between; 
-    .kanata-details {
-      display: none;
-
-    }
-    .kanata-actions {
-      display: flex;
-      gap: 0px;
-      .kanata-email-btn,
-  .kanata-call-btn {
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 0px 15px 0px 10px;
   }
-    }
-}}
-img {
-  display: none;
 }
+
+  .kanata-details {
+    display: none;
+
+  }
+
+  .kanata-actions {
+    display: flex;
+    gap: 0px;
+
+    .kanata-email-btn,
+    .kanata-call-btn {
+      justify-content: flex-end;
+    }
+  }
+
+  img {
+    display: none;
+  }
 
   .kanata-email-btn span,
   .kanata-call-btn span {
