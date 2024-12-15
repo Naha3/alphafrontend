@@ -1,275 +1,194 @@
+
 .container {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
+  width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sub-container {
+  padding: 20px;
+}
+.content{
   display: flex;
-  justify-content: center;
+  gap: 20px;
+}
+.images {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.main-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail.selected img {
+  // border-color: #007bff;
+}
+
+.header {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.download-btn {
+  background-color: transparent;
+  color: black;
+  padding: 10px 15px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid rgb(206, 200, 200);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
   align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
 
-  .sub-container {
-    border: 1px solid black;
-    border-radius: 8px;
+
+
+.details{
+  display: flex;
+  gap: 10px;
+  .customer-details, .vehicle-details {
+    width: 100%;
     display: flex;
-    width: 90%;
-
-    .content {
-      display: flex;
-      gap: 2rem;
+    .customer-detail, .vehicle-detail {
       width: 100%;
-
-      .images {
-        border-radius: 8px;
-
-        // width: 30%;
-        .main-image {
-          height: 255px;
-
-          // margin-bottom: 1rem;
-          img {
-            padding: 10px;
-            object-fit: cover;
-            height: 100%;
-          }
-        }
-
-        .thumbnail {
-          height: 74px;
-          background: none;
-          overflow: hidden;
-          cursor: pointer;
-          transition: border 0.3s ease;
-
-          img {
-            object-fit: cover;
-            height: 80%;
-          }
-        }
-      }
-
-      .details {
-        height: 144px;
-
-        // width: 70%;
-        .header {
-          display: flex;
-          gap: 50px;
-          margin-top: 50px;
-
-          .header h1 {
-            height: 54px;
-            font-size: 1.5rem;
-            font-weight: bold;
-          }
-
-          .download-btn {
-            width: 160px;
-            height: 40px;
-            background-color: transparent;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            font-size: 1rem;
-            align-items: center;
-            justify-content: center;
-            .icon {
-              margin-top: 5px;
-              margin-right: 0.5rem;
-              font-size: 1.2rem;
-            }
-          }
-        }
-
-        .customer-details,
-        .vehicle-details {
-          .customer-detail,
-          .vehicle-detail {
-            display: flex;
-
-            .detail {
-              display: flex;
-              align-items: flex-end;
-            }
-
-            .label {
-              width: 140px;
-              font-size: 0.875rem;
-              color: #777;
-            }
-
-            .paragraph {
-              font-size: 1rem;
-              width: 200px;
-              margin-top: 1rem;
-            }
-          }
+      .detail {
+        // width: 100%;  
+        display: flex;
+        gap: 20px;
+        .label,.paragraph{
+          // width: 100%;
         }
       }
     }
   }
+  
 }
+
+
+
+
+.detail {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 0.875rem;
+              color: #777;
+}
+
+.paragraph {
+  font-size: 14px;
+  color: #333;
+  // margin-top: 5px;
+}
+
+
 
 .thumbnail img {
   object-fit: cover;
   height: 90%;
 }
 
-.selected {
-  border-color: #007bff;
-}
-
 .download-btn .download-btn:hover {
   background-color: #f0f0f0;
 }
 
-@media (max-width: 500px) {
-  .container {
-    // border: 1px solid;
-  }
-  /* Show header-1 on mobile */
-  .header-1 {
-    display: block; /* Ensure it's visible on mobile */
-  }
-  .customer-detail,
-  .vehicle-detail {
-    display: flex;
-    flex-direction: column;
-  }
 
-  /* Hide the header inside .details (for larger screens) */
-  .header {
-    display: none; /* Hide this on mobile */
+
+
+// .toggle-view button:hover {
+//   background-color: #0056b3;
+// }
+
+@media (max-width: 720px) {
+.container{
+  width: 100%;
+}
+  .sub-container{
+    width: 100%;
+    justify-content: center;
   }
-
-  /* Stack the sub-container elements vertically */
-  .sub-container {
-    width: 90%;
-    display: flex;
-
-    border: none;
-    flex-direction: column;
-  }
-
-  /* For the content section, change the flex-direction to column */
   .content {
-    flex-direction: column;
-    gap: 1rem; /* Reduce gap for mobile */
-  }
-
-  /* Show estimate and download button first (header-1 should come first) */
-  .header-1 {
-    order: -1; /* Place it first */
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-  }
-
-  /* Show images after the header */
-  .images {
-    order: 0; /* Show images second */
-    width: 90%;
-  }
-
-  /* Show other details last */
-  .details {
-    order: 1; /* Show other details last */
-    width: 100%;
     display: flex;
     flex-direction: column;
   }
-
-  /* Adjust main image height for mobile */
-  .main-image {
-    // height: 200px;
-    margin-bottom: 1rem;
+  .header{
+    padding-left: 30px;
   }
-
-  .main-image img {
-    // padding: 5px; /* Reduce padding on mobile */
-    height: 100%;
-    width: 305px;
+  .main-image{
+    width:86%;
   }
-
-  /* Adjust thumbnail size for mobile */
-  .thumbnail {
-    height: 60px; /* Reduce thumbnail height */
-    margin-left: 10px;
-  }
-
-  .thumbnail img {
-    height: 83%; /* Adjust thumbnail image size */
-  }
-
-  /* Adjust download button size */
-  .download-btn {
-    width: 140px; /* Adjust width of download button */
-    height: 35px; /* Adjust height of download button */
-    // margin-bottom: 40px;
-  }
-
-  /* Adjust header font size for mobile */
-  .header-1 h1 {
-    font-size: 1.2rem; /* Adjust font size for header */
-    margin-top: 0; /* Remove margin-top for compact view */
-  }
-
-  /* Adjust font size for labels and paragraphs on mobile */
-  .label {
-    font-size: 0.75rem; /* Smaller label font */
-  }
-
-  .paragraph {
-    font-size: 0.875rem; /* Smaller paragraph font */
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-/* For larger screens, hide header-1 */
-@media (min-width: 501px) {
-  .header-1 {
-    display: none; /* Hide header-1 on large screens */
-  }
-
-  /* Ensure the header in .details is visible on larger screens */
-  .header {
-    display: flex; /* Show the header inside .details */
-  }
-}
-
-.content {
-  flex-direction: column;
-}
-
-.sub-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.images {
-  .thumbnail-images {
-    width: auto;
-  }
-}
-
-.details {
-  order: 1;
-}
-
-.thumbnail-images {
-  display: flex;
-  flex-direction: row;
-}
-
+ 
 .customer-details,
-.vehicle-details {
+.vehicle-details{
   flex-direction: column;
 }
-
-.customer-detail,
-.vehicle-detail {
+.details{
+  display: flex;
   flex-direction: column;
 }
+.detail{
+  display: flex;
+  align-items: baseline;
+   gap: 20px;
+}
+  .header {
+    order: 1;
+  }
 
-.detail {
-  flex-direction: column;
+  .images {
+    order: 2;
+  }
+
+  .details {
+    order: 3;
+    gap: 0px;
+  }
+
+  .toggle-view button {
+    background-color: white;
+    color: greenyellow;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+  }
 }

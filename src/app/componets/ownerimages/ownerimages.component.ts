@@ -1,22 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { EstimateDetails } from './EstimateDetails/EstimateDetails.interface';
-
 
 @Component({
   selector: 'app-ownerimages',
   templateUrl: './ownerimages.component.html',
-  styleUrl: './ownerimages.component.scss'
-
+  styleUrl: './ownerimages.component.scss',
 })
 export class OwnerimagesComponent {
   selectedImage: number = 0;
+  isSmallScreen = false; // Flag to determine if screen size is <= 720px
+  showMore = false;
+
+  constructor() {
+    this.checkScreenSize(); // Initialize screen size check
+  }
 
   images = [
-    '/assets/images/bonnet-1732777028372.webp?height=400&width=300',
-    '/assets/images/bonnet-1732777028372.webp?height=100&width=150',
-    '/assets/images/bonnet-1732777028372.webp?height=100&width=150',
-    '/assets/images/bonnet-1732777028372.webp?height=100&width=150',
-    '/assets/images/bonnet-1732777028372.webp?height=100&width=150'
+    '/assets/images/bonnet-1732777028372.webp',
+    '/assets/images/bonnet-1732777028372.webp',
+    '/assets/images/bonnet-1732777028372.webp',
+    '/assets/images/bonnet-1732777028372.webp',
+    '/assets/images/bonnet-1732777028372.webp',
   ];
 
   estimateDetails: EstimateDetails = {
@@ -34,6 +38,20 @@ export class OwnerimagesComponent {
       odometerIn: '12233.3 Miles',
     },
   };
+
+  // Listen to window resize events
+  @HostListener('window:resize', [])
+  onResize() {
+    this.checkScreenSize();
+  }
+
+  private checkScreenSize() {
+    this.isSmallScreen = window.innerWidth <= 720;
+  }
+
+  toggleView() {
+    this.showMore = !this.showMore;
+  }
 
   handleDownload() {
     // Implement download functionality
