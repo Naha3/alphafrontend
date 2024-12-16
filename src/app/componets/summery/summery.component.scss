@@ -35,7 +35,7 @@
                     font-family: Open scans;
                     display: flex;
                     justify-content: space-between;
-                    padding: 12px 24px 0 24px; /* top, right, bottom, left */
+                    padding: 12px 24px 3px 24px;
                     
                     
                 }
@@ -46,10 +46,11 @@
                     line-height:20px;
                     text-align: right;
                     font-family: Open scans;
-                    padding: 2px 24px 0 24px; /* top, right, bottom, left */   
+                    padding: 2px 24px 1px 24px; /* top, right, bottom, left */   
                     display: flex;
                     opacity: 0.5;
                     justify-content: space-between;
+                  
                   
                 }
                
@@ -62,7 +63,7 @@
         }
         .fotter{
             
-            h3{
+            .h3{
                 padding: 20px 24px 0 24px;
                 font-weight: 600;
                 font-size: 20px;
@@ -94,7 +95,12 @@
 }
 
 @media (max-width: 500px) {
-    
+    .container{
+width:100%;
+.sub-container{
+    width: 100%;
+}
+    }
     .fotter-2 {
         width: 80%;
 

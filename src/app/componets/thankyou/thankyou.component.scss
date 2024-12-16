@@ -1,22 +1,24 @@
-
 .response-box {
   background-color: #d4f8d4;
   padding: 20px;
   border-radius: 8px;
-  width: 90%;
-  margin-top:20px ;
-  border: solid 1px #28a745;
+  justify-content: center;
   align-items: center;
-}
+  width: 90%;
+  margin-top: 20px;
+  border: solid 1px #28a745;
 
 .sub-container {
   width: 90%;
+  // display: flex;
   align-items: center;
-}
+  justify-content: center;
 
+}
+}
 .message-container {
   // text-align: center;
-  .thank{
+  .thank {
     font-family: Open Sans;
     font-size: 20px;
     font-weight: 600;
@@ -24,10 +26,9 @@
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-
   }
 
-  p{
+  p {
     font-family: Open Sans;
     font-size: 16px;
     font-weight: 400;
@@ -35,7 +36,6 @@
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-
   }
 }
 
@@ -93,13 +93,12 @@
   .response-box {
     font-size: 14px;
     margin-top: 18px;
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
     .sub-container {
-align-items: center;
-justify-content: center;
+      align-items: center;
+      justify-content: center;
       .message-container {
         h2 {
           font-size: 18px; // Smaller heading
@@ -142,15 +141,13 @@ justify-content: center;
           justify-content: center;
           gap: 4px;
 
-          background: #FFFFFF;
+          background: #ffffff;
           border: 1px solid #00000026;
 
           font-family: Open Sans;
           font-size: 14px;
           font-weight: 600;
           line-height: 22px;
-         
-
         }
       }
     }

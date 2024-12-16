@@ -123,6 +123,37 @@
 //   transition: background-color 0.3s ease;
 // }
 
+/* Default styles for large screens */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5; /* Background color similar to your image */
+  padding: 20px;
+}
+
+.button-container1 {
+  display: none; /* Hide on large screens */
+}
+
+/* Styles for the button inside button-container */
+.button-container .sign-submit-btn {
+  width: 90%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745; /* Green color for the button */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
 .button-container .sign-submit-btn .arrow {
   margin-left: 10px;
   font-size: 18px;
@@ -131,43 +162,36 @@
 /* Media query for small screens (max-width: 500px) */
 @media (max-width: 500px) {
 
-  .button-container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-      align-items: center;
-      background:white;
-    .button-container1 {
-      width: 100%;
-      width: 343px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #00B578;
-      border-radius: 4px;
-  gap: 8px;
-  
-    }
+  .footer{
+    display: none;
   }
-  
+  .button-container {
+    display: none; /* Hide on small screens */
+  }
+
+  .button-container1 {
+    display: flex; /* Show on small screens */
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Match styling if needed */
+    padding: 20px;
+  }
 
   .button-container1 .sign-submit-btn {
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #00B578; /* Blue color for the small screen button */
+    background-color: #28a745; /* Blue color for the small screen button */
     color: white;
+    font-size: 16px;
+    font-weight: bold;
     border: none;
+    border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    font-family: Open Sans;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 22px;
-    align-items: unset;
-
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
   }
 
   .button-container1 .sign-submit-btn .arrow {
