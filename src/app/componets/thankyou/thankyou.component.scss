@@ -1,198 +1,226 @@
-.response-box {
-  background: #f4ffeb;
-  border-radius: 6px;
-  justify-content: center;
-  align-items: center;
+.container {
+  width: 100%;
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  .sub-container {
+    padding: 20px;
+    width: 90%;
+  }
+}
+
+
+
+.content {
   display: flex;
-  // max-width: 1248px;
-  width: 90%;
-  height: 217px;
-  margin-top: 20px;
-  border: 1px solid #52C41A;
+  gap: 20px;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
 
-  .sub-container {
-    width: 90%;
+
+.main-image {
+  height: 255px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  img {
+    height: 100%;
+    border-radius: 5px;
+  }
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  height: 65px;
+ img{
+  width: 100%;
+  }
+}
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.download-btn {
+  background-color: transparent;
+  color: black;
+  padding: 10px 15px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid rgb(206, 200, 200);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+
+
+
+  .details {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-.message-container {
-  // text-align: center;
-  .thank {
-    // padding: 20px 0px 0px 0px;
-    font-family: Open Sans;
-    font-size: 20px;
-    // font-weight: 600;
-    // line-height: 27.24px;
-    text-align: center;
-    // text-underline-position: from-font;
-    // text-decoration-skip-ink: none;
-  }
-
-  .p {
-    padding: 25px 0px 25px 0px;
-    font-family: Open Sans;
-    font-size: 16px;
-    // font-weight: 400;
-    // line-height: 21.79px;
-    text-align: center;
-    // text-underline-position: from-font;
-    // text-decoration-skip-ink: none;
-  }
-}
-
-.message-container h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.message-container p {
-  font-size: 1.1rem;
-  color: white;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.button-container {
-  // padding: 0px 0px 25px 0px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap; /* Wraps buttons on smaller screens */
-}
-
-.download-estimate-btn {
-  display: none; /* Hidden by default */
-}
-
-.contact-btn,
-.view-estimate-btn {
-  width: 250px;
-  padding: 12px 24px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  display: flex;
-  align-items: center; /* Aligns icon and text vertically */
-  justify-content: center;
-  gap: 5px; /* Space between the icon and text */
-  background-color: #ffffff;
-
-  font-family: Open Sans;
-  // font-size: 14px;
-  // font-weight: 600;
-  // line-height: 22px;
-  // text-align: left;
-  // text-underline-position: from-font;
-  // text-decoration-skip-ink: none;
-
-  // padding: 0px 8px 0px 8px;
-  gap: 4px;
-  border-radius: 4px;
-  border: 1px solid #00000026;
-  opacity: 0px;
-}
-
-.contact-btn {
-  background-color: #ffffff; /* Light gray background */
-  color: #333;
-}
-
-.view-estimate-btn {
-  background-color: #ffffff;
-  color: #333;
-}
-
-/* Mobile Responsive Styling */
-@media screen and (max-width: 500px) {
-  .response-box {
-    width: 88%;
-    height: 319px;
-
-    .sub-container {
-      align-items: center;
-      justify-content: center;
-
-      .message-container {
-        .thank {
-          margin-top: 10px;
-          padding: 0px;
-          font-family: Open Sans;
-          font-size: 20px;
-          // font-weight: 600;
-          // line-height: 27.24px;
-          // text-align: center;
-          // text-underline-position: from-font;
-          // text-decoration-skip-ink: none;
-        }
-        .p {
-          // margin-top: 10px;
-          padding: 25px 0px 25px 0px;
-          // margin-bottom: 10px;
-        }
-        h2 {
-          font-size: 18px; // Smaller heading
-          margin-bottom: 8px;
-        }
-
-        p {
-          font-size: 14px;
-          line-height: 1.4;
-          br {
-            display: none; // Remove line break on small screens
-          }
-        }
+    gap: 20px;
+    .dubilacte-header{
+      align-items: baseline;
+      margin-top: 40px;
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+      .esitmate-no{
+        font-family:open Sans;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 54.47px;
       }
+    }
+    
 
-      .button-container {
+    .detail-1 {
+display: flex;
+gap: 10px;
+      .customer-details,
+      .vehicle-details {
+        // width: 100%;
         display: flex;
-        flex-direction: column; // Stack buttons vertically
-        gap: 4px; // Add spacing between buttons
 
-        button {
-          width: 100%;
-          padding: 10px;
-          font-size: 14px;
-          border: 1px solid #28a745;
-          border-radius: 5px;
+        .customer-detail,
+        .vehicle-detail {
+          // width: 100%;
+// gap: 20px;
+          .detail {
+            // width: 100%;
+            display: flex;
+            // gap: 20px;
 
-          svg {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px; // Ensure consistent spacing
+.label{
+  width: 191px;
+  font-family:open Sans;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27.24px;
+}
+.paragraph{
+  width: 275px;
+  
+}
           }
-        }
-
-        .contact-btn,
-        .view-estimate-btn,
-        .download-estimate-btn {
-          width: 327px;
-          height: 48px;
-          padding: 0px 8px 0px 8px;
-          gap: 4px;
-          border-radius: 4px;
-          border: 1px 0px 0px 0px;
-          opacity: 0px;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 4px;
-
-          background: #ffffff;
-          border: 1px solid #00000026;
-
-          font-family: Open Sans;
-          // font-size: 14px;
-          // font-weight: 600;
-          // line-height: 22px;
         }
       }
     }
+  }
+
+  .detail {
+    margin-bottom: 10px;
+  }
+
+  .label {
+    font-size: 0.875rem;
+    color: #777;
+  }
+
+  .paragraph {
+    font-size: 14px;
+    color: #333;
+  }
+
+  .thumbnail img {
+    object-fit: cover;
+    height: 90%;
+  }
+
+  .download-btn .download-btn:hover {
+    background-color: #f0f0f0;
+  }
+
+
+@media (max-width: 720px) {
+  .container {
+    width: 100%;
+  }
+  .dubilacte-header{
+   display: none;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    .esitmate-no1{
+      font-family:open Sans;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32.68px;
+    }
+  }
+  .sub-container {
+    justify-content: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    .main-image {
+      // width: 86%;
+      height: 207px;
+
+      img{
+  width: 100%;
+      }
+    }
+    
+  }
+
+  
+
+  
+  
+  .details {
+    display: flex;
+    .detail-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 0px;
+    }
+    .customer-details,
+  .vehicle-details {
+    .customer-detail,
+    .vehicle-detail{
+      .detail{
+        .label{
+          width: 123px;
+        }
+        .paragraph{
+          width: 112px;
+        }
+      }
+    }
+  }
+
+  }
+
+  .toggle-view button {
+    background-color: white;
+    color: greenyellow;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
   }
 }
