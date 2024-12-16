@@ -18,7 +18,6 @@ import { ConcernapprovedComponent } from './componets/concernapproved/concernapp
 import { ThankyouComponent } from './componets/thankyou/thankyou.component';
 import { EsumateViewComponent } from './esumate-view/esumate-view.component';
 import { SignatureAuthComponent } from './componets/signature-auth/signature-auth.component';
-import { ButtonComponent } from './componets/button/button.component';
 // import { SignatureAuthComponent } from './signature-auth/signature-auth.component';
 import { EstimateGalleryComponent } from './componets/estimate-gallery/estimate-gallery.component';
 import { InspectionResultsComponent } from './componets/inspection-results/inspection-results.component';
@@ -39,7 +38,6 @@ import { InspectionResultsComponent } from './componets/inspection-results/inspe
     ConcernapprovedComponent,
     ThankyouComponent,
     EsumateViewComponent,
-    ButtonComponent,
     SignatureAuthComponent,
     EstimateGalleryComponent,
     InspectionResultsComponent

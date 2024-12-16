@@ -1,66 +1,158 @@
+
 .response-box {
-    background-color: #d4f8d4; 
-    padding: 40px;
-    border-radius: 8px;
-    width: 80%; 
-    margin: 0 auto; 
-    max-width: 900px; 
-    border: solid 2px #28a745;
-    
-    .message-container {
-      text-align: center;
-      
-      h2 {
-        font-size: 2rem;
-        color: #333;
-        margin-bottom: 15px;
-      }
-    
-      p {
-        font-size: 1.1rem;
-        color: #666;
-        line-height: 1.6;
-        margin-bottom: 20px;
-      }
-    }
-    
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    
-      .contact-btn,
-      .view-estimate-btn {
-        width: 250px;
-        padding: 12px 24px;
-        font-size: 1rem;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-        display: flex;
-        align-items: center; // Aligns icon and text vertically
-        justify-content: center;
-        
-        
-        i {
-          margin-right: 8px; // Space between the icon and text
+  background-color: #d4f8d4;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  margin-top:20px ;
+  border: solid 1px #28a745;
+  align-items: center;
+}
+
+.sub-container {
+  width: 90%;
+  align-items: center;
+}
+
+.message-container {
+  // text-align: center;
+  .thank{
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+  }
+
+  p{
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.79px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+  }
+}
+
+.message-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.message-container p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Wraps buttons on smaller screens */
+}
+
+.download-estimate-btn {
+  display: none; /* Hidden by default */
+}
+
+.contact-btn,
+.view-estimate-btn {
+  width: 250px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center; /* Aligns icon and text vertically */
+  justify-content: center;
+  gap: 5px; /* Space between the icon and text */
+}
+
+.contact-btn {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333;
+}
+
+.view-estimate-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 500px) {
+  .response-box {
+    font-size: 14px;
+    margin-top: 18px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    .sub-container {
+align-items: center;
+justify-content: center;
+      .message-container {
+        h2 {
+          font-size: 18px; // Smaller heading
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.4;
+          br {
+            display: none; // Remove line break on small screens
+          }
         }
       }
-    
-      .contact-btn {
-        background-color: #f0f0f0; // Green color
-        color: #333;
-          
-       
-      }
-    
-      .view-estimate-btn {
-        background-color: #f0f0f0; // Light grey background
-        color: #333;
-          
-        
+
+      .button-container {
+        display: flex;
+        flex-direction: column; // Stack buttons vertically
+        gap: 10px; // Add spacing between buttons
+
+        button {
+          width: 100%;
+          padding: 10px;
+          font-size: 14px;
+          border: 1px solid #28a745;
+          border-radius: 5px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px; // Ensure consistent spacing
+          }
+        }
+
+        .contact-btn,
+        .view-estimate-btn,
+        .download-estimate-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+
+          background: #FFFFFF;
+          border: 1px solid #00000026;
+
+          font-family: Open Sans;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 22px;
+         
+
+        }
       }
     }
   }
-  
+}
