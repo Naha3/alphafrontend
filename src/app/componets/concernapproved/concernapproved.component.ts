@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './concernapproved.component.scss'
 })
 export class ConcernapprovedComponent {
-  status: string = 'approved';
+  status: string = 'deferred';
 
 }

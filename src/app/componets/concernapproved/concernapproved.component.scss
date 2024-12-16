@@ -48,6 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    // font-size: 30px;
     
     .statuss-container {
       display: flex;
@@ -56,14 +57,14 @@
   
       .statuss-icon {
         font-size: 24px;
-        color: #28a745; // Green color for the icon
+        color: #52C41A; // Green color for the icon
         margin-bottom: 33px;
       }
   
       .statuss-message {
         .statuss-text {
           font-size: 1.5rem;
-          color: #28a745; // Green color for the status text
+          color: #52C41A; // Green color for the status text
           margin-bottom: 15px;
           font-weight: 700;
         }
