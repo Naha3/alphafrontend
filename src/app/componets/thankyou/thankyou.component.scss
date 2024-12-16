@@ -1,41 +1,46 @@
 .response-box {
-  background-color: #d4f8d4;
-  padding: 20px;
-  border-radius: 8px;
+  background: #f4ffeb;
+  border-radius: 6px;
   justify-content: center;
   align-items: center;
+  display: flex;
+  // max-width: 1248px;
   width: 90%;
+  height: 217px;
   margin-top: 20px;
-  border: solid 1px #28a745;
+  border: 1px solid #52C41A;
+  margin-bottom: 20px;
 
-.sub-container {
-  width: 90%;
-  // display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
+  .sub-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .message-container {
   // text-align: center;
   .thank {
+    // padding: 20px 0px 0px 0px;
     font-family: Open Sans;
     font-size: 20px;
-    font-weight: 600;
-    line-height: 27.24px;
+    // font-weight: 600;
+    // line-height: 27.24px;
     text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    // text-underline-position: from-font;
+    // text-decoration-skip-ink: none;
   }
 
-  p {
+  .p {
+    padding: 25px 0px 25px 0px;
     font-family: Open Sans;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 21.79px;
+    // font-weight: 400;
+    // line-height: 21.79px;
     text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    // text-underline-position: from-font;
+    // text-decoration-skip-ink: none;
   }
 }
 
@@ -47,12 +52,13 @@
 
 .message-container p {
   font-size: 1.1rem;
-  color: #666;
+  color: white;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 .button-container {
+  // padding: 0px 0px 25px 0px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -67,7 +73,6 @@
 .view-estimate-btn {
   width: 250px;
   padding: 12px 24px;
-  font-size: 1rem;
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -76,30 +81,60 @@
   align-items: center; /* Aligns icon and text vertically */
   justify-content: center;
   gap: 5px; /* Space between the icon and text */
+  background-color: #ffffff;
+
+  font-family: Open Sans;
+  // font-size: 14px;
+  // font-weight: 600;
+  // line-height: 22px;
+  // text-align: left;
+  // text-underline-position: from-font;
+  // text-decoration-skip-ink: none;
+
+  // padding: 0px 8px 0px 8px;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid #00000026;
+  opacity: 0px;
 }
 
 .contact-btn {
-  background-color: #f0f0f0; /* Light gray background */
+  background-color: #ffffff; /* Light gray background */
   color: #333;
 }
 
 .view-estimate-btn {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   color: #333;
 }
 
 /* Mobile Responsive Styling */
 @media screen and (max-width: 500px) {
   .response-box {
-    font-size: 14px;
-    margin-top: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 88%;
+    height: 319px;
+
     .sub-container {
       align-items: center;
       justify-content: center;
+
       .message-container {
+        .thank {
+          margin-top: 10px;
+          padding: 0px;
+          font-family: Open Sans;
+          font-size: 20px;
+          // font-weight: 600;
+          // line-height: 27.24px;
+          // text-align: center;
+          // text-underline-position: from-font;
+          // text-decoration-skip-ink: none;
+        }
+        .p {
+          // margin-top: 10px;
+          padding: 25px 0px 25px 0px;
+          // margin-bottom: 10px;
+        }
         h2 {
           font-size: 18px; // Smaller heading
           margin-bottom: 8px;
@@ -117,7 +152,7 @@
       .button-container {
         display: flex;
         flex-direction: column; // Stack buttons vertically
-        gap: 10px; // Add spacing between buttons
+        gap: 4px; // Add spacing between buttons
 
         button {
           width: 100%;
@@ -136,6 +171,14 @@
         .contact-btn,
         .view-estimate-btn,
         .download-estimate-btn {
+          width: 327px;
+          height: 48px;
+          padding: 0px 8px 0px 8px;
+          gap: 4px;
+          border-radius: 4px;
+          border: 1px 0px 0px 0px;
+          opacity: 0px;
+
           display: flex;
           align-items: center;
           justify-content: center;
@@ -145,9 +188,9 @@
           border: 1px solid #00000026;
 
           font-family: Open Sans;
-          font-size: 14px;
-          font-weight: 600;
-          line-height: 22px;
+          // font-size: 14px;
+          // font-weight: 600;
+          // line-height: 22px;
         }
       }
     }
