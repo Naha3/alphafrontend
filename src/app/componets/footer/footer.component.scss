@@ -1,288 +1,92 @@
 .footer {
-    background-color: #fff;
-    max-width: 1296px;
-    // width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; 
-    padding: 20px;
-    // height: 114px; 
-    border: 1px solid;
-
-    .footer-content {
-      display: flex;
-      background-color: #fff; // White background for the content box
-  
-      @media (max-width: 768px) {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px; // Adjust padding for smaller screens
-      }
-  
-      .footer-text {
-        width: 600px;
-  
-        h2 {
-          margin-top: 10px;
-          font-size: 16px;
-          color: #333; // Darker text for heading
-          font-weight: 700;
-          
-        }
-  
-        p {
-          font-size: 14px;
-          color: #666;
-          font-weight: 400;
-          line-height: 19.7px;
-        }
-      }
-  
-      .footer-button {
-        @media (max-width: 768px) {
-          align-items: center;
-          margin-top: 20px;
-        }
-  
-        .btn-sign-submit {
-          background-color: #28a745; // Green background
-          color: #fff; // White text
-          border: none;
-          border-radius: 5px;
-          padding: 12px 30px;
-          font-size: 1.1rem;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-          // width: 300.66px; // Fixed button width
-          margin-right: 30px;r
-  
-          &:hover {
-            background-color: #218838; // Darker green on hover
-          }
-        }
-  
-        .footer-note {
-          width: 90%;
-          margin-top: 15px;
-          font-size: 13px;
-          color: #666;
-          display: flex;
-          justify-content: center;
-          line-height: 17.7px;
-          font-weight: 400;
-          // gap: 10px;
-
-  
-          .icon-secure {
-            display: flex;
-          
-            justify-content: space-around;
-            margin-left: 50px;
-            font-size: 1rem;
-          }
-        }
-      }
-    }
-  }
-  
-
-  .button-container {
-    max-width: 1442px;
-    width: 100%;
-    display: flex;
-    // justify-content: center;
-    // align-items: center;
-    background-color: #f5f5f5; // Background color similar to your image
-    // padding: 10px;
-  
-    .sign-submit-btn {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #28a745; // Green color for the button
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
-  
-      
-  
-      .arrow {
-        margin-left: 10px;
-        font-size: 18px;
-      }
-    }
-  }
-  
-  
-
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    }
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.button-container{
-  position: fixed;
-    bottom: 0;
-    left: 0;
-}
-.sign-submit-btn {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-}
-
-.sign-submit-btn .arrow {
-  margin-left: 10px;
-}
-
-
-
-
-
-
-
-/* Footer Styling */
-.footer {
   background-color: #fff;
-  max-width: 1442px;
+  max-width: 1296px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; 
+  justify-content: space-around;
   padding: 20px;
-  height: 114px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1; /* Ensure it stays above the button */
-  transition: opacity 0.3s ease-in-out;
+  margin: 0 auto; // Center the footer container
+  border: 1px solid #ddd;
 
   .footer-content {
     display: flex;
-    background-color: #fff;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 
     @media (max-width: 768px) {
       flex-direction: column;
       text-align: center;
-      padding: 20px; // Adjust padding for smaller screens
-    }
-  }
-
-  .footer-text {
-    width: 600px;
-
-    h2 {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #333; // Darker text for heading
-      font-weight: 700;
     }
 
-    p {
-      font-size: 14px;
-      color: #666;
-      font-weight: 400;
-      line-height: 19.7px;
-    }
-  }
+    .footer-text {
+      max-width: 600px;
 
-  .footer-button {
-    @media (max-width: 768px) {
-      align-items: center;
-      margin-top: 20px;
-    }
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+      }
 
-    .btn-sign-submit {
-      background-color: #28a745; // Green background
-      color: #fff; // White text
-      border: none;
-      border-radius: 5px;
-      padding: 12px 30px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      width: 447.66px; // Fixed button width
-
-      &:hover {
-        background-color: #218838; // Darker green on hover
+      p {
+        font-size: 14px;
+        color: #666;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 0;
       }
     }
 
-    .footer-note {
-      width: 90%;
-      margin-top: 15px;
-      font-size: 13px;
-      color: #666;
+    .footer-button {
       display: flex;
-      justify-content: end;
-      line-height: 17.7px;
-      font-weight: 400;
-      gap: 10px;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
 
-      .icon-secure {
-        display: flex;
-        justify-content: space-around;
-        margin-left: 50px;
-        font-size: 1rem;
+      @media (max-width: 768px) {
+        align-items: center;
+        margin-top: 20px;
       }
-    }
-  }
-}
 
-/* Button Container Styling */
-.button-container {
-  max-width: 1442px;
-  width: 100%;
-  display: flex;
-  background-color: #f5f5f5; // Background color similar to your image
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 0; /* Behind the footer */
-  transition: opacity 0.3s ease-in-out;
+      .btn-sign-submit {
+        width: 100%;
+        background-color: #28a745; // Green background
+        color: #fff;
+        border: 1px solid #28a745;
+        border-radius: 5px;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
 
-  .sign-submit-btn {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #28a745; // Green color for the button
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+        .arrow {
+          margin-left: 10px;
+          font-size: 18px;
+        }
 
-    .arrow {
-      margin-left: 10px;
-      font-size: 18px;
+        &:hover {
+          background-color: #218838;
+          border-color: #1e7e34;
+        }
+      }
+
+      .footer-note {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #666;
+        display: flex;
+        align-items: center;
+
+        .icon-secure {
+          font-size: 1rem;
+          margin-right: 5px;
+        }
+      }
     }
   }
 }
