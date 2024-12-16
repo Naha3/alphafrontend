@@ -5,8 +5,8 @@
 
             <div *ngIf="isSmallScreen">
                 <div class="header">
-                    <div>
-                        <h1>Estimate #{{ estimateDetails.estimateNumber }}</h1>
+                    <div class="esitmate-no1">
+                        Estimate #{{ estimateDetails.estimateNumber }}
                     </div>
                     <button class="download-btn" (click)="handleDownload()">
                         <span class="icon">
@@ -41,8 +41,8 @@
 
                 <div *ngIf="!isSmallScreen">
                     <div class="dubilacte-header">
-                        <div>
-                            <h1>Estimate #{{ estimateDetails.estimateNumber }}</h1>
+                        <div class="esitmate-no">
+                            Estimate #{{ estimateDetails.estimateNumber }}
                         </div>
                         <button class="download-btn" (click)="handleDownload()">
                             <span class="icon"><svg width="21" height="20" viewBox="0 0 21 20" fill="none"

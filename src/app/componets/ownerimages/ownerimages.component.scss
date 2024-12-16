@@ -21,29 +21,27 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-}
 
-.main-image img {
-  width: 100%;
-  max-width: 400px;
+
+.main-image {
+  height: 255px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  img {
+    height: 100%;
+    border-radius: 5px;
+  }
 }
 
 .thumbnail-images {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+  height: 65px;
+ img{
+  width: 100%;
+  }
 }
-
-.thumbnail img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 5px;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: border-color 0.3s ease;
 }
 
 h1 {
@@ -76,9 +74,17 @@ h1 {
     flex-direction: column;
     gap: 20px;
     .dubilacte-header{
+      align-items: baseline;
+      margin-top: 40px;
       display: flex;
       gap: 30px;
       margin-bottom: 20px;
+      .esitmate-no{
+        font-family:open Sans;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 54.47px;
+      }
     }
     
 
@@ -87,18 +93,29 @@ display: flex;
 gap: 10px;
       .customer-details,
       .vehicle-details {
-        width: 100%;
+        // width: 100%;
         display: flex;
 
         .customer-detail,
         .vehicle-detail {
-          width: 100%;
-gap: 20px;
+          // width: 100%;
+// gap: 20px;
           .detail {
-            width: 100%;
+            // width: 100%;
             display: flex;
-            gap: 20px;
+            // gap: 20px;
 
+.label{
+  width: 191px;
+  font-family:open Sans;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27.24px;
+}
+.paragraph{
+  width: 275px;
+  
+}
           }
         }
       }
@@ -139,23 +156,34 @@ gap: 20px;
   .header {
     display: flex;
     justify-content: space-between;
-    padding: 0px 65px 0px 10px;
+    padding: 0px 10px 0px 10px;
+    .esitmate-no1{
+      font-family:open Sans;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32.68px;
+    }
   }
   .sub-container {
-    width: 100%;
     justify-content: center;
   }
 
   .content {
     display: flex;
     flex-direction: column;
+    .main-image {
+      // width: 86%;
+      height: 207px;
+
+      img{
+  width: 100%;
+      }
+    }
+    
   }
 
   
 
-  .main-image {
-    width: 86%;
-  }
   
   
   .details {
@@ -168,24 +196,20 @@ gap: 20px;
     }
     .customer-details,
   .vehicle-details {
+    .customer-detail,
+    .vehicle-detail{
+      .detail{
+        .label{
+          width: 123px;
+        }
+        .paragraph{
+          width: 112px;
+        }
+      }
+    }
   }
 
   }
-
- 
-
-  // .header {
-  //   order: 1;
-  // }
-
-  // .images {
-  //   order: 2;
-  // }
-
-  // .details {
-  //   order: 3;
-  //   gap: 0px;
-  // }
 
   .toggle-view button {
     background-color: white;
