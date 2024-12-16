@@ -1,10 +1,12 @@
+
 .response-box {
   background-color: #d4f8d4;
   padding: 20px;
   border-radius: 8px;
   width: 90%;
-  margin: 0 auto;
+  margin-top:20px ;
   border: solid 1px #28a745;
+  align-items: center;
 }
 
 .sub-container {
@@ -13,7 +15,28 @@
 }
 
 .message-container {
-  text-align: center;
+  // text-align: center;
+  .thank{
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27.24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+  }
+
+  p{
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.79px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+  }
 }
 
 .message-container h2 {
@@ -68,13 +91,15 @@
 /* Mobile Responsive Styling */
 @media screen and (max-width: 500px) {
   .response-box {
-    padding: 10px;
     font-size: 14px;
-
+    margin-top: 18px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
     .sub-container {
-      padding: 5px;
-      text-align: center;
-
+align-items: center;
+justify-content: center;
       .message-container {
         h2 {
           font-size: 18px; // Smaller heading
@@ -103,8 +128,8 @@
           border-radius: 5px;
 
           svg {
-            width: 14px;
-            height: 14px;
+            width: 20px;
+            height: 20px;
             margin-right: 5px; // Ensure consistent spacing
           }
         }
@@ -115,7 +140,17 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 6px;
+          gap: 4px;
+
+          background: #FFFFFF;
+          border: 1px solid #00000026;
+
+          font-family: Open Sans;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 22px;
+         
+
         }
       }
     }

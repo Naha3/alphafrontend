@@ -1,17 +1,27 @@
 <div class="container">
     <div class="sub-container">
-        <!-- <div class="header-1">
-            <h1>Estimate #{{ estimateDetails.estimateNumber }}</h1>
-            <button class="download-btn" (click)="handleDownload()">
-                <span class="icon"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.377 12.9102C10.3916 12.9288 10.4102 12.9439 10.4316 12.9543C10.4529 12.9647 10.4763 12.9701 10.5 12.9701C10.5237 12.9701 10.5471 12.9647 10.5684 12.9543C10.5898 12.9439 10.6084 12.9288 10.623 12.9102L12.8105 10.1426C12.8906 10.041 12.8184 9.89062 12.6875 9.89062H11.2402V3.28125C11.2402 3.19531 11.1699 3.125 11.084 3.125H9.91211C9.82617 3.125 9.75586 3.19531 9.75586 3.28125V9.88867H8.3125C8.18164 9.88867 8.10938 10.0391 8.18945 10.1406L10.377 12.9102ZM17.6484 12.2266H16.4766C16.3906 12.2266 16.3203 12.2969 16.3203 12.3828V15.3906H4.67969V12.3828C4.67969 12.2969 4.60938 12.2266 4.52344 12.2266H3.35156C3.26562 12.2266 3.19531 12.2969 3.19531 12.3828V16.25C3.19531 16.5957 3.47461 16.875 3.82031 16.875H17.1797C17.5254 16.875 17.8047 16.5957 17.8047 16.25V12.3828C17.8047 12.2969 17.7344 12.2266 17.6484 12.2266Z" fill="black" fill-opacity="0.88"/>
-                    </svg>
-                    </span>
-                Download
-            </button>
-        </div> -->
 
         <div class="content">
+
+            <div *ngIf="isSmallScreen">
+                <div class="header">
+                    <div class="esitmate-no1">
+                        Estimate #{{ estimateDetails.estimateNumber }}
+                    </div>
+                    <button class="download-btn" (click)="handleDownload()">
+                        <span class="icon">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.377 12.9102C10.3916 12.9288 10.4102 12.9439 10.4316 12.9543C10.4529 12.9647 10.4763 12.9701 10.5 12.9701C10.5237 12.9701 10.5471 12.9647 10.5684 12.9543C10.5898 12.9439 10.6084 12.9288 10.623 12.9102L12.8105 10.1426C12.8906 10.041 12.8184 9.89062 12.6875 9.89062H11.2402V3.28125C11.2402 3.19531 11.1699 3.125 11.084 3.125H9.91211C9.82617 3.125 9.75586 3.19531 9.75586 3.28125V9.88867H8.3125C8.18164 9.88867 8.10938 10.0391 8.18945 10.1406L10.377 12.9102ZM17.6484 12.2266H16.4766C16.3906 12.2266 16.3203 12.2969 16.3203 12.3828V15.3906H4.67969V12.3828C4.67969 12.2969 4.60938 12.2266 4.52344 12.2266H3.35156C3.26562 12.2266 3.19531 12.2969 3.19531 12.3828V16.25C3.19531 16.5957 3.47461 16.875 3.82031 16.875H17.1797C17.5254 16.875 17.8047 16.5957 17.8047 16.25V12.3828C17.8047 12.2969 17.7344 12.2266 17.6484 12.2266Z"
+                                    fill="black" fill-opacity="0.88" />
+                            </svg>
+                        </span>
+                        Download
+                    </button>
+                </div>
+            </div>
+
             <div class="images">
                 <div class="main-image">
                     <img [src]="images[selectedImage]" alt="Vehicle" />
@@ -20,71 +30,90 @@
                     <button *ngFor="let image of images.slice(1); let i = index"
                         [ngClass]="{'selected': selectedImage === i + 1}" (click)="selectImage(i + 1)"
                         class="thumbnail">
-                        <img [src]="image"  />
+                        <img [src]="image" />
                     </button>
                 </div>
             </div>
+
+
 
             <div class="details">
 
-                <div class="header">
-                    <h1>Estimate #{{ estimateDetails.estimateNumber }}</h1>
-                    <button class="download-btn" (click)="handleDownload()">
-                        <span class="icon"><svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.377 12.9102C10.3916 12.9288 10.4102 12.9439 10.4316 12.9543C10.4529 12.9647 10.4763 12.9701 10.5 12.9701C10.5237 12.9701 10.5471 12.9647 10.5684 12.9543C10.5898 12.9439 10.6084 12.9288 10.623 12.9102L12.8105 10.1426C12.8906 10.041 12.8184 9.89062 12.6875 9.89062H11.2402V3.28125C11.2402 3.19531 11.1699 3.125 11.084 3.125H9.91211C9.82617 3.125 9.75586 3.19531 9.75586 3.28125V9.88867H8.3125C8.18164 9.88867 8.10938 10.0391 8.18945 10.1406L10.377 12.9102ZM17.6484 12.2266H16.4766C16.3906 12.2266 16.3203 12.2969 16.3203 12.3828V15.3906H4.67969V12.3828C4.67969 12.2969 4.60938 12.2266 4.52344 12.2266H3.35156C3.26562 12.2266 3.19531 12.2969 3.19531 12.3828V16.25C3.19531 16.5957 3.47461 16.875 3.82031 16.875H17.1797C17.5254 16.875 17.8047 16.5957 17.8047 16.25V12.3828C17.8047 12.2969 17.7344 12.2266 17.6484 12.2266Z" fill="black" fill-opacity="0.88"/>
-                            </svg>
+                <div *ngIf="!isSmallScreen">
+                    <div class="dubilacte-header">
+                        <div class="esitmate-no">
+                            Estimate #{{ estimateDetails.estimateNumber }}
+                        </div>
+                        <button class="download-btn" (click)="handleDownload()">
+                            <span class="icon"><svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.377 12.9102C10.3916 12.9288 10.4102 12.9439 10.4316 12.9543C10.4529 12.9647 10.4763 12.9701 10.5 12.9701C10.5237 12.9701 10.5471 12.9647 10.5684 12.9543C10.5898 12.9439 10.6084 12.9288 10.623 12.9102L12.8105 10.1426C12.8906 10.041 12.8184 9.89062 12.6875 9.89062H11.2402V3.28125C11.2402 3.19531 11.1699 3.125 11.084 3.125H9.91211C9.82617 3.125 9.75586 3.19531 9.75586 3.28125V9.88867H8.3125C8.18164 9.88867 8.10938 10.0391 8.18945 10.1406L10.377 12.9102ZM17.6484 12.2266H16.4766C16.3906 12.2266 16.3203 12.2969 16.3203 12.3828V15.3906H4.67969V12.3828C4.67969 12.2969 4.60938 12.2266 4.52344 12.2266H3.35156C3.26562 12.2266 3.19531 12.2969 3.19531 12.3828V16.25C3.19531 16.5957 3.47461 16.875 3.82031 16.875H17.1797C17.5254 16.875 17.8047 16.5957 17.8047 16.25V12.3828C17.8047 12.2969 17.7344 12.2266 17.6484 12.2266Z"
+                                        fill="black" fill-opacity="0.88" />
+                                </svg>
                             </span>
-                        Download
-                    </button>
-                </div>
-
-                <div class="customer-details">
-                    <div class="customer-detail">
-                        <div class="detail">
-                            <div class="label">Customer Name</div>
-                            <div class="paragraph">{{ estimateDetails.customer.name }}</div>
-                        </div>
-                        <div class="detail">
-                            <div class="label">Cell:</div>
-                            <div class="paragraph"> {{ estimateDetails.customer.cell }}</div>
-                        </div>
-                    </div>
-                    <div class="customer-detail">
-                        <div class="detail">
-                            <div class="label">Email:</div>
-                            <div class="paragraph">{{ estimateDetails.customer.email }}</div>
-                        </div>
-                        <div class="detail">
-                            <div class="label">Service Advisor:</div>
-                            <div class="paragraph"> {{ estimateDetails.customer.serviceAdvisor }} </div>
-                        </div>
+                            Download
+                        </button>
                     </div>
                 </div>
-                <div class="vehicle-details">
-                    <div class="vehicle-detail">
-                        <div class="detail">
-                            <div class="label">Vehicle:</div>
-                            <div class="paragraph">{{ estimateDetails.vehicle.model }} </div>
-                        </div>
 
-                        <div class="detail">
-                            <div class="label">License Plate:</div>
-                            <div class="paragraph">{{ estimateDetails.vehicle.licensePlate }}</div>
+                <div class="detail-1">
+                    <!-- Customer Details -->
+                    <div class="customer-details">
+                        <div class="customer-detail">
+                            <div class="detail">
+                                <div class="label">Customer Name</div>
+                                <div class="paragraph">{{ estimateDetails.customer.name }}</div>
+                            </div>
+                            <div class="detail">
+                                <div class="label">Cell:</div>
+                                <div class="paragraph">{{ estimateDetails.customer.cell }}</div>
+                            </div>
+                            <!-- Show these details only for small screens OR when "View More" is clicked -->
+                            <div class="detail" *ngIf="showMore || !isSmallScreen">
+                                <div class="label">Email:</div>
+                                <div class="paragraph">{{ estimateDetails.customer.email }}</div>
+                            </div>
+                            <div class="detail" *ngIf="showMore || !isSmallScreen">
+                                <div class="label">Service Advisor:</div>
+                                <div class="paragraph">{{ estimateDetails.customer.serviceAdvisor }}</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="vehicle-detail">
-                        <div class="detail">
-                            <div class="label">VIN number:</div>
-                            <div class="paragraph">{{ estimateDetails.vehicle.vin }} </div>
-                        </div>
-                        <div class="detail">
-                            <div class="label">Odometer In: </div>
-                            <div class="paragraph"> {{ estimateDetails.vehicle.odometerIn}} </div>
-                        </div>
 
+                    <!-- Vehicle Details -->
+                    <div class="vehicle-details">
+                        <div class="vehicle-detail">
+                            <div class="detail">
+                                <div class="label">Vehicle:</div>
+                                <div class="paragraph">{{ estimateDetails.vehicle.model }}</div>
+                            </div>
+                            <div class="detail">
+                                <div class="label">License Plate:</div>
+                                <div class="paragraph">{{ estimateDetails.vehicle.licensePlate }}</div>
+                            </div>
+                            <!-- Show these details only for small screens OR when "View More" is clicked -->
+                            <div class="detail" *ngIf="showMore || !isSmallScreen">
+                                <div class="label">VIN number:</div>
+                                <div class="paragraph">{{ estimateDetails.vehicle.vin }}</div>
+                            </div>
+                            <div class="detail" *ngIf="showMore || !isSmallScreen">
+                                <div class="label">Odometer In:</div>
+                                <div class="paragraph">{{ estimateDetails.vehicle.odometerIn }}</div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Toggle Button -->
                 </div>
             </div>
+
+
+
         </div>
+        <div class="toggle-view" *ngIf="isSmallScreen">
+            <button (click)="toggleView()">
+                {{ showMore ? 'View Less' : 'View More' }}
+            </button>
         </div>
-        </div>
+    </div>
+</div>
