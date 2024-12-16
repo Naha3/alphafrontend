@@ -16,7 +16,6 @@ export class ConcernsListComponent {
       concern:'Needs Immediate Attention',
       image: '/assets/images/bonnet-1732777028372.webp',
       title_name: 'Engine oil',
-      title_namee: 'ENGINE OIL',
       description: 'Engine oil level is low and requires topping up.',
       service: 'Engine Oil Labor',
       laborCost: 60,
