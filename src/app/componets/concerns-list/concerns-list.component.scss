@@ -453,7 +453,7 @@ color: white;
     }
   }
 }
-// Media Query for Mobile (max-width: 500px)
+// // Media Query for Mobile (max-width: 500px)
 @media (max-width: 500px) {
   .container {
     flex-direction: column;
@@ -468,6 +468,12 @@ color: white;
       padding: 8px;
       // flex-direction: column;
       align-items: flex-start;
+      .left-header-part{
+        .icon{
+          height: 16px;
+          width: 18px;
+        }
+      }
     }
 
     .concern-tital p{
@@ -605,7 +611,8 @@ color: white;
 
   .container {
     flex-direction: column;
-    .concerns-container .header {
+    .concerns-container 
+    .header {
       font-size: 14px;
       height: auto;
       padding: 8px;
@@ -674,12 +681,12 @@ color: white;
         }
       }
       .total-cost {
-        margin-right: 10px;
-        width: 97%;
-        justify-content: flex-start;
-        text-align: center;
+        margin-right: 18px;
+        width: 95%;
+        // justify-content: flex-start;
+        // text-align: center;  
         background-color: #c7c6c6;
-        display: flex;
+        // display: flex;
         margin-bottom: 139px;
     
         .act {
@@ -696,14 +703,13 @@ color: white;
                     text-align: right;
                     text-underline-position: from-font;
                     text-decoration-skip-ink: none;
-                    padding-left: 10px;
+                    margin-top: 5px;
                     
                   }
           
           .buttons{
-            // margin-right: 23px;
-            display: flex;
             align-items: center;
+            display: flex;
             gap: 11px;
             flex-direction: column;
             .act-approve {
@@ -774,12 +780,50 @@ color: white;
             h4 {
               display: none;
             }
+            span{
+              font-family: Open Sans;
+font-size: 14px;
+font-weight: 600;
+line-height: 19.07px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+            }
+          }
+          .hours{
+            font-family: Open Sans;
+font-size: 12px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
           }
         }
         .service-right {
           .services_cost {
             display: flex;
             justify-content: end;
+            font-family: Open Sans;
+font-size: 16px;
+font-weight: 600;
+line-height: 21.79px;
+text-align: right;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+          }
+          .hour_cost{
+            font-family: Open Sans;
+font-size: 12px;
+font-weight: 400;
+line-height: 20px;
+text-align: right;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
           }
         }
       }
@@ -804,16 +848,53 @@ color: white;
 
               .description-content {
                 font-size: 14px;
+
+                font-family: Open Sans;
+font-size: 12px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
               }
             }
             /* Optional styling for the buttons and content */
           }
           .service-right-message {
             width: 40%;
-            padding: 0px 10px 0px 0px;
+            
+
           }
         }
       }
     }
   }
+
+  .container{
+    .sub-container{
+      width: 100%;
+    }
+  }
+  .container[_ngcontent-ng-c3908030459] .small-screen-services[_ngcontent-ng-c3908030459] .services-message[_ngcontent-ng-c3908030459] .services-message-name[_ngcontent-ng-c3908030459] .service-left-message[_ngcontent-ng-c3908030459] .description-wrapper[_ngcontent-ng-c3908030459] .close-description[_ngcontent-ng-c3908030459] {
+    background-color: #FFFFFF;
+    color: #00c19d !important;
+    padding: 0px !important;
+    border: none !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    border-radius: 4px !important;
+  }
+}
+
+@media (max-width: 400px){
+  .container[_ngcontent-ng-c3908030459] .concern-item[_ngcontent-ng-c3908030459] .total-cost[_ngcontent-ng-c3908030459] .act[_ngcontent-ng-c3908030459] .buttons[_ngcontent-ng-c3908030459] {
+    padding-left: 0px;}
+    .container[_ngcontent-ng-c3908030459] .concern-item[_ngcontent-ng-c3908030459] .image[_ngcontent-ng-c3908030459] img[_ngcontent-ng-c3908030459] {
+      max-width: 290px;}
+      .container[_ngcontent-ng-c3908030459] .concern-item[_ngcontent-ng-c3908030459] .total-cost[_ngcontent-ng-c3908030459] .act[_ngcontent-ng-c3908030459] .buttons[_ngcontent-ng-c3908030459] .act-approve[_ngcontent-ng-c3908030459] {
+        width: 300px;
+      }
+      .container[_ngcontent-ng-c3908030459] .concern-item[_ngcontent-ng-c3908030459] .total-cost[_ngcontent-ng-c3908030459] .act[_ngcontent-ng-c3908030459] .buttons[_ngcontent-ng-c3908030459] .act-later[_ngcontent-ng-c3908030459]{
+        width: 300px;
+      }
 }

@@ -1,6 +1,6 @@
-<footer class="footer" >
+<footer  class="footer" [ngClass]="{ 'footer-visible': isFooterVisible, 'footer-hidden': isAtBottom }">
   <div class="footer-content">
-    <div class="footer-text">
+    <!-- <div class="footer-text">
       <div>
         <h2>Let’s Approve Your Repairs</h2>
       </div>
@@ -23,9 +23,18 @@
         </span>
         Submitting is fast and secure.
       </p>
+    </div> -->
+    <div class="button-container">
+      <button class="sign-submit-btn">
+        Sign and Submit
+        <span class="arrow">➤</span>
+      </button>
     </div>
+
   </div>
 </footer>
+
+
 
 <div class="button-container1">
   <button class="sign-submit-btn">
