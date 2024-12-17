@@ -1,5 +1,10 @@
 .animation{
-  margin-right: 0px;
+  position: relative;
+  width: 51px;
+  height: 41px;
+  left: 83px;
+ 
+  top: 13px;
 }
 .container {
   // max-width: 1296px; 
@@ -301,11 +306,6 @@ text-decoration-skip-ink: none;
           
         }
 
-        .btn {
-          // padding: 0.5rem 1rem;
-          // font-size: 1rem;
-          // border-radius: 4px;
-        }
 
         .btn-primary {
           width: 120px;
@@ -457,13 +457,70 @@ color: white;
   }
 }
 // // Media Query for Mobile (max-width: 500px)
+
+
+
+.services,
+.small-screen-services {
+  display: none;
+}
+/* Hide .actions on small screens */
+@media (max-width: 720px) {
+  .actions {
+    display: none;
+  }
+}
+
+/* Optionally, you can define how the actions div should appear on larger screens */
+@media (min-width: 721px) {
+  .actions {
+    display: block;
+  }
+}
+
+/* Show .services on large screens */
+@media (min-width: 769px) {
+  .services {
+    display: block;
+  }
+}
+
+/* Show .small-screen-services on small screens */
+@media (max-width: 768px) {
+  .small-screen-services {
+    display: block;
+  }
+}
+/* Hide both by default */
+.svg-small,
+.svg-large {
+  display: none;
+}
+
+/* Show the small SVG on small screens */
+@media (max-width: 768px) {
+  .svg-small {
+    display: inline-block;
+  }
+}
+
+/* Show the large SVG on large screens */
+@media (min-width: 769px) {
+  .svg-large {
+    display: inline-block;
+  }
+}
 @media (max-width: 500px) {
+  .container[_ngcontent-ng-c2228516488] .concerns-container[_ngcontent-ng-c2228516488] .header[_ngcontent-ng-c2228516488] .left-header-part[_ngcontent-ng-c2228516488] .icon[_ngcontent-ng-c2228516488] {
+    height: 16px;
+    width: 18px;
+}
+.container[_ngcontent-ng-c2228516488] .sub-container[_ngcontent-ng-c2228516488] .concerns-container[_ngcontent-ng-c2228516488] .header[_ngcontent-ng-c2228516488] .left-right-part[_ngcontent-ng-c2228516488] {
+  height: 12px;
+    width: 18px;
+}
   .container {
     flex-direction: column;
-
-    .sub-container {
-      // width: 100%;
-    }
 
     .concerns-container .header {
       font-size: 14px;
@@ -557,59 +614,7 @@ color: white;
     }
   }
 }
-
-
-.services,
-.small-screen-services {
-  display: none;
-}
-/* Hide .actions on small screens */
-@media (max-width: 720px) {
-  .actions {
-    display: none;
-  }
-}
-
-/* Optionally, you can define how the actions div should appear on larger screens */
-@media (min-width: 721px) {
-  .actions {
-    display: block;
-  }
-}
-
-/* Show .services on large screens */
-@media (min-width: 769px) {
-  .services {
-    display: block;
-  }
-}
-
-/* Show .small-screen-services on small screens */
-@media (max-width: 768px) {
-  .small-screen-services {
-    display: block;
-  }
-}
-/* Hide both by default */
-.svg-small,
-.svg-large {
-  display: none;
-}
-
-/* Show the small SVG on small screens */
-@media (max-width: 768px) {
-  .svg-small {
-    display: inline-block;
-  }
-}
-
-/* Show the large SVG on large screens */
-@media (min-width: 769px) {
-  .svg-large {
-    display: inline-block;
-  }
-}
- 
+/*both 500 are used*/
 @media (max-width: 500px) {
 
   .container {
