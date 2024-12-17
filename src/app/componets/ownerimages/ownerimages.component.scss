@@ -166,7 +166,7 @@ gap: 10px;
   }
 
 
-  @media (max-width: 1370px) {
+  @media (max-width: 1438px) {
     .detail-1{
       gap:0px !important;
     }
@@ -181,6 +181,7 @@ gap: 10px;
 @media (max-width: 720px) {
   .container {
     width: 100%;
+    margin-left: 0px;
   }
   .dubilacte-header{
    display: none;
