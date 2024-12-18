@@ -1,6 +1,5 @@
 .main-section {
   width: 100%;
-  // max-width: 1296px;
   background-color: #fff;
   border-radius: 5px;
   display: flex;
@@ -17,7 +16,7 @@
       height: 54px;
       border: 1px solid;
       border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+      border-top-right-radius: 8px;
       align-items: center;
       padding-left: 14px;
 
@@ -111,13 +110,13 @@
     .info-section {
       // margin-top: 20px;
       opacity: 0.8;
-      margin-top: 55px;
+      margin-top: 68px;
       font-family: open sans;
       font-weight: 400;
       font-size: 14px;
 
-      h3 {
-        // margin-top: 20px;
+      .disclimer {
+        margin-top: 46px;
         font-size: 18px;
         color: #444;
         font-weight: 700;
@@ -126,9 +125,30 @@
         line-height: 19.07px;
       }
 
-      p {
+      .p {
+        margin-top: 20px;
+        font-family: Open Sans;
         font-size: 14px;
-        // margin: 0 0 10px;
+        font-weight: 400;
+        line-height: 19.07px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #0000008F;
+
+      }
+      .thanku{
+        margin-top: 200px;
+        font-family: Open Sans;
+font-size: 32px;
+font-weight: 600;
+line-height: 22px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #00000066;
+margin-bottom: 147px;
+
       }
 
       a {
@@ -178,6 +198,9 @@
 
 
 @media (max-width: 500px) {
+  .thanku{
+    display: none;
+  }
   .main-section {
     padding: 10px;
     max-width: 100%;

@@ -1,185 +1,78 @@
 .footer {
   position: fixed;
-  bottom: -80px;
-  // z-index: 1000;
-  transition: bottom 0.3s ease-in-out;
-  left: 0;
-  margin-bottom: 80px;
+  bottom: 0px;
   background-color: #fff;
   width: 100%;
+  padding: 19px 0px 20px 0px;
+.footer-content{
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  // margin: 0 auto; // Center the footer container
-  border: 1px solid #ddd;
+    align-items: center;
+    justify-content: center;
+  .button-container {
+    width: 100%;
+    // border: 1px solid #009a66;
+    // border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  .footer-visible {
-    bottom: 0; /* Bring the footer back into view */
-  }
-  .footer-hidden {
-    bottom: -100px; /* Move footer out of view */
-  }
-
-  .footer-content {
-    padding: 0px 0px 0px 0px;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .footer-text {
-      max-width: 600px;
-
-      h2 {
-        margin: 0 0 10px;
-        font-size: 18px;
-        font-weight: 700;
-        color: #333;
-      }
-
-      p {
-        font-size: 14px;
-        color: #666;
-        font-weight: 400;
-        line-height: 1.5;
-        margin: 0;
-      }
-    }
-
-    .footer-button {
+    .sign-submit-btn {
       display: flex;
-      flex-direction: column;
+      gap: 10px;
+      border: 1px solid #009a66;
+      border-radius: 4px;
+      width: 90%;
+      height: 64px;
+      background-color: #28a745;
+      color: #ffffff;
       align-items: center;
-      width: 30%;
-
-      @media (max-width: 768px) {
-        align-items: center;
-        margin-top: 20px;
-      }
-
-      .btn-sign-submit {
-        width: 90%;
-        background-color: #28a745; // Green background
-        color: #fff;
-        border: 1px solid #28a745;
-        border-radius: 5px;
-        // padding: 12px 30px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.3s ease, border-color 0.3s ease;
-
-        .arrow {
-          margin-left: 10px;
-          font-size: 18px;
-        }
-
-        &:hover {
-          background-color: #218838;
-          border-color: #1e7e34;
-        }
-      }
-
-      .footer-note {
-        margin-top: 10px;
-        font-size: 13px;
-        color: #666;
-        display: flex;
-        align-items: center;
-
-        .icon-secure {
-          font-size: 1rem;
-          margin-right: 5px;
-        }
+      justify-content: center;
+      font-family: Open Sans;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      .arrow {
+        width: 19px;
+        height: 21px;
       }
     }
   }
 }
-
-
-//  .button-container {
-//    display: flex;
-//   justify-content: center;
-//    align-items: center;
-//    background-color: #f5f5f5; /* Background color similar to your image */
-//    padding: 20px;
-//  }
-
-//  .button-container1 {
-//    display: none; /* Hide on large screens */
-//  }
-
-// // /* Styles for the button inside button-container */
- .button-container .sign-submit-btn {
-   width: 90%;
-  //  display: flex;
-  //  align-items: center;
-  //  justify-content: center;
-   background-color: #28a745; /* Green color for the button */
-   color: white;
-   font-size: 16px;
-   font-weight: bold;
-   border: none;
-   border-radius: 5px;
-   height: 96px;
-   cursor: pointer;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
- }
-
-/* Default styles for large screens */
-.button-container {
-  // padding: 0px 0px 0px 0px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // background-color: #f5f5f5; /* Background color similar to your image */
-  // padding: 20px;
 }
-
 .button-container1 {
-  display: none; /* Hide on large screens */
+  display: none;
 }
 
-/* Styles for the button inside button-container */
 .button-container .sign-submit-btn {
-  width: 90%;
+  width: 100%;
   height: 56px;
 }
 
-.button-container .sign-submit-btn .arrow {
-  margin-left: 10px;
-  font-size: 18px;
-}
-
-/* Media query for small screens (max-width: 500px) */
 @media (max-width: 500px) {
-
-  .footer{
+  .footer {
     display: none;
   }
   .button-container {
-    display: none; /* Hide on small screens */
+    display: none;
   }
 
   .button-container1 {
-    display: flex; /* Show on small screens */
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5; /* Match styling if needed */
+    background-color: #f5f5f5;
     padding: 20px;
   }
 
   .button-container1 .sign-submit-btn {
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #28a745; /* Blue color for the small screen button */
+    background-color: #28a745;
     color: white;
     font-size: 16px;
     font-weight: bold;
