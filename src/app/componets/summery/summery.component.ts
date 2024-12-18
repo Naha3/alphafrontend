@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Summery } from './summery_list/summery.interfac';
 
 @Component({
@@ -6,7 +6,8 @@ import { Summery } from './summery_list/summery.interfac';
   templateUrl: './summery.component.html',
   styleUrl: './summery.component.scss'
 })
-export class SummeryComponent {
+export class SummeryComponent 
+implements OnInit {
 
 summeries:Summery[]=[
   {
@@ -105,4 +106,21 @@ summeries:Summery[]=[
    
   }
 ]
+
+  isLargeScreen: boolean = true;
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize(): void {
+    this.isLargeScreen = window.innerWidth > 720;
+  }
 }

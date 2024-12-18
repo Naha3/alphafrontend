@@ -617,9 +617,11 @@ color: white;
 }
 /*both 500 are used*/
 @media (max-width: 500px) {
+  .container[_ngcontent-ng-c2778308200] .sub-container[_ngcontent-ng-c2778308200] .concerns-container[_ngcontent-ng-c2778308200] .header[_ngcontent-ng-c2778308200] .left-header-part[_ngcontent-ng-c2778308200] {
+    align-items: baseline;
+  }
 .animation
 {
-  display: none;
 }
   .container {
     flex-direction: column;
@@ -652,6 +654,7 @@ color: white;
         display: flex;
         padding-left: 0;
         flex-direction: column;
+        gap: 4px;
         .level {
           gap: 5px;
         }
@@ -847,8 +850,7 @@ text-decoration-skip-ink: none;
           .service-left-message {
             width: 60%;
             .description-wrapper {
-              .toggle-description-btn,
-              .close-description {
+              .toggle-description-btn, .close-description {
                 background-color: white !important;
                 color: #00c19d !important;
                 padding: 0px !important;
@@ -886,15 +888,6 @@ text-decoration-skip-ink: none;
     .sub-container{
       width: 100%;
     }
-  }
-  .container[_ngcontent-ng-c3908030459] .small-screen-services[_ngcontent-ng-c3908030459] .services-message[_ngcontent-ng-c3908030459] .services-message-name[_ngcontent-ng-c3908030459] .service-left-message[_ngcontent-ng-c3908030459] .description-wrapper[_ngcontent-ng-c3908030459] .close-description[_ngcontent-ng-c3908030459] {
-    background-color: #FFFFFF;
-    color: #00c19d !important;
-    padding: 0px !important;
-    border: none !important;
-    cursor: pointer !important;
-    font-size: 14px !important;
-    border-radius: 4px !important;
   }
 }
 
