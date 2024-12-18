@@ -3,20 +3,20 @@
   bottom: 0px;
   background-color: #fff;
   width: 100%;
-  padding: 19px 0px 20px 0px;
+  padding: 20px 0px 20px 0px;
 .footer-content{
   display: flex;
     align-items: center;
     justify-content: center;
   .button-container {
     width: 100%;
-    // border: 1px solid #009a66;
-    // border-radius: 4px;
+    padding-right: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .sign-submit-btn {
+      padding-right: 40px;
       display: flex;
       gap: 10px;
       border: 1px solid #009a66;
