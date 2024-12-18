@@ -1,48 +1,26 @@
-.parent{
+.parent {
+  width: 100%;
+  height: 100%;
+display: flex;
+// justify-content: center;
+// align-items: center;
+  .sub-parent {
     width: 100%;
-    height: 100%;
-
-    .sub-parent{ 
-    .container{
-    display:flex ;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .sub-container{
-        display:flex ;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    }
-   .component{
     display: flex;
     flex-direction: column;
-    margin-left: 72px;
-   }
-  //  @media (max-width: 1420px) {
-  //   .component {
-  //     margin-left: 50px;
-  //   }}
+// justify-content: center;
+// align-items: center;
+    .sub-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .alignment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
-
+  }
 }
-
-
-  .container {
-    flex-direction: column;
-    justify-content: flex-start; /* Align content to the top */
-    padding: 10px; /* Add some padding for better layout on small screens */
-  }
-
-  .sub-container {
-    flex-direction: column;
-    justify-content: flex-start; /* Adjust alignment for smaller screens */
-    padding: 10px; /* Ensure proper spacing */
-  }
-
-  .component {
-    margin-left: 0; /* Remove left margin to avoid overflow on small screens */
-    padding: 10px; /* Add padding for better spacing */
-    align-items: center; /* Center align the content */
-  }

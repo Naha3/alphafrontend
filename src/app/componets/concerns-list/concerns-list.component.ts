@@ -74,23 +74,24 @@ export class ConcernsListComponent {
     if (descriptionContent.style.display === "none" || descriptionContent.style.display === "") {
       // Show description
       descriptionContent.style.display = "block";
-      
+  
       // Hide the "Show Description" button
       toggleButton.style.display = "none";
-      
+  
       // Show the "Hide Description" button
       closeButton.style.display = "block";
     } else {
       // Hide description
       descriptionContent.style.display = "none";
-      
+  
       // Show the "Show Description" button
       toggleButton.style.display = "block";
-      
+  
       // Hide the "Hide Description" button
       closeButton.style.display = "none";
     }
   }
+  
   
   
 }
