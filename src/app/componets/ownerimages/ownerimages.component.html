@@ -107,17 +107,18 @@
                         </div>
                     </div>
                     <!-- Toggle Button -->
+                    <div class="toggle-view" *ngIf="isSmallScreen">
+                        <button (click)="toggleView()">
+                            {{ showMore ? 'View Less' : 'View More' }}
+                        </button>
+                    </div>
                 </div>
             </div>
 
 
 
         </div>
-        <div class="toggle-view" *ngIf="isSmallScreen">
-            <button (click)="toggleView()">
-                {{ showMore ? 'View Less' : 'View More' }}
-            </button>
-        </div>
+        
     </div>
 </div>
 
