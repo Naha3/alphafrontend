@@ -3,10 +3,7 @@
   <div class="sub-container">
     <div class="concerns-container">
       <div *ngFor="let concern of concerns">
-        <div class="header" [ngClass]="{
-            'red-header': concern.concern === 'Needs Immediate Attention',
-            'yellow-header': concern.concern !== 'Needs Immediate Attention'
-          }">
+        <div class="header" [ngClass]="{'red-header': concern.concern === 'Needs Immediate Attention','yellow-header': concern.concern !== 'Needs Immediate Attention'}">
           <div class="left-header-part">
             <div class="icon">
               <i class="svg-small">
@@ -80,7 +77,9 @@
                                           </svg> -->
               <!-- </i> -->
             </div>
-            <div class="no">{{ concerns.length }} Concerns Reported by You</div>
+            <div class="no">
+              {{ concerns.length }} Concerns Reported by You
+            </div>
           </div>
 
           <div class="left-right-part">
@@ -95,7 +94,7 @@
         <div class="concern-item">
           <div class="concern-tital">
             <div class="title">
-              <div class="concern-tital">
+              <div class="concern-titals">
                 <div class="concern-tital-color">
                   {{ concern.title }}
                 </div>
@@ -109,12 +108,7 @@
               <span>
                 {{ concern.title_name }}
               </span>
-              <!-- <div class="namee">
-                <span>
-                    <h2>{{ concern.title_name }}</h2>
-                </span>
-              </div>  -->
-
+              
               <div *ngIf="concern.concern" class="level">
                 <div class="level-1">{{ concern.level }}</div>
                 <div class="level-concern">{{ concern.concern }}</div>
@@ -129,6 +123,7 @@
           </div>
           <div class="service-engine">
             <div class="service-part">
+
               <div class="sevices-name">
                 <div class="service-name-part">{{ concern.service_part }}</div>
 
@@ -160,7 +155,7 @@
                
               </div>
             </div>
-
+<!-- services only displayed on large screen -->
             <div class="services">
               <div class="services-name">
                 <div class="service-left">
@@ -209,8 +204,11 @@
                 </div>
               </div>
             </div>
+            <hr class="white-line">
 
+<!-- small-screen-services only displayed on small screen -->
             <div class="small-screen-services">
+
               <div class="services-name">
                 <div class="service-left">
                   <div class="h4">

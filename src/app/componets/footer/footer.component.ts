@@ -22,23 +22,6 @@ export class FooterComponent implements OnInit, AfterViewInit, OnDestroy {
     // Show the footer during scrolling but hide it at the bottom
     this.isFooterVisible = scrollPosition > 100 && !this.isAtBottom;  }
 
-
-
-
-
-
-
-
-
-
- 
-  // showFooter: boolean = window.innerWidth > 720;
-
-  // @HostListener('window:resize', ['$event'])
-  // onResize() {
-  //   this.checkScreenSize();
-  // }
-
   constructor() {
     this.checkScreenSize(); 
   }
