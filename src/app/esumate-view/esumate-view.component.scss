@@ -28,6 +28,7 @@
 
 .footer {
   display: flex;
+  // padding: 0px;
 }
 
 
@@ -46,10 +47,12 @@
 
 @media (max-width: 500px) {
   .parent {
+    flex-direction: column;
     .sub-parent {
       .alignment {
+       
         .submission {
-          margin-bottom: 113px;
+          margin-bottom: 100px;
         }
         .perevious-screen {
           padding: 12px 0px 0px 0px;

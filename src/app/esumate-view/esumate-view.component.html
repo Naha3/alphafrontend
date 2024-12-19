@@ -40,7 +40,7 @@
           </button>
         </div>
 
-        <!-- <app-footer class="footer" *ngIf="!showInitialSections"></app-footer> -->
+        <!-- <app-footer class="footer"></app-footer> -->
       </ng-container>
 
       <!-- Components for Large Screens -->
@@ -50,12 +50,14 @@
         <app-inspection-results class="submission"></app-inspection-results>
         <app-summery></app-summery>
         <app-submission></app-submission>
+        <app-footer class="footer" ></app-footer>
       </ng-template>
+      
     </div>
     
   </div>
-  
+  <app-footer class="footer" *ngIf="!showInitialSections"></app-footer>
 </div>
-<app-footer class="footer" *ngIf="!showInitialSections"></app-footer>
+
 
 
