@@ -208,9 +208,13 @@ color: #5C5C5C;
   }
   .sub-container {
     justify-content: center;
+    .app-thankyou{
+      display: none;
+    }
   }
 
   .content {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     .main-image {

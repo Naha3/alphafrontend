@@ -1,43 +1,56 @@
-
-<div #parentContainer class="parent">
+<div #parentContainer class="parent scrollable">
   <div class="sub-parent">
     <app-header class="header"></app-header>
 
     <div class="alignment">
-      <!-- Always Visible -->
-      <app-ownerimages *ngIf="showInitialSections"></app-ownerimages>
-      <app-concerns-list *ngIf="showInitialSections"></app-concerns-list>
-      <app-inspection-results *ngIf="showInitialSections"></app-inspection-results>
+      <!-- Components for Small Screens -->
+      <ng-container *ngIf="isSmallScreen; else allComponents">
+        <app-ownerimages *ngIf="showInitialSections"></app-ownerimages>
+        <app-concerns-list *ngIf="showInitialSections"></app-concerns-list>
+        <app-inspection-results *ngIf="showInitialSections" class="submission"></app-inspection-results>
 
-      <!-- Initially Hidden -->
-      <div *ngIf="!showInitialSections">
-        <div (click)="backToInitialSections()">
-        <button class="perevious-screen" >
-          <div class="icon">
-            <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.183313 4.44241C0.183501 4.44259 0.183657 4.44281 0.183875 4.443L3.44963 7.693C3.69428 7.93647 4.09 7.93556 4.33353 7.69088C4.57703 7.44622 4.57609 7.0505 4.33144 6.807L2.13881 4.625L15.375 4.625C15.7202 4.625 16 4.34519 16 4C16 3.65481 15.7202 3.375 15.375 3.375L2.13884 3.375L4.33141 1.193C4.57606 0.949501 4.577 0.553782 4.3335 0.309126C4.08997 0.0644077 3.69422 0.0635642 3.44959 0.307001L0.183844 3.557C0.183656 3.55719 0.1835 3.55741 0.183281 3.55759C-0.0615002 3.80191 -0.0607182 4.19891 0.183313 4.44241Z" fill="black" fill-opacity="0.64"/>
+        <!-- Back Section -->
+        <div *ngIf="!showInitialSections">
+          <div (click)="backToInitialSections()">
+            <button class="perevious-screen">
+              <div class="icon">
+                <!-- SVG icon here -->
+                <svg width="16" height="8"  viewBox="0 0 16 8"  fill="none"  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.183313 4.44241C0.183501 4.44259 0.183657 4.44281 0.183875 4.443L3.44963 7.693C3.69428 7.93647 4.09 7.93556 4.33353 7.69088C4.57703 7.44622 4.57609 7.0505 4.33144 6.807L2.13881 4.625L15.375 4.625C15.7202 4.625 16 4.34519 16 4C16 3.65481 15.7202 3.375 15.375 3.375L2.13884 3.375L4.33141 1.193C4.57606 0.949501 4.577 0.553782 4.3335 0.309126C4.08997 0.0644077 3.69422 0.0635642 3.44959 0.307001L0.183844 3.557C0.183656 3.55719 0.1835 3.55741 0.183281 3.55759C-0.0615002 3.80191 -0.0607182 4.19891 0.183313 4.44241Z" fill="black" fill-opacity="0.64"/>
+                </svg>
+              </div>
+              <div class="back-text">Back to Estimate</div>
+            </button>
+          </div>
+          <app-summery></app-summery>
+          <app-submission></app-submission>
+        </div>
+
+        <!-- Proceed Button -->
+        <div class="buton-container" *ngIf="showInitialSections" (click)="proceedToNext()">
+          <button class="proceed-btn">
+            <div>Proceed</div>
+            <div class="arrow">
+              <!-- SVG icon here -->
+              <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.55834 19.3331L4.24167 20.6665C3.90681 20.8677 3.5244 20.9762 3.13374 20.9807C2.74308 20.9853 2.35826 20.8857 2.01884 20.6922C1.67942 20.4987 1.39764 20.2184 1.20247 19.8799C1.0073 19.5415 0.905775 19.1572 0.908334 18.7665L2.5 13.9498C2.62971 13.5585 2.8753 13.2158 3.20421 12.9673C3.53312 12.7188 3.9298 12.5761 4.34167 12.5581L10.1 12.3415C10.4343 12.3044 10.7432 12.1453 10.9676 11.8947C11.1919 11.6441 11.316 11.3195 11.316 10.9831C11.316 10.6468 11.1919 10.3222 10.9676 10.0716C10.7432 9.82098 10.4343 9.6619 10.1 9.62481L4.34167 9.39981C3.9298 9.38188 3.53312 9.23919 3.20421 8.99065C2.8753 8.74211 2.62971 8.39946 2.5 8.00814L0.916668 3.20814C0.913762 2.81707 1.01476 2.43223 1.20935 2.09299C1.40393 1.75374 1.68511 1.47226 2.02415 1.27731C2.36319 1.08237 2.74791 0.980955 3.13899 0.983443C3.53007 0.985931 3.91347 1.09223 4.25 1.29148L10.9833 5.16648L17.7167 9.05814C18.0504 9.25251 18.3274 9.53103 18.5199 9.86588C18.7124 10.2007 18.8137 10.5802 18.8137 10.9665C18.8137 11.3527 18.7124 11.7322 18.5199 12.0671C18.3274 12.4019 18.0504 12.6804 17.7167 12.8748L10.9833 16.7498L9.875 17.3915L6.55834 19.3331Z" fill="white"/>
               </svg>
-          </div>
-          <div class="back-text">
-            Back to Estimate
-          </div>
-      </button>
-    </div>
+            </div>
+          </button>
+        </div>
+
+        <app-footer class="footer" *ngIf="!showInitialSections"></app-footer>
+      </ng-container>
+
+      <!-- Components for Large Screens -->
+      <ng-template #allComponents>
+        <app-ownerimages></app-ownerimages>
+        <app-concerns-list></app-concerns-list>
+        <app-inspection-results class="submission"></app-inspection-results>
         <app-summery></app-summery>
         <app-submission></app-submission>
-      </div>
-
-      <!-- Proceed Button -->
-       <div class="buton-container" *ngIf="showInitialSections" (click)="proceedToNext()" >
-        <button class="proceed-btn">
-          <div>Proceed</div>
-           <div class="arrow"><svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path d="M6.55834 19.3331L4.24167 20.6665C3.90681 20.8677 3.5244 20.9762 3.13374 20.9807C2.74308 20.9853 2.35826 20.8857 2.01884 20.6922C1.67942 20.4987 1.39764 20.2184 1.20247 19.8799C1.0073 19.5415 0.905775 19.1572 0.908334 18.7665L2.5 13.9498C2.62971 13.5585 2.8753 13.2158 3.20421 12.9673C3.53312 12.7188 3.9298 12.5761 4.34167 12.5581L10.1 12.3415C10.4343 12.3044 10.7432 12.1453 10.9676 11.8947C11.1919 11.6441 11.316 11.3195 11.316 10.9831C11.316 10.6468 11.1919 10.3222 10.9676 10.0716C10.7432 9.82098 10.4343 9.6619 10.1 9.62481L4.34167 9.39981C3.9298 9.38188 3.53312 9.23919 3.20421 8.99065C2.8753 8.74211 2.62971 8.39946 2.5 8.00814L0.916668 3.20814C0.913762 2.81707 1.01476 2.43223 1.20935 2.09299C1.40393 1.75374 1.68511 1.47226 2.02415 1.27731C2.36319 1.08237 2.74791 0.980955 3.13899 0.983443C3.53007 0.985931 3.91347 1.09223 4.25 1.29148L10.9833 5.16648L17.7167 9.05814C18.0504 9.25251 18.3274 9.53103 18.5199 9.86588C18.7124 10.2007 18.8137 10.5802 18.8137 10.9665C18.8137 11.3527 18.7124 11.7322 18.5199 12.0671C18.3274 12.4019 18.0504 12.6804 17.7167 12.8748L10.9833 16.7498L9.875 17.3915L6.55834 19.3331Z" fill="white"/>
-             </svg>
-           </div>
-         </button>
-       </div>
-      
+      </ng-template>
     </div>
   </div>
 </div>

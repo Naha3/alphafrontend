@@ -1,40 +1,52 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+
 @Component({
   selector: 'app-esumate-view',
   templateUrl: './esumate-view.component.html',
-  styleUrl: './esumate-view.component.scss'
+  styleUrls: ['./esumate-view.component.scss']
 })
-export class EsumateViewComponent  {
-
-  @ViewChild('parentContainer') parentContainer!: ElementRef;
+export class EsumateViewComponent {
   showInitialSections = true;
+  isSmallScreen = false;
 
-  // Proceed to next set of components
+  constructor() {
+    this.checkScreenSize();
+  }
+
+  // Check the screen size
+  @HostListener('window:resize', [])
+  onResize() {
+    this.checkScreenSize();
+  }
+
+  private checkScreenSize() {
+    this.isSmallScreen = window.innerWidth < 768; // Adjust breakpoint as needed
+  }
+
   proceedToNext() {
-    this.showInitialSections = false;
-
-    // Scroll to the top of the next section
-    setTimeout(() => {
-      this.scrollToTop();
-    });
+    if (this.isSmallScreen) {
+      this.showInitialSections = false;
+      setTimeout(() => {
+        this.scrollToTop();
+      }, 0);
+    }
   }
 
-  // Back to initial set of components
   backToInitialSections() {
-    this.showInitialSections = true;
-
-    // Scroll to the top of the initial section
-    setTimeout(() => {
-      this.scrollToTop();
-    });
+    if (this.isSmallScreen) {
+      this.showInitialSections = true;
+      setTimeout(() => {
+        this.scrollToTop();
+      }, 0);
+    }
   }
 
-  // Scroll to the top of the container
   scrollToTop() {
-    if (this.parentContainer) {
-      this.parentContainer.nativeElement.scrollTo({
+    const parentContainer = document.querySelector('.scrollable');
+    if (parentContainer) {
+      parentContainer.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   }

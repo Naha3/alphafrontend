@@ -68,4 +68,45 @@ export class SignatureAuthComponent {
     if (!ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+// constructor(
+//   public ref: DynamicDialogRef,
+//   private concernsService: ConcernsService
+// ) {
+//   this.onCloseSubscription = this.ref.onClose.subscribe(() => {
+//   });
+// }
+
+// ngOnInit() {
+//   this.concernsService.concerns$.subscribe((concerns: any) => {
+//     if (concerns && typeof concerns === 'object') {
+//       debugger
+//       // Extract inspections if available, otherwise default to an empty array
+//       this.concerns = concerns.inspections ? concerns.inspections : [];
+//       console.log(this.concerns); // Add this to inspect the structure
+
+//       // Handle the case where inspections property is missing
+//       if (!this.concerns.length) {
+//         console.warn('No inspections found for this concern.');
+//       }
+//       if (concerns.inspectionItemsNotLinked) {
+//         console.log('Inspection items not linked to any concern:', concerns.inspectionItemsNotLinked);
+//       }
+//     } else {
+//       console.error('Expected concerns to be an object, received:', concerns);
+//       this.concerns = [];
+//     }
+//   });
+// }
+
+
+
+// ngOnDestroy() {
+//   if (this.onCloseSubscription) {
+//     this.onCloseSubscription.unsubscribe();
+//   }
+// }
+
+
+
 }
