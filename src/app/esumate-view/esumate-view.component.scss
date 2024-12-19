@@ -4,6 +4,7 @@
   margin: 0px;
   padding: 0px;
   display: flex;
+  background: #F5F5F5;
   .sub-parent {
     width: 100%;
     display: flex;
@@ -22,18 +23,6 @@
       flex-direction: column;
       width: 95%;
     }
-    // .sub-container {
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-
-    //   .alignment {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //   }
-    // }
   }
 }
 
@@ -41,17 +30,16 @@
   display: flex;
 }
 
-/* Responsive Styles */
+
 .proceed-btn {
   display: block;
   margin: 1em auto;
 }
 
-/* Adjust visibility for larger screens */
 @media (min-width: 768px) {
   .buton-container {
     .proceed-btn {
-      display: none; /* Hide button on larger screens */
+      display: none; 
     }
   }
 }
@@ -67,7 +55,7 @@
           padding: 12px 0px 0px 0px;
           display: flex;
           gap: 6px;
-          background-color: white;
+          background: #F5F5F5;
           border: none;
           align-items: baseline;
           .icon {
