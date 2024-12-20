@@ -4,36 +4,24 @@ import { EstimateDetails } from './EstimateDetails/EstimateDetails.interface';
 @Component({
   selector: 'app-ownerimages',
   templateUrl: './ownerimages.component.html',
-  styleUrl: './ownerimages.component.scss',
+  styleUrls: ['./ownerimages.component.scss'], // Corrected `styleUrl` to `styleUrls`
 })
 export class OwnerimagesComponent {
-  isSmallScreen: boolean = window.innerWidth > 720;  
-  selectedImage: number = 0;  
-  showMore: boolean = false; 
-  isSticky = false; 
-  isContentVisible = true;
+  isSmallScreen: boolean = window.innerWidth <= 720; // Small screen detection
+  isSticky = false; // Sticky header flag
+  isContentVisible = true; // Content visibility flag
+  selectedImage: number = 0; // Selected image index
+  showMore: boolean = false; // Toggle additional details
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const offset = window.pageYOffset || document.documentElement.scrollTop;
-    this.isSticky = offset > 400;
-    this.isContentVisible = offset <= 400;
-    if( this.isSmallScreen){
-      debugger
-      this.isSticky=true
-    }
-    // 
-  }
-
-  images = [  // Image array
+  images = [
     '/assets/images/bonnet-1732777028372.webp',
     '/assets/images/bonnet-1732777028372.webp',
     '/assets/images/bonnet-1732777028372.webp',
     '/assets/images/bonnet-1732777028372.webp',
     '/assets/images/bonnet-1732777028372.webp',
   ];
-  
-  estimateDetails: EstimateDetails = {  // Sample estimate data
+
+  estimateDetails: EstimateDetails = {
     estimateNumber: '43312',
     customer: {
       name: 'John Dofender',
@@ -49,32 +37,42 @@ export class OwnerimagesComponent {
     },
   };
 
-  // Listen to window resize events and update the screen size flag
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const offset = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (this.isSmallScreen) {
+      // Sticky behavior for small screens
+      this.isSticky = offset > 200; // Adjust threshold as needed
+      this.isContentVisible = offset <= 200;
+    } else {
+      // Sticky behavior for large screens
+      this.isSticky = offset > 450;
+      this.isContentVisible = offset <= 450;
+    }
+  }
+
+  @HostListener('window:resize', [])
   onResize() {
     this.checkScreenSize();
   }
 
   constructor() {
-    this.checkScreenSize();  // Initialize screen size check on component load
+    this.checkScreenSize();
   }
 
   private checkScreenSize() {
-    this.isSmallScreen =  window.innerWidth <= 720;
-    
+    this.isSmallScreen = window.innerWidth <= 720;
   }
 
-  // Toggle the visibility of extra customer/vehicle details
   toggleView() {
     this.showMore = !this.showMore;
   }
 
-  // Handle download functionality (can be customized)
   handleDownload() {
     console.log('Downloading estimate...');
   }
 
-  // Select image from thumbnails
   selectImage(index: number) {
     this.selectedImage = index;
   }

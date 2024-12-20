@@ -25,8 +25,7 @@
           </div>
           <app-summery></app-summery>
           <app-submission></app-submission>
-          <app-footer class="footer" *ngIf="!showInitialSections"></app-footer>
-        </div>
+         </div>
 
         <!-- Proceed Button -->
        
@@ -46,6 +45,7 @@
     </div>
     
   </div>
+  <app-footer class="footer" *ngIf="!showInitialSections && isSmallScreen"></app-footer>
 </div>
 
 
@@ -62,3 +62,5 @@
 </div>
 
 
+
+        
