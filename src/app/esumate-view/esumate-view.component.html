@@ -5,7 +5,7 @@
     <div class="alignment">
       <!-- Components for Small Screens -->
       <ng-container *ngIf="isSmallScreen; else allComponents">
-        <app-ownerimages  *ngIf="showInitialSections" (stickinessChange)="onStickinessChange($event)"></app-ownerimages>
+        <app-ownerimages  *ngIf="showInitialSections" (stickinessChange)="onStickinessChange($event)" #ownerImages> </app-ownerimages>
         <app-concerns-list *ngIf="showInitialSections"></app-concerns-list>
         <app-inspection-results *ngIf="showInitialSections" class="result"></app-inspection-results>
 
