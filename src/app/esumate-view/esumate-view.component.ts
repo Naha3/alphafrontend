@@ -15,19 +15,15 @@ export class EsumateViewComponent {
     this.isOwnerImagesSticky = isSticky;
     console.log('OwnerImages sticky state:', isSticky);
   }
-
   @ViewChild('ownerImages', { static: false }) ownerImages!: ElementRef;
 
   ngAfterViewInit() {
-    // Add scroll event listener
     const scrollContainer = document.querySelector('.scrollable');
     scrollContainer?.addEventListener('scroll', this.onScroll.bind(this));
   }
 
-  onScroll(event: Event): void {
+  onScroll(event: any): void {
     const scrollContainer = event.target as HTMLElement;
-
-    // Check if ownerImages is in the viewport
     const bounding = this.ownerImages.nativeElement.getBoundingClientRect();
     this.isSticky = bounding.top <= 0;
 
