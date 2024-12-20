@@ -30,6 +30,16 @@
   
 }
 
+.sticky {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0px 10px 75px;
+  background-color: #fff; /* Ensure background stays consistent */
+}
 
 
 .content {

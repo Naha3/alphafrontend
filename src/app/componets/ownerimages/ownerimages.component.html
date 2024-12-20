@@ -1,13 +1,13 @@
 <div class="container">
     
-    <div class="sub-container">
+    <div class="sub-container" >
 
         <app-thankyou class="app-thankyou"></app-thankyou>
         
         <div class="content">
 
             <div *ngIf="isSmallScreen">
-                <div class="header">
+                <div class="header" >
                     <div class="esitmate-no1">
                         Estimate #{{ estimateDetails.estimateNumber }}
                     </div>
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            <div class="images">
+            <div class="images" *ngIf="isContentVisible">
                 <div class="main-image">
                     <img [src]="images[selectedImage]" alt="Vehicle" />
                 </div>
@@ -43,11 +43,11 @@
             <div class="details">
 
                 <div *ngIf="!isSmallScreen">
-                    <div class="dubilacte-header">
-                        <div class="esitmate-no">
+                    <div class="dubilacte-header"  >
+                        <div class="esitmate-no" [ngClass]="{ 'sticky': isSticky }">
                             Estimate #{{ estimateDetails.estimateNumber }}
                         </div>
-                        <button class="download-btn" (click)="handleDownload()">
+                        <button class="download-btn" (click)="handleDownload()" *ngIf="isContentVisible">
                             <span class="icon"><svg width="21" height="20" viewBox="0 0 21 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <div class="detail-1">
+                <div class="detail-1" >
                     <!-- Customer Details -->
                     <div class="customer-details">
                         <div class="customer-detail">
@@ -68,7 +68,7 @@
                                 <div class="label">Customer Name</div>
                                 <div class="paragraph">{{ estimateDetails.customer.name }}</div>
                             </div>
-                            <div class="detail">
+                            <div class="detail" *ngIf="isContentVisible">
                                 <div class="label">Cell:</div>
                                 <div class="paragraph">{{ estimateDetails.customer.cell }}</div>
                             </div>
@@ -85,7 +85,7 @@
                     </div>
 
                     <!-- Vehicle Details -->
-                    <div class="vehicle-details">
+                    <div class="vehicle-details" *ngIf="isContentVisible">
                         <div class="vehicle-detail">
                             <div class="detail">
                                 <div class="label">Vehicle:</div>

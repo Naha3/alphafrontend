@@ -10,6 +10,15 @@ export class OwnerimagesComponent {
   isSmallScreen: boolean = window.innerWidth > 720;  // Flag for screen size
   selectedImage: number = 0;  // Default selected image
   showMore: boolean = false;  // Flag to toggle extra details
+  isSticky = false; // Flag for sticky mode
+  isContentVisible = true;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const offset = window.pageYOffset || document.documentElement.scrollTop;
+    this.isSticky = offset > 350;
+    this.isContentVisible = offset <= 350;
+  }
 
   images = [  // Image array
     '/assets/images/bonnet-1732777028372.webp',
