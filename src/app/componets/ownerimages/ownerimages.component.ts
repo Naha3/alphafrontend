@@ -13,6 +13,8 @@ export class OwnerimagesComponent {
   selectedImage: number = 0; // Selected image index
   showMore: boolean = false; // Toggle additional details
 
+
+
   images = [
     '/assets/images/bonnet-1732777028372.webp',
     '/assets/images/bonnet-1732777028372.webp',
@@ -39,30 +41,41 @@ export class OwnerimagesComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
+    // Debugging log to ensure scroll is triggered
+    console.log('Scroll event triggered');
     const offset = window.pageYOffset || document.documentElement.scrollTop;
 
     if (this.isSmallScreen) {
-      // Sticky behavior for small screens
-      this.isSticky = offset > 200; // Adjust threshold as needed
-      this.isContentVisible = offset <= 200;
+      // debugger
+      // Small screen scroll behavior
+      this.isSticky = offset > 100; // Adjust threshold as needed
+      this.isContentVisible = offset <= 100;
+      console.log('Small Screen Scroll Offset:', offset);
+      console.log('Is Sticky:', this.isSticky);
     } else {
-      // Sticky behavior for large screens
+      // debugger
+      // Large screen scroll behavior
       this.isSticky = offset > 450;
       this.isContentVisible = offset <= 450;
+      console.log('Large Screen Scroll Offset:', offset);
+      console.log('Is Sticky:', this.isSticky);
     }
   }
 
   @HostListener('window:resize', [])
   onResize() {
+    // Update screen size on resize
     this.checkScreenSize();
+    console.log('Screen resized. Is Small Screen:', this.isSmallScreen);
   }
 
   constructor() {
-    this.checkScreenSize();
+    this.checkScreenSize(); // Initialize screen size detection
   }
 
   private checkScreenSize() {
     this.isSmallScreen = window.innerWidth <= 720;
+    console.log('Is Small Screen (checkScreenSize):', this.isSmallScreen);
   }
 
   toggleView() {

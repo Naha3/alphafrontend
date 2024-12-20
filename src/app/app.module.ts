@@ -21,7 +21,7 @@ import { SignatureAuthComponent } from './componets/signature-auth/signature-aut
 // import { SignatureAuthComponent } from './signature-auth/signature-auth.component';
 import { EstimateGalleryComponent } from './componets/estimate-gallery/estimate-gallery.component';
 import { InspectionResultsComponent } from './componets/inspection-results/inspection-results.component';
-
+// import { ScrollEventDirective } from './scroll-event.directive'; // Adjust the path as needed
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +40,7 @@ import { InspectionResultsComponent } from './componets/inspection-results/inspe
     EsumateViewComponent,
     SignatureAuthComponent,
     EstimateGalleryComponent,
-    InspectionResultsComponent
+    InspectionResultsComponent,
   ],
   imports: [
     BrowserModule,
