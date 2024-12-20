@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-esumate-view',
@@ -7,10 +7,31 @@ import { Component, HostListener } from '@angular/core';
 })
 export class EsumateViewComponent {
   showInitialSections = true;
-  isSmallScreen = false;
+  isSmallScreen : boolean = window.innerWidth <= 720;
+  isSticky = false;
+  isOwnerImagesSticky = false; 
 
-  constructor() {
-    this.checkScreenSize();
+  onStickinessChange(isSticky: boolean) {
+    this.isOwnerImagesSticky = isSticky;
+    console.log('OwnerImages sticky state:', isSticky);
+  }
+
+  @ViewChild('ownerImages', { static: false }) ownerImages!: ElementRef;
+
+  ngAfterViewInit() {
+    // Add scroll event listener
+    const scrollContainer = document.querySelector('.scrollable');
+    scrollContainer?.addEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  onScroll(event: Event): void {
+    const scrollContainer = event.target as HTMLElement;
+
+    // Check if ownerImages is in the viewport
+    const bounding = this.ownerImages.nativeElement.getBoundingClientRect();
+    this.isSticky = bounding.top <= 0;
+
+    console.log('Scroll position:', scrollContainer.scrollTop, 'Is Sticky:', this.isSticky);
   }
 
   // Check the screen size
@@ -50,4 +71,6 @@ export class EsumateViewComponent {
       });
     }
   }
+
+ 
 }

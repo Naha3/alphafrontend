@@ -1,38 +1,33 @@
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Output, Renderer2 } from '@angular/core';
 import { EstimateDetails } from './EstimateDetails/EstimateDetails.interface';
 
 @Component({
   selector: 'app-ownerimages',
   templateUrl: './ownerimages.component.html',
-  styleUrls: ['./ownerimages.component.scss'], // Corrected `styleUrl` to `styleUrls`
+  styleUrls: ['./ownerimages.component.scss'],
 })
 export class OwnerimagesComponent {
-  isSmallScreen: boolean = window.innerWidth <= 720; // Small screen detection
-  isSticky = false; // Sticky header flag
-  isContentVisible = true; // Content visibility flag
-  selectedImage: number = 0; // Selected image index
-  showMore: boolean = false; // Toggle additional details
+  isSmallScreen: boolean = window.innerWidth <= 720;
+  isSticky = false;
+  isContentVisible = true; // Control visibility of content
+  selectedImage: number = 0;
+  showMore: boolean = false;
+
+  @Output() stickinessChange = new EventEmitter<boolean>(); // Emit stickiness changes to parent
 
   private scrollListener!: () => void;
 
-  constructor(private renderer: Renderer2, private elRef: ElementRef, ) {
-    this.checkScreenSize(); 
+  constructor(private renderer: Renderer2, private elRef: ElementRef) {
+    this.checkScreenSize();
   }
-  // @HostListener('window:scroll', [])
-  // ngAfterViewInit() {
-  //   // Add scroll event listener
-  //   this.scrollListener = this.renderer.listen('window', 'scroll', this.onWindowScroll.bind(this));
 
-  //   // Handle resize for screen size detection
-  //   this.renderer.listen('window', 'resize', () => this.checkScreenSize());
-  // }
   ngOnInit() {
     this.checkScreenSize();
   }
 
   ngAfterViewInit() {
     this.scrollListener = this.renderer.listen('window', 'scroll', () => {
-      this.onWindowScroll();
+      this.onScroll(); // Call the onScroll method
     });
 
     this.renderer.listen('window', 'resize', () => {
@@ -40,20 +35,15 @@ export class OwnerimagesComponent {
     });
   }
 
-  onWindowScroll() {
-    console.log('Scroll event triggered');
+  @HostListener('window:scroll', [])
+  onScroll() {
     const offset = window.pageYOffset || document.documentElement.scrollTop;
-console.log("naha")
-    if (this.isSmallScreen) {
-      this.isSticky = offset > 100;
-      this.isContentVisible = offset <= 100;
-      console.log('Small Screen Scroll Offset:', offset);
-      console.log('Is Sticky:', this.isSticky);
-    } else {
-      this.isSticky = offset > 450;
-      this.isContentVisible = offset <= 450;
-      console.log('Large Screen Scroll Offset:', offset);
-      console.log('Is Sticky:', this.isSticky);
+
+    const shouldBeSticky = offset > 200; // Adjust threshold for stickiness
+    if (this.isSticky !== shouldBeSticky) {
+      this.isSticky = shouldBeSticky;
+      this.isContentVisible = !shouldBeSticky; // Update visibility based on stickiness
+      this.stickinessChange.emit(this.isSticky); // Notify parent of state change
     }
   }
 
@@ -61,7 +51,7 @@ console.log("naha")
   onResize() {
     this.checkScreenSize();
     console.log('Screen resized. Is Small Screen:', window.innerWidth);
-    console.log('Screen resized. Is height Screen:', window.innerHeight);
+    console.log('Screen resized. Screen Height:', window.innerHeight);
   }
 
   images = [
@@ -87,7 +77,6 @@ console.log("naha")
       odometerIn: '12233.3 Miles',
     },
   };
-
 
   private checkScreenSize() {
     this.isSmallScreen = window.innerWidth <= 720;
