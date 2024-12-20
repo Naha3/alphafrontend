@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { EstimateDetails } from './EstimateDetails/EstimateDetails.interface';
 
 @Component({
@@ -13,7 +13,56 @@ export class OwnerimagesComponent {
   selectedImage: number = 0; // Selected image index
   showMore: boolean = false; // Toggle additional details
 
+  private scrollListener!: () => void;
 
+  constructor(private renderer: Renderer2, private elRef: ElementRef, ) {
+    this.checkScreenSize(); 
+  }
+  // @HostListener('window:scroll', [])
+  // ngAfterViewInit() {
+  //   // Add scroll event listener
+  //   this.scrollListener = this.renderer.listen('window', 'scroll', this.onWindowScroll.bind(this));
+
+  //   // Handle resize for screen size detection
+  //   this.renderer.listen('window', 'resize', () => this.checkScreenSize());
+  // }
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
+  ngAfterViewInit() {
+    this.scrollListener = this.renderer.listen('window', 'scroll', () => {
+      this.onWindowScroll();
+    });
+
+    this.renderer.listen('window', 'resize', () => {
+      this.checkScreenSize();
+    });
+  }
+
+  onWindowScroll() {
+    console.log('Scroll event triggered');
+    const offset = window.pageYOffset || document.documentElement.scrollTop;
+console.log("naha")
+    if (this.isSmallScreen) {
+      this.isSticky = offset > 100;
+      this.isContentVisible = offset <= 100;
+      console.log('Small Screen Scroll Offset:', offset);
+      console.log('Is Sticky:', this.isSticky);
+    } else {
+      this.isSticky = offset > 450;
+      this.isContentVisible = offset <= 450;
+      console.log('Large Screen Scroll Offset:', offset);
+      console.log('Is Sticky:', this.isSticky);
+    }
+  }
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.checkScreenSize();
+    console.log('Screen resized. Is Small Screen:', window.innerWidth);
+    console.log('Screen resized. Is height Screen:', window.innerHeight);
+  }
 
   images = [
     '/assets/images/bonnet-1732777028372.webp',
@@ -39,39 +88,6 @@ export class OwnerimagesComponent {
     },
   };
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    // Debugging log to ensure scroll is triggered
-    console.log('Scroll event triggered');
-    const offset = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (this.isSmallScreen) {
-      // debugger
-      // Small screen scroll behavior
-      this.isSticky = offset > 100; // Adjust threshold as needed
-      this.isContentVisible = offset <= 100;
-      console.log('Small Screen Scroll Offset:', offset);
-      console.log('Is Sticky:', this.isSticky);
-    } else {
-      // debugger
-      // Large screen scroll behavior
-      this.isSticky = offset > 450;
-      this.isContentVisible = offset <= 450;
-      console.log('Large Screen Scroll Offset:', offset);
-      console.log('Is Sticky:', this.isSticky);
-    }
-  }
-
-  @HostListener('window:resize', [])
-  onResize() {
-    // Update screen size on resize
-    this.checkScreenSize();
-    console.log('Screen resized. Is Small Screen:', this.isSmallScreen);
-  }
-
-  constructor() {
-    this.checkScreenSize(); // Initialize screen size detection
-  }
 
   private checkScreenSize() {
     this.isSmallScreen = window.innerWidth <= 720;
