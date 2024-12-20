@@ -7,7 +7,7 @@
       <ng-container *ngIf="isSmallScreen; else allComponents">
         <app-ownerimages *ngIf="showInitialSections"></app-ownerimages>
         <app-concerns-list *ngIf="showInitialSections"></app-concerns-list>
-        <app-inspection-results *ngIf="showInitialSections" class="submission"></app-inspection-results>
+        <app-inspection-results *ngIf="showInitialSections" class="result"></app-inspection-results>
 
         <!-- Back Section -->
         <div *ngIf="!showInitialSections">
@@ -25,29 +25,29 @@
           </div>
           <app-summery></app-summery>
           <app-submission></app-submission>
+          <app-footer class="footer" *ngIf="!showInitialSections"></app-footer>
         </div>
 
         <!-- Proceed Button -->
        
 
-        <!-- <app-footer class="footer"></app-footer> -->
       </ng-container>
 
       <!-- Components for Large Screens -->
       <ng-template #allComponents>
-        <app-ownerimages></app-ownerimages>
+        <app-ownerimages class="owner-images"></app-ownerimages>
         <app-concerns-list></app-concerns-list>
-        <app-inspection-results class="submission"></app-inspection-results>
+        <app-inspection-results class="result"></app-inspection-results>
         <app-summery></app-summery>
-        <app-submission></app-submission>
+        <app-submission class="submission"></app-submission>
         <app-footer class="footer" ></app-footer>
       </ng-template>
       
     </div>
     
   </div>
-  <app-footer class="footer" *ngIf="!showInitialSections"></app-footer>
 </div>
+
 
 <div class="buton-container" *ngIf="showInitialSections" (click)="proceedToNext()">
   <button class="proceed-btn">
@@ -60,4 +60,5 @@
     </div>
   </button>
 </div>
+
 

@@ -1,13 +1,12 @@
 .main-section {
-  width: 100%;
-  background-color: #fff;
+  width: 90%;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
   .sub-container {
-    width: 90%;
+    width: 100%;
 
     
     .title-section {
@@ -37,10 +36,11 @@
       flex-direction: column;
       .history-item {
         display: flex;
-        margin-left: 20px;
+        padding-left: 20px;
         height: 74px;
         height: 74PX;
-        // width: 1247px;
+        
+  background-color: #fff;
         border-bottom: 1px solid #eee;
 
         .history-info {
@@ -108,15 +108,14 @@
 
     /* Info Section */
     .info-section {
-      // margin-top: 20px;
+      background: #F5F5F5;
       opacity: 0.8;
-      margin-top: 68px;
       font-family: open sans;
       font-weight: 400;
       font-size: 14px;
 
       .disclimer {
-        margin-top: 46px;
+        padding-top: 20px;
         font-size: 18px;
         color: #444;
         font-weight: 700;
@@ -138,16 +137,15 @@
 
       }
       .thanku{
-        margin-top: 200px;
         font-family: Open Sans;
-font-size: 32px;
-font-weight: 600;
-line-height: 22px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-color: #00000066;
-margin-bottom: 147px;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 22px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: rgba(0, 0, 0, 0.4);
+        padding: 200px 0px 141px 0px;
 
       }
 
@@ -166,7 +164,6 @@ margin-bottom: 147px;
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .main-section {
-    padding: 15px;
     max-width: 100%;
 
     .title-section {
@@ -187,7 +184,7 @@ margin-bottom: 147px;
 
     .history-details {
       // margin-right: 0;
-      text-align: left;
+      // text-align: left;
     }
 
     .warranty-section {
@@ -202,11 +199,11 @@ margin-bottom: 147px;
     display: none;
   }
   .main-section {
-    padding: 10px;
-    max-width: 100%;
+    // padding: 10px;
+    width: 92%;
 
     .sub-container{
-
+background-color: #F5F5F5;
     .title-section {
       display: none; /* This hides the title section */
     }
