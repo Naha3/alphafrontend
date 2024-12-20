@@ -1,16 +1,6 @@
 .container {
-  // width: 90%;
-  // margin: 20px auto;
-  // background: #fff;
-  // border: 1px solid #ddd;
-  // border-radius: 8px;
-  // box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  // overflow: hidden;
-  // align-items: center;
-  // justify-content: center;
 
   margin-top: 20px;
-  // margin-left: 70px;
   width: 90%;
     background: #fff;
     border: 1px solid #ddd;
@@ -21,7 +11,7 @@
     align-items: center;
     justify-content: center;
   .sub-container {
-    // padding: 20px;
+    
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -32,15 +22,54 @@
 
 .sticky {
   position: fixed;
+  display: flex;
   top: 65px;
   left: 0;
   right: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 10px 0px 10px 75px;
-  background-color: #fff; /* Ensure background stays consistent */
-}
+  background-color: #fff;
 
+  /* Add a smooth transition */
+  transition: all 0.5s ease-in-out;
+
+  .dubilacte-header {
+    justify-content: space-between;
+
+    .detail {
+      display: flex;
+
+      .label {
+        width: 177px !important;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.07px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        /* Add a smooth transition for width changes */
+        transition: width 0.3s ease-in-out;
+      }
+
+      .paragraph {
+        width: 87% !important;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 20.43px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        /* Add smooth font size changes */
+        transition: font-size 0.3s ease-in-out;
+      }
+    }
+  }
+}
 
 .content {
   display: flex;
@@ -197,7 +226,16 @@ color: #5C5C5C;
   }
 
 @media (max-width: 720px) {
-  
+  .sticky {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0px 10px 75px;
+  background-color: #fff; /* Ensure background stays consistent */
+  }
   .container {
     width: 100%;
     margin-left: 0px;

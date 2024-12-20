@@ -1,12 +1,7 @@
 .container {
-  // max-width: 1296px;
-  // width: 100%;
   display: flex;
-  justify-content: center; /* Centers the sub-container horizontally */
-  // align-items: center; /* Centers the sub-container vertically (if you want) */
-  margin-top: 10px; /* Full viewport height for vertical centering */
-
-
+  justify-content: center; 
+  margin-top: 10px; 
 
   .sub-container {
     border: 1px solid greenyellow;
@@ -14,22 +9,23 @@
     width: 90%;
     display: flex;
     flex-direction: column;
+    background-color: white;
 
     .inspection-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px; // Spacing inside each item
-      border-bottom: 1px solid #e0e0e0; // Divider line
+      padding: 16px; 
+      border-bottom: 1px solid #e0e0e0; 
 
       &:last-child {
-        border-bottom: none; // Remove the last item's bottom border
+        border-bottom: none; 
       }
 
       .icon-and-title {
         display: flex;
         align-items: center;
-        gap: 12px; // Space between icon and text
+        gap: 12px; 
 
         .icon {
           display: flex;

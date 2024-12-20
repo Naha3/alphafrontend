@@ -7,17 +7,22 @@ import { EstimateDetails } from './EstimateDetails/EstimateDetails.interface';
   styleUrl: './ownerimages.component.scss',
 })
 export class OwnerimagesComponent {
-  isSmallScreen: boolean = window.innerWidth > 720;  // Flag for screen size
-  selectedImage: number = 0;  // Default selected image
-  showMore: boolean = false;  // Flag to toggle extra details
-  isSticky = false; // Flag for sticky mode
+  isSmallScreen: boolean = window.innerWidth > 720;  
+  selectedImage: number = 0;  
+  showMore: boolean = false; 
+  isSticky = false; 
   isContentVisible = true;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const offset = window.pageYOffset || document.documentElement.scrollTop;
-    this.isSticky = offset > 350;
-    this.isContentVisible = offset <= 350;
+    this.isSticky = offset > 400;
+    this.isContentVisible = offset <= 400;
+    if( this.isSmallScreen){
+      debugger
+      this.isSticky=true
+    }
+    // 
   }
 
   images = [  // Image array
@@ -55,7 +60,8 @@ export class OwnerimagesComponent {
   }
 
   private checkScreenSize() {
-    this.isSmallScreen =  window.innerWidth <= 720;;  // Update the flag based on screen size
+    this.isSmallScreen =  window.innerWidth <= 720;
+    
   }
 
   // Toggle the visibility of extra customer/vehicle details
