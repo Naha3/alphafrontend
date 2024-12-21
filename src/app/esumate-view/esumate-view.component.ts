@@ -11,7 +11,8 @@ export class EsumateViewComponent {
   isSticky = false;
   isOwnerImagesSticky = false;
 
-  
+  @ViewChild('scrollableContainer') scrollableContainer: ElementRef | undefined;
+
   @ViewChild('ownerImages', { static: false }) ownerImages!: ElementRef;
 
   private scrollListener!: () => void;
@@ -29,8 +30,7 @@ export class EsumateViewComponent {
     if (this.ownerImages?.nativeElement) {
       const bounding = this.ownerImages.nativeElement.getBoundingClientRect();
       this.isSticky = bounding.top <= 0;
-      console.log('Scroll position:', (event.target as HTMLElement).scrollTop, 'Is Sticky:', this.isSticky);
-    }
+          }
   }
 
   ngOnDestroy() {
@@ -41,7 +41,7 @@ export class EsumateViewComponent {
 
   onStickinessChange(isSticky: boolean) {
     this.isSticky = isSticky;
-    console.log('OwnerImages sticky state:', isSticky);
+    // console.log('OwnerImages sticky state:', isSticky);
   }
 
   
@@ -74,12 +74,18 @@ export class EsumateViewComponent {
   }
 
   scrollToTop() {
-    const parentContainer = document.querySelector('.scrollable');
-    if (parentContainer) {
-      parentContainer.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
+    if (this.scrollableContainer) {
+      const container = this.scrollableContainer.nativeElement;
+
+      if (typeof container.scrollTo === 'function') {
+        // Modern browsers: Use smooth scrolling
+        container.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        // Fallback for older browsers
+        container.scrollTop = 0;
+      }
+    } else {
+      console.error('Scrollable container not found.');
     }
   }
  

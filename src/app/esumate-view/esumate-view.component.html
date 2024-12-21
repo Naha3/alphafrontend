@@ -4,13 +4,13 @@
 
     <div class="alignment">
       <!-- Components for Small Screens -->
-      <ng-container *ngIf="isSmallScreen; else allComponents">
+      <ng-container  *ngIf="isSmallScreen; else allComponents">
         <app-ownerimages *ngIf="showInitialSections" (stickinessChange)="onStickinessChange($event)" #ownerImages></app-ownerimages>
         <app-concerns-list *ngIf="showInitialSections"></app-concerns-list>
         <app-inspection-results *ngIf="showInitialSections" class="result"></app-inspection-results>
 
         <!-- Back Section -->
-        <div *ngIf="!showInitialSections">
+        <div *ngIf="!showInitialSections" #scrollableContainer >
           <div (click)="backToInitialSections()">
             <button class="perevious-screen">
               <div class="icon">
@@ -43,7 +43,7 @@
   <app-footer class="footer" *ngIf="!showInitialSections && isSmallScreen"></app-footer>
 </div>
 
-<div class="button-container" *ngIf="showInitialSections" (click)="proceedToNext()">
+<div class="button-container" *ngIf="showInitialSections && isSmallScreen" (click)="proceedToNext()">
   <button class="proceed-btn">
     <div>Proceed</div>
     <div class="arrow">
