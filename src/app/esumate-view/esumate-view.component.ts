@@ -10,15 +10,17 @@ export class EsumateViewComponent {
   isSmallScreen: boolean = window.innerWidth <= 720;
   isSticky = false;
   isOwnerImagesSticky = false;
-  private scrollListener!: () => void;
 
-@ViewChild('ownerImages', { static: false }) ownerImages!: ElementRef;
+  
+  @ViewChild('ownerImages', { static: false }) ownerImages!: ElementRef;
+
+  private scrollListener!: () => void;
 
   constructor(private renderer: Renderer2) {}
 
-  ngAfterViewInit() {
+  ngAfterViewChecked() {
     const scrollContainer = document.querySelector('.scrollable');
-    if (scrollContainer) {
+    if (scrollContainer  && this.ownerImages) {
       this.scrollListener = this.renderer.listen(scrollContainer, 'scroll', (event) => this.onScroll(event));
     }
   }
@@ -27,10 +29,7 @@ export class EsumateViewComponent {
     if (this.ownerImages?.nativeElement) {
       const bounding = this.ownerImages.nativeElement.getBoundingClientRect();
       this.isSticky = bounding.top <= 0;
-
       console.log('Scroll position:', (event.target as HTMLElement).scrollTop, 'Is Sticky:', this.isSticky);
-    } else {
-      console.error('ownerImages is not defined or inaccessible.');
     }
   }
 
@@ -41,9 +40,10 @@ export class EsumateViewComponent {
   }
 
   onStickinessChange(isSticky: boolean) {
-    this.isOwnerImagesSticky = isSticky;
+    this.isSticky = isSticky;
     console.log('OwnerImages sticky state:', isSticky);
   }
+
   
   @HostListener('window:resize', [])
   onResize() {

@@ -80,7 +80,7 @@
       justify-content: flex-start;
     align-items: center;
       .alignment {
-       
+       height: 100%;
         .result {
           margin-bottom: 120px;
         }
@@ -115,7 +115,7 @@
     max-height: 100vh;
     position: relative; /* Ensure relative positioning */
   }
-  .buton-container {
+  .button-container{
     position: fixed;
     bottom: 0px;
     background-color: #fff;
