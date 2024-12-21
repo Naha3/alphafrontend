@@ -30,7 +30,7 @@
 
       <!-- Components for Large Screens -->
       <ng-template #allComponents>
-        <app-ownerimages class="owner-images" (stickinessChange)="onStickinessChange($event)"></app-ownerimages>
+        <app-ownerimages class="owner-images" (stickinessChange)="onStickinessChange($event)" #ownerImages></app-ownerimages>
         <app-concerns-list></app-concerns-list>
         <app-inspection-results class="result"></app-inspection-results>
         <app-summery></app-summery>

@@ -10,41 +10,48 @@ export class EsumateViewComponent {
   isSmallScreen: boolean = window.innerWidth <= 720;
   isSticky = false;
   isOwnerImagesSticky = false;
+  private scrollListener!: () => void;
 
-  @ViewChild('ownerImages', { static: false }) ownerImages!: ElementRef;
-  constructor() {}
+@ViewChild('ownerImages', { static: false }) ownerImages!: ElementRef;
+
+  constructor(private renderer: Renderer2) {}
+
+  ngAfterViewInit() {
+    const scrollContainer = document.querySelector('.scrollable');
+    if (scrollContainer) {
+      this.scrollListener = this.renderer.listen(scrollContainer, 'scroll', (event) => this.onScroll(event));
+    }
+  }
+
+  onScroll(event: Event): void {
+    if (this.ownerImages?.nativeElement) {
+      const bounding = this.ownerImages.nativeElement.getBoundingClientRect();
+      this.isSticky = bounding.top <= 0;
+
+      console.log('Scroll position:', (event.target as HTMLElement).scrollTop, 'Is Sticky:', this.isSticky);
+    } else {
+      console.error('ownerImages is not defined or inaccessible.');
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.scrollListener) {
+      this.scrollListener();
+    }
+  }
 
   onStickinessChange(isSticky: boolean) {
     this.isOwnerImagesSticky = isSticky;
     console.log('OwnerImages sticky state:', isSticky);
   }
-
-  ngAfterViewInit() {
-    const scrollContainer = document.querySelector('.scrollable');
-    if (scrollContainer) {
-      scrollContainer.addEventListener('scroll', this.onScroll.bind(this));
-    }
-  }
-
-  onScroll(event: Event): void {
-    if (this.ownerImages) {
-      const scrollContainer = event.target as HTMLElement;
-      const bounding = this.ownerImages.nativeElement.getBoundingClientRect();
-      this.isSticky = bounding.top <= 0;
-
-      console.log('Scroll position:', scrollContainer.scrollTop, 'Is Sticky:', this.isSticky);
-    } else {
-      console.error('Error: ownerImages is not defined.');
-    }
-  }
-  // Check the screen size
+  
   @HostListener('window:resize', [])
   onResize() {
     this.checkScreenSize();
   }
 
   private checkScreenSize() {
-    this.isSmallScreen = window.innerWidth < 768; // Adjust breakpoint as needed
+    this.isSmallScreen = window.innerWidth < 768; 
   }
 
 
